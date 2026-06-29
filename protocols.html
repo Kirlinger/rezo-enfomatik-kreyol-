@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Pwotokòl Rezo – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Pwotokòl Rezo</div>
+    <h1>📦 Pwotokòl Rezo yo</h1>
+    <p>Aprann chak pwotokòl enpòtan — pò li, TCP oswa UDP, ak yon egzanp reyèl an Kreyòl.</p>
+  </div>
+</div>
+
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="info-box note"><div class="icon">💡</div><div class="body"><strong>Kisa yon Pwotokòl Ye?</strong><p>Yon <strong>pwotokòl rezo</strong> se yon seri règ estanda ki defini kijan aparèy yo kominike. Sanble règ gramè yon lang — si tout moun suiv menm règ, yo ka konprann youn ak lòt.</p></div></div>
+
+  <div class="content-section">
+    <h2>Tablo Pwotokòl Prensipal yo</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Pwotokòl</th><th>Non Konplè</th><th>Pò</th><th>TCP/UDP</th><th>Wòl</th></tr></thead>
+        <tbody>
+          <tr><td><strong>HTTP</strong></td><td>HyperText Transfer Protocol</td><td>80</td><td>TCP</td><td>Transfere paj wèb (pa chifre)</td></tr>
+          <tr><td><strong>HTTPS</strong></td><td>HTTP Secure</td><td>443</td><td>TCP</td><td>Transfere paj wèb chifre (SSL/TLS)</td></tr>
+          <tr><td><strong>FTP</strong></td><td>File Transfer Protocol</td><td>20 (done), 21 (kontwòl)</td><td>TCP</td><td>Transfere fichye</td></tr>
+          <tr><td><strong>SFTP</strong></td><td>SSH File Transfer Protocol</td><td>22</td><td>TCP</td><td>Transfere fichye sou SSH chifre</td></tr>
+          <tr><td><strong>SSH</strong></td><td>Secure Shell</td><td>22</td><td>TCP</td><td>Aksè distans chifre nan sèvè</td></tr>
+          <tr><td><strong>Telnet</strong></td><td>Terminal Network</td><td>23</td><td>TCP</td><td>Aksè distans — PA chifre (obsolèt)</td></tr>
+          <tr><td><strong>SMTP</strong></td><td>Simple Mail Transfer Protocol</td><td>25 / 587</td><td>TCP</td><td>Voye imel</td></tr>
+          <tr><td><strong>POP3</strong></td><td>Post Office Protocol v3</td><td>110</td><td>TCP</td><td>Telechaje imel (efase sèvè)</td></tr>
+          <tr><td><strong>IMAP</strong></td><td>Internet Message Access Protocol</td><td>143</td><td>TCP</td><td>Li imel (rete sèvè)</td></tr>
+          <tr><td><strong>DNS</strong></td><td>Domain Name System</td><td>53</td><td>UDP (TCP pou gwo)</td><td>Konvèti non domèn an IP</td></tr>
+          <tr><td><strong>DHCP</strong></td><td>Dynamic Host Configuration Protocol</td><td>67 (sèvè), 68 (kliyan)</td><td>UDP</td><td>Bay adrès IP otomatik</td></tr>
+          <tr><td><strong>SNMP</strong></td><td>Simple Network Management Protocol</td><td>161 / 162</td><td>UDP</td><td>Monitore aparèy rezo</td></tr>
+          <tr><td><strong>ICMP</strong></td><td>Internet Control Message Protocol</td><td>—</td><td>ICMP</td><td>Mesaj erè ak dyagnostik (ping)</td></tr>
+          <tr><td><strong>ARP</strong></td><td>Address Resolution Protocol</td><td>—</td><td>Broadcast</td><td>Tradui IP an MAC address</td></tr>
+          <tr><td><strong>NTP</strong></td><td>Network Time Protocol</td><td>123</td><td>UDP</td><td>Senkronize lè sou rezo</td></tr>
+          <tr><td><strong>LDAP</strong></td><td>Lightweight Directory Access Protocol</td><td>389</td><td>TCP</td><td>Aksè anyè (Active Directory)</td></tr>
+          <tr><td><strong>SMB</strong></td><td>Server Message Block</td><td>445</td><td>TCP</td><td>Pataje fichye Windows</td></tr>
+          <tr><td><strong>RDP</strong></td><td>Remote Desktop Protocol</td><td>3389</td><td>TCP</td><td>Aksè grafik distans Windows</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>TCP vs UDP — Diferans Fondamantal</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <span class="card-icon">🔒</span>
+        <h3>TCP – Transmission Control Protocol</h3>
+        <p><strong>TCP</strong> bay yon koneksyon <strong>fyab ak garanti</strong>. Li:</p>
+        <ul>
+          <li>Etabli koneksyon dabò (<strong>3-Way Handshake</strong>)</li>
+          <li>Asire tout pakè rive (retransmèt si pèdi)</li>
+          <li>Reòdone pakè si yo rive deòd</li>
+          <li>Kontwole vitès transmisyon</li>
+        </ul>
+        <p><strong>Itilize pou:</strong> HTTP/S, FTP, SSH, SMTP, imel</p>
+        <span class="badge badge-green">Fyab</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">⚡</span>
+        <h3>UDP – User Datagram Protocol</h3>
+        <p><strong>UDP</strong> voye done <strong>san koneksyon ak san garanti</strong>. Li:</p>
+        <ul>
+          <li>Pa etabli koneksyon anvan</li>
+          <li>Pa verifye si pakè rive</li>
+          <li>Pa reòdone pakè</li>
+          <li>Pi rapid pase TCP</li>
+        </ul>
+        <p><strong>Itilize pou:</strong> DNS, DHCP, streaming videyo, jwèt an liy</p>
+        <span class="badge badge-yellow">Rapid</span>
+      </div>
+    </div>
+
+    <h3>3-Way Handshake TCP</h3>
+    <div class="diagram" style="flex-direction:column;align-items:flex-start;padding:1.5rem 2rem;">
+      <div style="display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;width:100%;align-items:center;max-width:500px;margin:0 auto;">
+        <div style="text-align:right;font-size:0.9rem;font-weight:600;">Kliyan (PC)</div>
+        <div></div>
+        <div style="font-size:0.9rem;font-weight:600;">Sèvè</div>
+
+        <div style="text-align:right;font-size:0.82rem;color:var(--accent-blue);">1. SYN →</div>
+        <div style="text-align:center;font-size:0.72rem;color:var(--text-muted);">M vle konekte</div>
+        <div></div>
+
+        <div></div>
+        <div style="text-align:center;font-size:0.72rem;color:var(--text-muted);">Dakò, vini</div>
+        <div style="font-size:0.82rem;color:var(--accent-cyan);">← 2. SYN-ACK</div>
+
+        <div style="text-align:right;font-size:0.82rem;color:var(--success);">3. ACK →</div>
+        <div style="text-align:center;font-size:0.72rem;color:var(--text-muted);">Koneksyon etabli!</div>
+        <div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Pwotokòl Imel yo an Detay</h2>
+    <div class="grid grid-3 mt-2">
+      <div class="card">
+        <span class="card-icon">📤</span>
+        <h3>SMTP (Pò 25/587)</h3>
+        <p><strong>Voye</strong> imel. Lè ou tape "Voye" nan Gmail, SMTP voye mesaj la bay sèvè imel destinatè a.</p>
+        <span class="badge badge-blue">TCP</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">📥</span>
+        <h3>POP3 (Pò 110)</h3>
+        <p><strong>Telechaje</strong> imel yo soti sèvè epi <strong>efase yo</strong> sou sèvè a. Imel yo stoke sèlman nan òdinatè ou.</p>
+        <span class="badge badge-blue">TCP</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">📬</span>
+        <h3>IMAP (Pò 143)</h3>
+        <p><strong>Senkronize</strong> imel ant sèvè ak aparèy ou. Imel yo rete sèvè — ka wè yo sou nenpòt aparèy.</p>
+        <span class="badge badge-blue">TCP</span>
+      </div>
+    </div>
+    <div class="info-box tip"><div class="icon">💡</div><div class="body"><strong>Kiyès ki Pou Itilize?</strong><p><strong>IMAP</strong> se rekòmande jodi a — ou ka wè imel ou sou telefòn, tablèt, ak òdinatè san pwoblèm senkronizasyon.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Pwotokòl Aksè Distans</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <span class="card-icon">🔐</span>
+        <h3>SSH – Secure Shell (Pò 22)</h3>
+        <p>Aksè kòmand-liy chifre nan sèvè distans. <strong>Rekòmande</strong> pou administrasyon sèvè Linux/Unix.</p>
+        <div class="code-block" style="margin-top:0.5rem;font-size:0.8rem;">
+          ssh admin@192.168.1.10
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-icon">❌</span>
+        <h3>Telnet (Pò 23)</h3>
+        <p>Ansyen pwotokòl aksè distans — <strong>PA chifre</strong>. Nenpòt moun ka entèsepte done yo. Evite nan rezo reyèl.</p>
+        <div class="info-box danger" style="margin-top:0.5rem;padding:0.5rem;"><div class="icon">🚫</div><div class="body"><p style="font-size:0.8rem;">Sèlman pou lab ak tès. Janm nan pwodiksyon!</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>ICMP ak ARP</h2>
+    <div class="grid grid-2">
+      <div class="card">
+        <span class="card-icon">📡</span>
+        <h3>ICMP – Internet Control Message Protocol</h3>
+        <p>ICMP se pwotokòl pou mesaj erè ak dyagnostik. Kòmand <code>ping</code> itilize ICMP.</p>
+        <div class="code-block" style="font-size:0.8rem;">
+          <span class="comment"># Ping teste koneksyon</span><br/>
+          ping 8.8.8.8<br/>
+          <span class="output">Reply from 8.8.8.8: bytes=32 time=20ms</span>
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-icon">🔍</span>
+        <h3>ARP – Address Resolution Protocol</h3>
+        <p>ARP tradui adrès IP an adrès MAC nan rezo lokal. Lè yon aparèy vle kominike ak lòt, li fè yon "ARP broadcast" pou jwenn MAC adrès li.</p>
+        <div class="code-block" style="font-size:0.8rem;">
+          <span class="comment"># Montre tab ARP lokal</span><br/>
+          arp -a
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Pò Konnen pa Kè (Well-Known Ports)</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Nimewo Pò</th><th>Pwotokòl</th><th>Sèvis</th><th>TCP/UDP</th></tr></thead>
+        <tbody>
+          <tr><td>20/21</td><td>FTP</td><td>Transfere Fichye</td><td>TCP</td></tr>
+          <tr><td>22</td><td>SSH / SFTP</td><td>Aksè Distans Chifre</td><td>TCP</td></tr>
+          <tr><td>23</td><td>Telnet</td><td>Aksè Distans (Pa chifre)</td><td>TCP</td></tr>
+          <tr><td>25</td><td>SMTP</td><td>Voye Imel</td><td>TCP</td></tr>
+          <tr><td>53</td><td>DNS</td><td>Rezolisyon Non Domèn</td><td>UDP/TCP</td></tr>
+          <tr><td>67/68</td><td>DHCP</td><td>Asiye Adrès IP</td><td>UDP</td></tr>
+          <tr><td>80</td><td>HTTP</td><td>Web (Pa Chifre)</td><td>TCP</td></tr>
+          <tr><td>110</td><td>POP3</td><td>Resevwa Imel</td><td>TCP</td></tr>
+          <tr><td>123</td><td>NTP</td><td>Senkronize Lè</td><td>UDP</td></tr>
+          <tr><td>143</td><td>IMAP</td><td>Jere Imel Sou Sèvè</td><td>TCP</td></tr>
+          <tr><td>161/162</td><td>SNMP</td><td>Monitore Rezo</td><td>UDP</td></tr>
+          <tr><td>389</td><td>LDAP</td><td>Anyè (Active Directory)</td><td>TCP</td></tr>
+          <tr><td>443</td><td>HTTPS</td><td>Web Chifre SSL/TLS</td><td>TCP</td></tr>
+          <tr><td>445</td><td>SMB</td><td>Pataje Fichye Windows</td><td>TCP</td></tr>
+          <tr><td>3389</td><td>RDP</td><td>Biwo Distans Windows</td><td>TCP</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box tip"><div class="icon">🎯</div><div class="body"><strong>Pou Egzamen Network+:</strong><p>Aprann pò yo pafè! Yo toujou poze kesyon sou yo. Konsantre sou: 20/21, 22, 23, 25, 53, 67/68, 80, 110, 143, 443.</p></div></div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="subnetting.html" class="btn btn-secondary">← Subnetting</a>
+    <a href="dns-dhcp.html" class="btn btn-primary">DNS & DHCP →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

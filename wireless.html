@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rezo San Fil (Wi-Fi) – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Rezo San Fil (Wi-Fi)</div>
+    <h1>📶 Rezo San Fil (Wi-Fi)</h1>
+    <p>Aprann Wi-Fi — estanda 802.11, frekans, SSID, sekirite WPA3, entèferans ak rezo envite.</p>
+  </div>
+</div>
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="content-section">
+    <h2>Wi-Fi – Sa Li Ye ak Kijan Li Travay</h2>
+    <p><strong>Wi-Fi</strong> se teknoloji ki pèmèt aparèy konekte nan yon rezo <strong>san fil</strong> itilizant siyal radyo. Li baze sou estanda <strong>IEEE 802.11</strong>.</p>
+    <div class="callout">
+      <h3>📶 Analoji</h3>
+      <p>Wi-Fi se tankou yon estasyon radyo — yon access point "broadcast" siyal, epi aparèy ou "resevwa" li. Diferans: Wi-Fi se bidireksyonèl, ou ka voye ak resevwa done.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Estanda Wi-Fi yo (802.11)</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Estanda</th><th>Non Maketing</th><th>Frekans</th><th>Vitès Max</th><th>Pòte</th></tr></thead>
+        <tbody>
+          <tr><td>802.11b</td><td>Wi-Fi 1</td><td>2.4 GHz</td><td>11 Mbps</td><td>~35m</td></tr>
+          <tr><td>802.11a</td><td>Wi-Fi 2</td><td>5 GHz</td><td>54 Mbps</td><td>~35m</td></tr>
+          <tr><td>802.11g</td><td>Wi-Fi 3</td><td>2.4 GHz</td><td>54 Mbps</td><td>~38m</td></tr>
+          <tr><td>802.11n</td><td>Wi-Fi 4</td><td>2.4 &amp; 5 GHz</td><td>600 Mbps</td><td>~70m</td></tr>
+          <tr><td>802.11ac</td><td>Wi-Fi 5</td><td>5 GHz</td><td>3.5 Gbps</td><td>~35m</td></tr>
+          <tr><td>802.11ax</td><td><strong>Wi-Fi 6</strong></td><td>2.4, 5, 6 GHz</td><td>9.6 Gbps</td><td>~100m</td></tr>
+          <tr><td>802.11be</td><td>Wi-Fi 7</td><td>2.4, 5, 6 GHz</td><td>46 Gbps</td><td>~100m</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>2.4 GHz vs 5 GHz vs 6 GHz</h2>
+    <div class="grid grid-3 mt-2">
+      <div class="card">
+        <span class="card-icon">📻</span>
+        <h3>2.4 GHz</h3>
+        <p><strong>Longè distans pi long</strong> — siyal travèse mi pi fasil.</p>
+        <ul><li>Pòte: ~50-100m</li><li>Vitès: 450 Mbps max</li><li>Mwens kanal (11 total, 3 ki pa chevauch)</li><li>Plis entèferans (mikwo-ond, Bluetooth)</li></ul>
+        <span class="badge badge-blue">Longè Distans</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">⚡</span>
+        <h3>5 GHz</h3>
+        <p><strong>Pi rapid</strong> men distans pi kout.</p>
+        <ul><li>Pòte: ~25-40m</li><li>Vitès: 3.5 Gbps (Wi-Fi 5)</li><li>Plis kanal (25 kanal ki pa chevauch)</li><li>Mwens entèferans</li></ul>
+        <span class="badge badge-cyan">Pi Rapid</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">🚀</span>
+        <h3>6 GHz (Wi-Fi 6E/7)</h3>
+        <p><strong>Pi nouvo</strong> — vitès siperb.</p>
+        <ul><li>Pòte: ~20-30m</li><li>Vitès: 9.6+ Gbps</li><li>59 kanal ki pa chevauch</li><li>Pa gen aparèy ansyen ki itilize li</li></ul>
+        <span class="badge badge-green">Nouvo</span>
+      </div>
+    </div>
+    <div class="info-box tip"><div class="icon">💡</div><div class="body"><strong>Konsèy Pratik:</strong><p>Pou streaming 4K ak gaming: itilize <strong>5 GHz</strong>. Pou aparèy ki lwen (TV nan lòt chanm): itilize <strong>2.4 GHz</strong>.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>SSID – Service Set Identifier</h2>
+    <p>Yon <strong>SSID</strong> se non rezo Wi-Fi ou — sa ou wè lè ou chèche rezo san fil. Egzanp: "FamilyWiFi" oswa "Hotel_Lobby".</p>
+    <div class="grid grid-2 mt-2">
+      <div class="card"><h3>SSID Kache</h3><p>Ou ka kache SSID ou. Aparèy yo pa wè non rezo a otomatikman — ou dwe tape li manyèlman. Pa vrèman yon solisyon sekirite serye.</p></div>
+      <div class="card"><h3>Plizyè SSID</h3><p>Yon access point ka bay plizyè SSID — egzanp: "CompanyWiFi" ak "GuestWiFi" — chak nan VLAN pa yo pou separasyon.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Sekirite Wi-Fi — WPA2 ak WPA3</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Pwotokòl</th><th>Chifraj</th><th>Sekirite</th><th>Nòt</th></tr></thead>
+        <tbody>
+          <tr><td>WEP</td><td>RC4 40-bit</td><td><span class="badge badge-red">Obsolèt</span></td><td>Kase fasil — pa janm itilize</td></tr>
+          <tr><td>WPA</td><td>TKIP</td><td><span class="badge badge-yellow">Fèb</span></td><td>Pi bon pase WEP men kase</td></tr>
+          <tr><td><strong>WPA2</strong></td><td>AES-CCMP</td><td><span class="badge badge-cyan">Bon</span></td><td>Estanda aktyèl — itilize li</td></tr>
+          <tr><td><strong>WPA3</strong></td><td>AES-GCMP-256</td><td><span class="badge badge-green">Ekselan</span></td><td>Pi nouvo — pi solid, SAE handshake</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box tip"><div class="icon">🔒</div><div class="body"><strong>Rekòmandasyon:</strong><p>Si routeur ou sipòte <strong>WPA3</strong>, aktive li. Sinon, asire ou WPA2-AES (pa TKIP) aktive. Toujou itilize yon <strong>mo de pase solid</strong> (12+ karaktè).</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Entèferans Wi-Fi ak Kanal</h2>
+    <p>Entèferans Wi-Fi rive lè plizyè rezo itilize menm kanal la. Sou bann 2.4 GHz, sèlman <strong>3 kanal ki pa chevauch</strong>: 1, 6, 11.</p>
+    <div class="info-box warning"><div class="icon">⚠️</div><div class="body"><strong>Koz Entèferans:</strong><p>Mikwo-ond, Bluetooth, moniteur bébé, ansyen telefòn, ak vwazen rezo Wi-Fi yo tout ka kreye entèferans sou 2.4 GHz.</p></div></div>
+    <div class="grid grid-2 mt-2">
+      <div class="card"><h3>Entèferans Ko-Kanal</h3><p>De rezo sou menm kanal an. Yo depase youn ak lòt (bloke youn ak lòt).</p></div>
+      <div class="card"><h3>Entèferans Kanal Adyasan</h3><p>Kanal ki chevauch (egzanp: 1 ak 3). Plis danjere pase ko-kanal.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Rezo Envite (Guest Network)</h2>
+    <p>Yon <strong>rezo envite</strong> ba vizitè aksè Entènèt san aksè nan rezo entèn ou. Se yon bon pratik sekirite enpòtan.</p>
+    <ul>
+      <li>Izole aparèy envite yo nan yon VLAN separe</li>
+      <li>Limite bann pasant pou envite yo</li>
+      <li>Aktive "client isolation" — envite yo pa ka wè youn ak lòt</li>
+      <li>Itilize yon non SSID diferan (egzanp: "GuestWiFi")</li>
+      <li>Pa pataje mo de pase rezo prensipal ou</li>
+    </ul>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="routing-switching.html" class="btn btn-secondary">← Routing & Switching</a>
+    <a href="security.html" class="btn btn-primary">Sekirite Rezo →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis pou étidyan ayisyen.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

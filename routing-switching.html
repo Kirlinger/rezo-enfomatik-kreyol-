@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Routing ak Switching – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Routing ak Switching</div>
+    <h1>🔄 Routing ak Switching</h1>
+    <p>Konprann kijan routeur dirije pakè ak kijan switch jere trafik lokal, VLAN, ak inter-VLAN routing.</p>
+  </div>
+</div>
+
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="content-section">
+    <h2>Diferans: Router vs Switch</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <span class="card-icon">🌐</span>
+        <h3>Router</h3>
+        <p>Konekte <strong>diferan rezo</strong> ak dirije (route) pakè ant yo. Opere nan <strong>Kouch 3</strong> (Network). Itilize adrès <strong>IP</strong>.</p>
+        <ul><li>Konekte LAN ak WAN</li><li>Route pakè sou baz IP</li><li>Jere tablo routing</li><li>Pwoteje rezo (NAT, Firewall debaz)</li></ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">🔌</span>
+        <h3>Switch</h3>
+        <p>Konekte aparèy nan <strong>menm rezo lokal</strong>. Opere nan <strong>Kouch 2</strong> (Data Link). Itilize adrès <strong>MAC</strong>.</p>
+        <ul><li>Konekte PC, sèvè, imprimant</li><li>Dirije tram sou baz MAC</li><li>Jere tablo MAC (CAM table)</li><li>Sipòte VLAN</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Kijan Routing Fonksyone</h2>
+    <p>Lè yon routeur resevwa yon pakè, li:<br/>1. Li adrès IP destinasyon an<br/>2. Chèche nan <strong>tablo routing</strong> li<br/>3. Voye pakè a nan bon entèfas (interface)</p>
+
+    <h3>Tablo Routing (Routing Table)</h3>
+    <div class="code-block">
+      <span class="comment"># Kòmand pou wè tablo routing (Windows)</span><br/>
+      route print<br/><br/>
+      <span class="comment"># Kòmand pou wè tablo routing (Linux)</span><br/>
+      ip route show<br/><br/>
+      <span class="output"># Egzanp Tablo Routing</span><br/>
+      Destination    Gateway        Masque          Interface<br/>
+      0.0.0.0        192.168.1.1    0.0.0.0         eth0   <span class="comment"># Default route</span><br/>
+      192.168.1.0    0.0.0.0        255.255.255.0   eth0   <span class="comment"># Rezo lokal</span><br/>
+      10.0.0.0       192.168.1.254  255.255.0.0     eth0   <span class="comment"># Rezo distans</span>
+    </div>
+
+    <h3>Default Route (Wout Defo)</h3>
+    <p>Yon <strong>default route (0.0.0.0/0)</strong> se wout pou voye nenpòt pakè ki pa gen yon wout espesifik. Rele tou "gateway of last resort". Se sa ki pèmèt ou reyini Entènèt.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>Routing Estatik vs Routing Dinamik</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <span class="card-icon">📌</span>
+        <h3>Routing Estatik</h3>
+        <p>Administratè konfigire <strong>manyèlman</strong> chak wout. Pa chanje otomatikman si yon lyen tonbe.</p>
+        <div class="code-block" style="font-size:0.8rem;">
+          <span class="comment"># Ajoute wout estatik (Linux)</span><br/>
+          ip route add 10.0.0.0/8 via 192.168.1.1
+        </div>
+        <p><strong>Avantaj:</strong> Senp, previzib, mwens chaj CPU<br/><strong>Dezavantaj:</strong> Pa adapte otomatikman</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🔄</span>
+        <h3>Routing Dinamik</h3>
+        <p>Routeur yo <strong>pataje enfòmasyon wout</strong> otomatikman ak chanje lè topoloji rezo chanje.</p>
+        <div class="grid grid-2 mt-1">
+          <div style="font-size:0.82rem;"><strong>Pwotokòl:</strong><ul style="padding:0;"><li style="padding:0.2rem 0 0.2rem 1rem;position:relative;color:var(--text-secondary);"><span style="position:absolute;left:0;color:var(--accent-blue);">•</span>RIP v2</li><li style="padding:0.2rem 0 0.2rem 1rem;position:relative;color:var(--text-secondary);"><span style="position:absolute;left:0;color:var(--accent-blue);">•</span>OSPF</li><li style="padding:0.2rem 0 0.2rem 1rem;position:relative;color:var(--text-secondary);"><span style="position:absolute;left:0;color:var(--accent-blue);">•</span>EIGRP</li><li style="padding:0.2rem 0 0.2rem 1rem;position:relative;color:var(--text-secondary);"><span style="position:absolute;left:0;color:var(--accent-blue);">•</span>BGP</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <h3>Pwotokòl Routing Dinamik yo</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Pwotokòl</th><th>Tip</th><th>Itilizasyon</th><th>Metrik</th><th>Konvèjans</th></tr></thead>
+        <tbody>
+          <tr><td><strong>RIP v2</strong></td><td>Distance Vector</td><td>Ti rezo</td><td>Hop Count (max 15)</td><td>Lannwit</td></tr>
+          <tr><td><strong>OSPF</strong></td><td>Link State</td><td>Gwo rezo antrepriz</td><td>Koût (bann pasant)</td><td>Rapid</td></tr>
+          <tr><td><strong>EIGRP</strong></td><td>Hybrid (Cisco)</td><td>Rezo Cisco</td><td>Bann pasant, delè</td><td>Trè rapid</td></tr>
+          <tr><td><strong>BGP</strong></td><td>Path Vector</td><td>Entènèt (ant ISP)</td><td>Atribi wout</td><td>Lannwit</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>VLAN – Virtual Local Area Network</h2>
+    <p>Yon <strong>VLAN (Virtual LAN)</strong> pèmèt ou divize <strong>yon sèl switch fizik</strong> an plizyè rezo lokal lojik. Aparèy nan diferan VLAN pa ka kominike dirèkteman san yon routeur.</p>
+
+    <div class="callout">
+      <h3>🏢 Analoji: Biwo</h3>
+      <p>Imajine yon biwo ki gen depatman IT, Finansye, ak RH. Avèk VLAN, yo ka tout konekte nan menm switch men separe lojikman. IT pa ka wè trafik Finansye, ak Finansye pa ka wè trafik IT — san bezwen switch diferan.</p>
+    </div>
+
+    <!-- VLAN Diagram -->
+    <div class="diagram mt-3" style="flex-direction:column;gap:1.5rem;">
+      <div style="text-align:center;font-weight:600;color:var(--accent-cyan);">Switch Managed yon sèl</div>
+      <div style="display:flex;gap:2rem;justify-content:center;flex-wrap:wrap;">
+        <div style="background:rgba(30,144,255,0.1);border:1px solid rgba(30,144,255,0.3);border-radius:var(--radius);padding:1rem;text-align:center;">
+          <div style="font-weight:700;color:var(--accent-blue);margin-bottom:0.5rem;">VLAN 10 – IT</div>
+          <div style="display:flex;gap:0.5rem;justify-content:center;">
+            <div class="diagram-node" style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;"><div class="d-icon" style="width:36px;height:36px;font-size:1.1rem;">💻</div><span style="font-size:0.65rem;">PC-IT1</span></div>
+            <div class="diagram-node" style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;"><div class="d-icon" style="width:36px;height:36px;font-size:1.1rem;">💻</div><span style="font-size:0.65rem;">PC-IT2</span></div>
+          </div>
+        </div>
+        <div style="background:rgba(34,197,94,0.1);border:1px solid rgba(34,197,94,0.3);border-radius:var(--radius);padding:1rem;text-align:center;">
+          <div style="font-weight:700;color:var(--success);margin-bottom:0.5rem;">VLAN 20 – Finansye</div>
+          <div style="display:flex;gap:0.5rem;justify-content:center;">
+            <div class="diagram-node" style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;"><div class="d-icon" style="width:36px;height:36px;font-size:1.1rem;">💻</div><span style="font-size:0.65rem;">PC-FIN1</span></div>
+            <div class="diagram-node" style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;"><div class="d-icon" style="width:36px;height:36px;font-size:1.1rem;">💻</div><span style="font-size:0.65rem;">PC-FIN2</span></div>
+          </div>
+        </div>
+        <div style="background:rgba(245,158,11,0.1);border:1px solid rgba(245,158,11,0.3);border-radius:var(--radius);padding:1rem;text-align:center;">
+          <div style="font-weight:700;color:var(--warning);margin-bottom:0.5rem;">VLAN 30 – RH</div>
+          <div style="display:flex;gap:0.5rem;justify-content:center;">
+            <div class="diagram-node" style="display:flex;flex-direction:column;align-items:center;gap:0.3rem;"><div class="d-icon" style="width:36px;height:36px;font-size:1.1rem;">💻</div><span style="font-size:0.65rem;">PC-RH1</span></div>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;color:var(--text-muted);font-size:0.8rem;">Chak VLAN se yon domèn broadcast separe</div>
+    </div>
+
+    <h3>Pò Switch: Access vs Trunk</h3>
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <span class="card-icon">🔑</span>
+        <h3>Access Port</h3>
+        <p>Yon pò ki manm <strong>yon sèl VLAN</strong> sèlman. Konekte pou aparèy final (PC, imprimant). Aparèy la pa konnen li nan yon VLAN.</p>
+        <div class="code-block" style="font-size:0.78rem;">
+          <span class="comment"># Konfigirasyon Cisco IOS</span><br/>
+          interface fa0/1<br/>
+          &nbsp;switchport mode access<br/>
+          &nbsp;switchport access vlan 10
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-icon">🚗</span>
+        <h3>Trunk Port</h3>
+        <p>Yon pò ki pote <strong>plizyè VLAN</strong> an menm tan. Itilize ant switch ak switch, oswa switch ak routeur. Itilize IEEE 802.1Q pou etikete.</p>
+        <div class="code-block" style="font-size:0.78rem;">
+          <span class="comment"># Trunk Cisco IOS</span><br/>
+          interface fa0/24<br/>
+          &nbsp;switchport mode trunk<br/>
+          &nbsp;switchport trunk allowed vlan 10,20,30
+        </div>
+      </div>
+    </div>
+
+    <h3>Native VLAN</h3>
+    <p>Yon <strong>Native VLAN</strong> se VLAN ki itilize pou trafik ki pa etikte sou yon trunk port. Pa defo, se VLAN 1. Pi bon pratik: chanje li pou yon VLAN inutilize pou sekirite.</p>
+    <div class="info-box warning"><div class="icon">⚠️</div><div class="body"><strong>Sekirite VLAN:</strong><p>Evite mete PC nan VLAN 1 (Native VLAN defo). Itilize VLAN separe ak bien konfigire pò trunk yo pou evite VLAN hopping attacks.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Inter-VLAN Routing</h2>
+    <p>VLAN separe rezo yo — pou VLAN diferan kominike, ou bezwen yon <strong>routeur</strong> oswa yon <strong>Layer 3 Switch</strong>.</p>
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <span class="card-icon">🔀</span>
+        <h3>Router-on-a-Stick</h3>
+        <p>Yon routeur ak yon sèl pò fizik ki konfigire an plizyè <strong>sous-entèfas lojik</strong> (sub-interfaces) — youn pou chak VLAN.</p>
+        <div class="code-block" style="font-size:0.78rem;">
+          interface fa0/0.10<br/>
+          &nbsp;encapsulation dot1Q 10<br/>
+          &nbsp;ip address 192.168.10.1 255.255.255.0
+        </div>
+      </div>
+      <div class="card">
+        <span class="card-icon">🏗️</span>
+        <h3>Layer 3 Switch</h3>
+        <p>Yon switch ki ka fè routing tou. Pi efikas pou gwo rezo — routing se nan materyèl (hardware).</p>
+        <div class="code-block" style="font-size:0.78rem;">
+          interface vlan 10<br/>
+          &nbsp;ip address 192.168.10.1 255.255.255.0<br/>
+          ip routing
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="dns-dhcp.html" class="btn btn-secondary">← DNS & DHCP</a>
+    <a href="wireless.html" class="btn btn-primary">Wi-Fi →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

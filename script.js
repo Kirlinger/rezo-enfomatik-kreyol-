@@ -174,16 +174,28 @@ document.addEventListener('DOMContentLoaded', function () {
         quizFeedback.textContent = msg;
         quizResult.classList.add('show');
         quizResult.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        // Show explanations
+        quizForm.querySelectorAll('.quiz-explanation').forEach(el => el.classList.remove('hidden'));
+        // Show reset button
+        if (resetBtn) resetBtn.style.display = '';
+        if (submitBtn) submitBtn.style.display = 'none';
       });
     }
-    if (resetBtn) {
-      resetBtn.addEventListener('click', function () {
-        quizForm.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
-        quizForm.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('correct', 'wrong'));
-        quizResult.classList.remove('show');
-        window.scrollTo({ top: 0, behavior: 'smooth' });
-      });
+
+    function doReset() {
+      quizForm.querySelectorAll('input[type="radio"]').forEach(r => r.checked = false);
+      quizForm.querySelectorAll('.quiz-option').forEach(o => o.classList.remove('correct', 'wrong'));
+      quizForm.querySelectorAll('.quiz-explanation').forEach(el => el.classList.add('hidden'));
+      quizResult.classList.remove('show');
+      if (resetBtn) resetBtn.style.display = 'none';
+      if (submitBtn) submitBtn.style.display = '';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
+
+    if (resetBtn) resetBtn.addEventListener('click', doReset);
+    const resetBtn2 = document.getElementById('quiz-reset-2');
+    if (resetBtn2) resetBtn2.addEventListener('click', doReset);
+
     if (showAnswersBtn) {
       showAnswersBtn.addEventListener('click', function () {
         const questions = quizForm.querySelectorAll('.quiz-question');
@@ -195,6 +207,9 @@ document.addEventListener('DOMContentLoaded', function () {
             opt.classList.remove('correct', 'wrong');
             if (inp && inp.value === correct) opt.classList.add('correct');
           });
+          // Show explanations
+          const exp = q.querySelector('.quiz-explanation');
+          if (exp) exp.classList.remove('hidden');
         });
       });
     }

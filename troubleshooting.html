@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Depannaj Rezo – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Depannaj Rezo</div>
+    <h1>🔧 Depannaj Rezo</h1>
+    <p>Aprann kijan depane pwoblèm rezo komen yo ak kòmand ping, tracert, ipconfig, nslookup.</p>
+  </div>
+</div>
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="content-section">
+    <h2>Metòd Depannaj Rezo</h2>
+    <p>Bon depannaj swiv yon <strong>pwosesis sistematik</strong> — pa devine okouran. Kòmanse pi ba (Fizik) rive pi wo (Aplikasyon).</p>
+    <div class="steps mt-2">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Idantifye Pwoblèm nan</h4><p>"Ki egzakteman ki pwoblèm? Ki aparèy? Depi kilè? Èske lòt moun afekte?"</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Etabli Teyori</h4><p>Panse sou koz posib. Kòmanse ak pi senp: Kab konekte? IP konfigire? DNS ap travay?</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Tès Teyori a</h4><p>Ping, tracert, ipconfig, nslookup — itilize zouti yo pou konfime oswa rejte teyori ou.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Reyalize Plan</h4><p>Yon fwa ou idantifye pwoblèm nan, reyalize yon plan pou rezoud li epi aplike li.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Verifye ak Dokimante</h4><p>Verifye solisyon an travay, avize itilizatè yo, epi dokimante sa ou fè.</p></div></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Pwoblèm Komen yo ak Solisyon</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">❌ Pa Gen Entènèt <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">
+          <p><strong>Verifye an lòd:</strong></p>
+          <ol style="padding-left:1.5rem;"><li style="padding:0.3rem 0;color:var(--text-secondary);">Kab fizik konekte? Limyè LAN sou switch ak routeur?</li><li style="padding:0.3rem 0;color:var(--text-secondary);">Ping gateway: <code>ping 192.168.1.1</code> — si echwe, pwoblèm lokal</li><li style="padding:0.3rem 0;color:var(--text-secondary);">Ping DNS: <code>ping 8.8.8.8</code> — si echwe, pwoblèm routing oswa ISP</li><li style="padding:0.3rem 0;color:var(--text-secondary);">Ping non domèn: <code>ping google.com</code> — si echwe men 8.8.8.8 travay, pwoblèm DNS</li></ol>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🔢 Pwoblèm Adrès IP <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">
+          <p><strong>Konsomasyon APIPA (169.254.x.x):</strong> Aparèy pa ka jwenn sèvè DHCP. Renouvle bail DHCP:</p>
+          <div class="code-block" style="font-size:0.82rem;">
+            <span class="comment"># Windows</span><br/>
+            ipconfig /release<br/>
+            ipconfig /renew<br/><br/>
+            <span class="comment"># Linux</span><br/>
+            sudo dhclient -r eth0<br/>
+            sudo dhclient eth0
+          </div>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🗂️ Pwoblèm DNS <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">
+          <p>Si ou ka ping IP men pa non domèn — pwoblèm DNS. Solisyon:</p>
+          <div class="code-block" style="font-size:0.82rem;">
+            <span class="comment"># Netwaye cache DNS (Windows)</span><br/>
+            ipconfig /flushdns<br/><br/>
+            <span class="comment"># Chanje DNS manyèlman pou Google</span><br/>
+            DNS Prefere: 8.8.8.8<br/>
+            DNS Altènatif: 8.8.4.4
+          </div>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">📶 Wi-Fi Fèb oswa Koupe <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">
+          <p><strong>Solisyon:</strong></p>
+          <ul style="padding-left:1.5rem;"><li style="padding:0.25rem 0;color:var(--text-secondary);">Deplase pi prè access point</li><li style="padding:0.25rem 0;color:var(--text-secondary);">Chanje kanal Wi-Fi (evite 1, 6, 11 si vwazen yo itilize yo)</li><li style="padding:0.25rem 0;color:var(--text-secondary);">Mete routeur nan kote santral, wo (pa bò atè)</li><li style="padding:0.25rem 0;color:var(--text-secondary);">Redémarrer access point</li><li style="padding:0.25rem 0;color:var(--text-secondary);">Chanje frekans (essaye 5 GHz si aparèy la sipòte)</li></ul>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Kòmand Depannaj Enpòtan</h2>
+
+    <h3>ping</h3>
+    <p>Teste si yon aparèy aksesib sou rezo. Itilize ICMP.</p>
+    <div class="terminal">
+      <div class="terminal-header"><div class="terminal-dot red"></div><div class="terminal-dot yellow"></div><div class="terminal-dot green"></div><span class="terminal-title">Command Prompt / Terminal</span></div>
+      <div class="terminal-body">
+        <p><span class="prompt">C:\&gt;</span> <span class="cmd">ping google.com</span></p>
+        <p><span class="result">Pinging google.com [142.250.80.46] with 32 bytes of data:</span></p>
+        <p><span class="result">Reply from 142.250.80.46: bytes=32 time=18ms TTL=117</span></p>
+        <p><span class="result">Reply from 142.250.80.46: bytes=32 time=20ms TTL=117</span></p>
+        <p><span class="result">Ping statistics: Sent = 4, Received = 4, Lost = 0 (0% loss)</span></p>
+      </div>
+    </div>
+
+    <h3>ipconfig / ifconfig</h3>
+    <p>Montre konfigirasyon IP aparèy ou.</p>
+    <div class="terminal">
+      <div class="terminal-header"><div class="terminal-dot red"></div><div class="terminal-dot yellow"></div><div class="terminal-dot green"></div><span class="terminal-title">Command Prompt</span></div>
+      <div class="terminal-body">
+        <p><span class="prompt">C:\&gt;</span> <span class="cmd">ipconfig /all</span></p>
+        <p><span class="result">Ethernet adapter:</span></p>
+        <p><span class="result">&nbsp;&nbsp;IPv4 Address. . . : 192.168.1.105</span></p>
+        <p><span class="result">&nbsp;&nbsp;Subnet Mask . . . : 255.255.255.0</span></p>
+        <p><span class="result">&nbsp;&nbsp;Default Gateway . : 192.168.1.1</span></p>
+        <p><span class="result">&nbsp;&nbsp;DNS Servers . . . : 8.8.8.8</span></p>
+        <p><span class="result">&nbsp;&nbsp;Physical Address. : 00-1A-2B-3C-4D-5E</span></p>
+      </div>
+    </div>
+
+    <h3>tracert / traceroute</h3>
+    <p>Montre chak étape (hop) pakè a pase pou rive nan destinasyon an.</p>
+    <div class="terminal">
+      <div class="terminal-header"><div class="terminal-dot red"></div><div class="terminal-dot yellow"></div><div class="terminal-dot green"></div><span class="terminal-title">Command Prompt</span></div>
+      <div class="terminal-body">
+        <p><span class="prompt">C:\&gt;</span> <span class="cmd">tracert google.com</span></p>
+        <p><span class="result">1  &lt;1ms  192.168.1.1     ← Routeur lokal (gateway)</span></p>
+        <p><span class="result">2  8ms   10.0.0.1        ← Routeur ISP</span></p>
+        <p><span class="result">3  15ms  203.x.x.x       ← Nan ISP la</span></p>
+        <p><span class="result">4  18ms  142.250.80.46   ← Sèvè Google</span></p>
+      </div>
+    </div>
+
+    <h3>nslookup</h3>
+    <p>Rekèt DNS manyèl — tradui non an IP oswa IP an non.</p>
+    <div class="terminal">
+      <div class="terminal-header"><div class="terminal-dot red"></div><div class="terminal-dot yellow"></div><div class="terminal-dot green"></div><span class="terminal-title">Command Prompt</span></div>
+      <div class="terminal-body">
+        <p><span class="prompt">C:\&gt;</span> <span class="cmd">nslookup google.com</span></p>
+        <p><span class="result">Server:  dns.google (8.8.8.8)</span></p>
+        <p><span class="result">Name:    google.com</span></p>
+        <p><span class="result">Address: 142.250.80.46</span></p>
+      </div>
+    </div>
+
+    <h3>netstat</h3>
+    <p>Montre koneksyon rezo aktif ak pò k ap koute.</p>
+    <div class="terminal">
+      <div class="terminal-header"><div class="terminal-dot red"></div><div class="terminal-dot yellow"></div><div class="terminal-dot green"></div><span class="terminal-title">Command Prompt</span></div>
+      <div class="terminal-body">
+        <p><span class="prompt">C:\&gt;</span> <span class="cmd">netstat -an</span></p>
+        <p><span class="result">Proto  Local Address       Foreign Address     State</span></p>
+        <p><span class="result">TCP    0.0.0.0:80          0.0.0.0:0           LISTENING</span></p>
+        <p><span class="result">TCP    192.168.1.5:52432   142.250.80.46:443   ESTABLISHED</span></p>
+      </div>
+    </div>
+
+    <h3>arp</h3>
+    <p>Montre oswa jere tab ARP — korèlasyon IP ak MAC address.</p>
+    <div class="terminal">
+      <div class="terminal-header"><div class="terminal-dot red"></div><div class="terminal-dot yellow"></div><div class="terminal-dot green"></div><span class="terminal-title">Command Prompt</span></div>
+      <div class="terminal-body">
+        <p><span class="prompt">C:\&gt;</span> <span class="cmd">arp -a</span></p>
+        <p><span class="result">Interface: 192.168.1.5</span></p>
+        <p><span class="result">  192.168.1.1    00-1a-2b-3c-4d-5e  dynamic  ← Gateway</span></p>
+        <p><span class="result">  192.168.1.10   00-aa-bb-cc-dd-ee  dynamic</span></p>
+      </div>
+    </div>
+
+    <h3>Tablo Rezime Kòmand yo</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Kòmand</th><th>Windows</th><th>Linux/Mac</th><th>Wòl</th></tr></thead>
+        <tbody>
+          <tr><td>Wè konfigirasyon IP</td><td>ipconfig /all</td><td>ip addr / ifconfig</td><td>Montre IP, MAC, Gateway, DNS</td></tr>
+          <tr><td>Tès koneksyon</td><td>ping x.x.x.x</td><td>ping x.x.x.x</td><td>ICMP echo – teste reyachabilite</td></tr>
+          <tr><td>Trace wout</td><td>tracert x.x.x.x</td><td>traceroute x.x.x.x</td><td>Montre chak hop nan wout la</td></tr>
+          <tr><td>Rekèt DNS</td><td>nslookup domèn</td><td>nslookup / dig</td><td>Tradui non an IP</td></tr>
+          <tr><td>Koneksyon aktif</td><td>netstat -an</td><td>netstat -an / ss -an</td><td>Montre koneksyon TCP/UDP aktif</td></tr>
+          <tr><td>Tab ARP</td><td>arp -a</td><td>arp -a / ip neigh</td><td>Montre korèlasyon IP-MAC</td></tr>
+          <tr><td>Netwaye DNS cache</td><td>ipconfig /flushdns</td><td>systemd-resolve --flush-caches</td><td>Netwaye cache DNS lokal</td></tr>
+          <tr><td>Renouvle IP DHCP</td><td>ipconfig /renew</td><td>dhclient -r &amp;&amp; dhclient</td><td>Mande nouvo IP soti DHCP</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="security.html" class="btn btn-secondary">← Sekirite</a>
+    <a href="homelab.html" class="btn btn-primary">Home Lab →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis pou étidyan ayisyen.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Glosè – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Glosè</div>
+    <h1>📖 Glosè Rezo Enfòmatik</h1>
+    <p>97 tèm rezo enpòtan — Anglè, Definisyon an Kreyòl, ak Egzanp.</p>
+  </div>
+</div>
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+  <div class="search-bar">
+    <input type="text" id="search-input" class="search-input" placeholder="🔍 Chèche yon tèm..."/>
+    <span class="search-count" id="search-count">97 tèm</span>
+  </div>
+
+  <div id="glossary-container">
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Access Point</div>
+  <p class="glossary-def">Aparèy ki pèmèt koneksyon san fil (Wi-Fi) pou aparèy mobil yo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Yon AP Ubiquiti konekte 30 laptop nan yon sal klas.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Address Resolution Protocol (ARP)</div>
+  <p class="glossary-def">Pwotokòl ki jwenn adrès MAC ki koresponn ak yon adrès IP nan rezo lokal la.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Lè PC A vle ping PC B, li voye yon ARP Request pou jwenn MAC PC B.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">APIPA</div>
+  <p class="glossary-def">Automatic Private IP Addressing — Windows asiye otomatikman 169.254.x.x si DHCP echwe.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Si ou wè 169.254.x.x, DHCP pa travay.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Authentication</div>
+  <p class="glossary-def">Priyorite pou verifye idantite yon itilizatè oswa aparèy anvan ba aksè.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Saisir non itilizatè ak mo de pase se yon otantifikasyon.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Bandwidth</div>
+  <p class="glossary-def">Kantite done ki ka transmèt sou yon koneksyon nan yon segond — enprime an Mbps oswa Gbps.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Koneksyon 100 Mbps ka transfere 100 megabit chak segond.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">BGP</div>
+  <p class="glossary-def">Border Gateway Protocol — pwotokòl routing ant sistèm òtònom (ISP yo) sou Entènèt.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> BGP kontwole kijan Entènèt rote pakè ant ISP mondyal.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Broadcast</div>
+  <p class="glossary-def">Mesaj voye ak tout aparèy nan yon rezo an menm tan.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> ARP Request se yon broadcast — FF:FF:FF:FF:FF:FF.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Broadcast Domain</div>
+  <p class="glossary-def">Gwoup aparèy ki ka resevwa broadcast youn ak lòt.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Yon VLAN defini yon broadcast domain separe.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Cable Management</div>
+  <p class="glossary-def">Òganizasyon kab yo pou fasilite depannaj ak ventilasyon.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Itilize Velcro straps ak patch panel pou bon cable management.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">CIDR</div>
+  <p class="glossary-def">Classless Inter-Domain Routing — nòtasyon /xx pou esprime long masque sou-rezo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> 192.168.1.0/24 se nòtasyon CIDR ki montre 24 bit pou rezo.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">CIA Triad</div>
+  <p class="glossary-def">Twa pilye sekirite: Confidentialite, Entegrite, Disponibilite.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Sekirize done = asire CIA Triad la konplè.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Client</div>
+  <p class="glossary-def">Aparèy ki mande sèvis bay yon sèvè.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Navigatè entènèt ou se yon kliyan DNS ak HTTP.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Collision Domain</div>
+  <p class="glossary-def">Zòn kote pakè ka rantre an konfli si yo voye an menm tan.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Chak pò switch gen pwòp collision domain li.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Default Gateway</div>
+  <p class="glossary-def">Routeur ki transfere pakè ki prale deyò rezo lokal la.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Si IP Gateway ou 192.168.1.1, pakè Entènèt yo pase la.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">DHCP</div>
+  <p class="glossary-def">Dynamic Host Configuration Protocol — ba adrès IP otomatikman ak lòt enfòmasyon rezo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> DHCP Server bay PC ou 192.168.1.50 otomatikman.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">DNS</div>
+  <p class="glossary-def">Domain Name System — tradui non tankou google.com an adrès IP.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> DNS resoud example.com → 93.184.216.34.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">DORA</div>
+  <p class="glossary-def">Pwosesis DHCP: Discover, Offer, Request, Acknowledge.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Kliyan fè Discover, Sèvè ba Offer, Kliyan fè Request, Sèvè ACK.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">DoS</div>
+  <p class="glossary-def">Denial of Service — atitid pou rann yon sèvis inaksesib.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Yon atakè inonde yon sèvè ak millyon pakè pou kraze li.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">DDoS</div>
+  <p class="glossary-def">Distributed Denial of Service — DoS ki soti nan plizyè sous an menm tan.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Yon botnet 100,000 machin fè DDoS sou yon sit wèb.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">DMZ</div>
+  <p class="glossary-def">Demilitarized Zone — zòn rezo ki separe sèvè piblik yo nan rezo entèn.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Sèvè wèb ou nan DMZ — izole nan firewall.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Dynamic Routing</div>
+  <p class="glossary-def">Routing kote routeur yo pataje otomatikman enfòmasyon wout ak protokòl tankou OSPF, RIP.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> OSPF otomatikman ajiste wout si yon lyen tonbe.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">EIGRP</div>
+  <p class="glossary-def">Enhanced Interior Gateway Routing Protocol — pwotokòl routing Cisco proprietary.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> EIGRP pi rapid konvèje pase RIP.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Encapsulation</div>
+  <p class="glossary-def">Pwosesis ki ajoute antèt (headers) bay done nan chak kouch OSI.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Kouch 4 ajoute TCP header, Kouch 3 ajoute IP header.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Ethernet</div>
+  <p class="glossary-def">Teknoloji rezo kablaj ki pi itilize — defini pa IEEE 802.3.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Kab Cat6 Ethernet konekte PC a switch la nan 1 Gbps.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Evil Twin</div>
+  <p class="glossary-def">Yon faux access point ki imiite yon rezo Wi-Fi lejitim pou vòlè done.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Atakè kreye SSID 'Hotel_WiFi_Free' pou trompe vizitè.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Fiber Optic</div>
+  <p class="glossary-def">Kab ki transmèt done ak vitès limyè — trè vit ak distans long.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Koneksyon fibra optik ISP bay 1 Gbps longdistans.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Firewall</div>
+  <p class="glossary-def">Sistèm ki filtre trafik rezo selon règ — pèmèt oswa bloke.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Firewall pfSense bloke tout trafik ki pa soti pò 443 ak 80.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">FTP</div>
+  <p class="glossary-def">File Transfer Protocol — pou transfere fichye. Port 21. Pa chifre.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> FTP itilize pou mete fichye sou yon sèvè wèb.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Full Duplex</div>
+  <p class="glossary-def">Kominikasyon nan de direksyon an menm tan.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Kab Ethernet modèn travay an full duplex — resevwa ak voye an menm tan.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Gateway</div>
+  <p class="glossary-def">Aparèy ki sèvi kòm pwen antre/sòti pou trafik rezo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Routeur ou = default gateway pou tout PC lakay.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">GNS3</div>
+  <p class="glossary-def">Graphic Network Simulator 3 — simulatè rezo avanse pou pratike CCNA/Network+.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Etidyan itilize GNS3 pou simile rezo Cisco konplè.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Half Duplex</div>
+  <p class="glossary-def">Kominikasyon nan yon direksyon alafwa sèlman.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Walkie-talkie se half duplex — yon moun pale alafwa.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Host</div>
+  <p class="glossary-def">Nenpòt aparèy ki gen yon adrès IP sou yon rezo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> PC, Telefòn, Sèvè — tout se hôte.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">HTTP</div>
+  <p class="glossary-def">HyperText Transfer Protocol — pou chaje paj wèb. Port 80. Pa chifre.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Navigatè itilize HTTP pou mande paj wèb.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">HTTPS</div>
+  <p class="glossary-def">HTTP Secure — HTTP chifre ak TLS/SSL. Port 443.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> https://bank.com itilize HTTPS pou sekirize koneksyon.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Hub</div>
+  <p class="glossary-def">Aparèy Kouch 1 ki voye done a tout pò — obsolète.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Hub voye yon pakè ak 8 pò menm lè 1 pò sèlman ki mande.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">ICMP</div>
+  <p class="glossary-def">Internet Control Message Protocol — itilize pou mesaj kontwòl tankou ping.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> ping Google = ICMP Echo Request/Reply.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">IDS</div>
+  <p class="glossary-def">Intrusion Detection System — detekte atitid sispèk epi leve alèt.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> IDS detekte yon scan pò epi avèti administratè.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">IPS</div>
+  <p class="glossary-def">Intrusion Prevention System — detekte ak aktif bloke atitid.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> IPS otomatikman bloke yon atakè ki tante SQL Injection.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">IP</div>
+  <p class="glossary-def">Internet Protocol — pwotokòl ki ba adrès ak rote pakè sou rezo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> IPv4 adrès (32 bit) identifye chak aparèy sou Entènèt.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">IPv4</div>
+  <p class="glossary-def">Vèsyon 4 Internet Protocol — 32 bit, notasyon dezimal.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> 192.168.1.1 se yon adrès IPv4.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">IPv6</div>
+  <p class="glossary-def">Vèsyon 6 Internet Protocol — 128 bit, notasyon heksadesimal.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> 2001:0db8::1 se yon adrès IPv6.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">ISP</div>
+  <p class="glossary-def">Internet Service Provider — konpayi ki bay aksè Entènèt.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Natcom, Digicel, Turboteks se ISP Ayiti.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">LAN</div>
+  <p class="glossary-def">Local Area Network — rezo nan yon ti espas tankou yon bilding.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Rezo yon lekòl oswa yon biwo se yon LAN.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Latency</div>
+  <p class="glossary-def">Retay pou done ale nan sòs rive destinasyon — mezire an ms.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Ping 5ms = latèns twa bon. Ping 500ms = koneksyon lènt.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Lease</div>
+  <p class="glossary-def">Dire tan yon kliyan ka kenbe yon adrès IP DHCP a.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> DHCP lease 8 èdtan = PC renye IP chak 8 èdtan.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Loopback</div>
+  <p class="glossary-def">Adrès 127.0.0.1 — itilize pou teste stack TCP/IP lokal.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> ping 127.0.0.1 = teste stack TCP/IP pa ou.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">MAC Address</div>
+  <p class="glossary-def">Media Access Control — adrès fizik unik sou chak NIC (Kouch 2).</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> 00:1A:2B:3C:4D:5E se yon adrès MAC.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">MAN</div>
+  <p class="glossary-def">Metropolitan Area Network — rezo ki kouvri yon vil.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Rezo fibra yon ISP ki kouvri Pòtoprens se yon MAN.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Modem</div>
+  <p class="glossary-def">Aparèy ki konvèti siyal DSL/kab/fibra ISP a an Ethernet pou routeur ou.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Modem ADSL konekte ak liy telefòn ISP a.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Multicast</div>
+  <p class="glossary-def">Voye done ak yon gwoup espesifik aparèy (pa tout).</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> OSPF itilize multicast 224.0.0.5 pou kominike ant routeur.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">NAT</div>
+  <p class="glossary-def">Network Address Translation — tradui adrès IP prive an piblik.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Routeur lakay ou fè NAT pou tout PC yo pataje yon IP piblik.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">NIC</div>
+  <p class="glossary-def">Network Interface Card — kat rezo ki ba yon PC koneksyon fizik.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> NIC ou ba ou adrès MAC ou epi konekte ak switch la.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">OSPF</div>
+  <p class="glossary-def">Open Shortest Path First — pwotokòl routing dinamik link-state.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Gwo antèpriz itilize OSPF paske li konvèje vit.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">PAN</div>
+  <p class="glossary-def">Personal Area Network — rezo nan espas pèsonèl yon moun.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Bluetooth ant telefòn ak ecouteur se yon PAN.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Patch Panel</div>
+  <p class="glossary-def">Pano ak pò yo konekte kab Ethernet pou òganize kadran rezo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Patch panel nan rack konekte tout pò mural yo nan switch la.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Peer-to-Peer</div>
+  <p class="glossary-def">Achitekti kote aparèy yo egal — chak ka sèvi kòm kliyan ak sèvè.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Torrent sharing se peer-to-peer.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Phishing</div>
+  <p class="glossary-def">Atitid ki itilize imel oswa sit wèb fo pou vòlè done.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Imel fòs 'Bankèt ou: Klike pou renouvle' = phishing.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">ping</div>
+  <p class="glossary-def">Kòmand ki voye ICMP pakè pou tès konektivite.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> ping 192.168.1.1 = teste si routeur la reponn.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Port</div>
+  <p class="glossary-def">Nimewo (0-65535) ki identifye yon sèvis espesifik sou yon òdinatè.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> HTTP = port 80, HTTPS = 443, SSH = 22.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Proxy</div>
+  <p class="glossary-def">Entèmedyè ant kliyan ak sèvè — ka kache, filtre, oswa cache.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Proxy Squid filtre sit wèb pou elèv lekòl.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">QoS</div>
+  <p class="glossary-def">Quality of Service — priyorite trafik rezo (egzanp: voix > email).</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> QoS priyorite VoIP pou evite ko-koupaj pandan apèl.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Rack</div>
+  <p class="glossary-def">Estrikti metalik pou òganize aparèy rezo (sèvè, switch, patch panel).</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Yon rack 42U ka kenbe 42 aparèy 1U.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">RIP</div>
+  <p class="glossary-def">Routing Information Protocol — pwotokòl routing vye jenerasyon (maks 15 hops).</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> RIP pa touche pou gwo rezo — OSPF pi bon.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">RJ45</div>
+  <p class="glossary-def">Konnektè estanda pou kab Ethernet (8 broch).</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Kab Cat6 avèk konnektè RJ45 konekte PC a switch.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Router</div>
+  <p class="glossary-def">Aparèy Kouch 3 ki rote pakè ant rezo diferan.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Router lakay ou konekte LAN ou ak Entènèt ISP.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Routing Table</div>
+  <p class="glossary-def">Tab nan routeur ki montre kote voye pakè selon destinasyon.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> ip route show (Linux) oswa route print (Windows) montre routing table.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">SFTP</div>
+  <p class="glossary-def">Secure File Transfer Protocol — FTP chifre ak SSH. Port 22.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Administratè itilize SFTP pou transfere fichye konfidansyèl.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">SMTP</div>
+  <p class="glossary-def">Simple Mail Transfer Protocol — pou voye imel. Port 25.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Gmail itilize SMTP pou voye imel ou.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">SNMP</div>
+  <p class="glossary-def">Simple Network Management Protocol — monitore aparèy rezo. Port 161.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Sèvè Zabbix itilize SNMP pou kouri routeur yo.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">SSH</div>
+  <p class="glossary-def">Secure Shell — koneksyon adistans sekirize, chifre. Port 22.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> ssh admin@192.168.1.1 = konekte ak routeur la sekirizman.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">SSID</div>
+  <p class="glossary-def">Service Set Identifier — non yon rezo Wi-Fi.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> SSID 'MonRezo_5G' se non rezo Wi-Fi mwen an.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Static IP</div>
+  <p class="glossary-def">Adrès IP manyèlman konfigire ki pa chanje.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Sèvè toujou gen IP estatik pou yo ka toujou jwenn yo.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Static Routing</div>
+  <p class="glossary-def">Wout rezo konfigire manyèlman pa administratè.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> ip route 10.0.0.0 255.0.0.0 192.168.1.254 = static route.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Subnet</div>
+  <p class="glossary-def">Yon pòsyon rezo ki separe pa masque sou-rezo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> 192.168.1.0/24 ak 192.168.2.0/24 se de sou-rezo diferan.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Subnet Mask</div>
+  <p class="glossary-def">Nimewo 32 bit ki separe pati rezo ak pati hôte nan yon adrès IP.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> 255.255.255.0 (/24) = 24 bit pou rezo, 8 bit pou hôte.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Switch</div>
+  <p class="glossary-def">Aparèy Kouch 2 ki konekte aparèy nan menm rezo, voye done espesifikman.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Switch 24 pò konekte tout PC nan yon biwo.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">TCP</div>
+  <p class="glossary-def">Transmission Control Protocol — pwotokòl fyab ak koneksyon (3-way handshake).</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> HTTP itilize TCP pou asire paj wèb rive konplètman.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Telnet</div>
+  <p class="glossary-def">Pwotokòl aksè adistans NON chifre. Port 23. Pa sekirize.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Remplace Telnet ak SSH pou sekirite.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">TFTP</div>
+  <p class="glossary-def">Trivial File Transfer Protocol — FTP senp, pa chifre. Port 69.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Routeur Cisco itilize TFTP pou chaje firmware.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Topology</div>
+  <p class="glossary-def">Aranjman fizik oswa lojik aparèy ak koneksyon nan yon rezo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Star topology pi randan pou rezo kay.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Traceroute</div>
+  <p class="glossary-def">Kòmand ki montre chak sote (hop) yon pakè fè pou rive destinasyon.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> tracert google.com montre wout pakè la pran pou rive Google.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Trunk Port</div>
+  <p class="glossary-def">Pò switch ki ka pote trafik plizyè VLAN an menm tan.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Lyen ant switch ak routeur se souvantou trunk port.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">TTL</div>
+  <p class="glossary-def">Time To Live — nimewo ki diminye nan chak routeur; pakè jete si TTL=0.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> TTL pa default 128 (Windows) oswa 64 (Linux).</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">UDP</div>
+  <p class="glossary-def">User Datagram Protocol — pwotokòl rapid san verifye livrezon.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> DNS, DHCP, ak streaming vidyo itilize UDP.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">UPS</div>
+  <p class="glossary-def">Uninterruptible Power Supply — bèf kouran pou pwoteje aparèy kont koupe kouran.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> UPS ba yon sèvè 10-30 minit backup kouran.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">URL</div>
+  <p class="glossary-def">Uniform Resource Locator — adrès konplè yon resous sou entènèt.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> https://www.example.com/page se yon URL.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">VLAN</div>
+  <p class="glossary-def">Virtual LAN — segmentasyon lojik yon rezo fizik an plizyè rezo vityèl.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> VLAN IT ak VLAN RH separe trafik ant depatman yo.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">VPN</div>
+  <p class="glossary-def">Virtual Private Network — tunel chifre sou yon rezo piblik.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Travayè adistans itilize VPN pou konekte sekirizman ak biwo a.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">WAN</div>
+  <p class="glossary-def">Wide Area Network — rezo ki kouvri distans long (ant vil, peyi).</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Entènèt se pi gwo WAN ki egziste.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">WPA2</div>
+  <p class="glossary-def">Wi-Fi Protected Access 2 — sekirite Wi-Fi ak AES encryption.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Aktive WPA2-AES sou routeur ou pou sekirite Wi-Fi.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">WPA3</div>
+  <p class="glossary-def">Vèsyon pli nouvo WPA — pi solid pase WPA2.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> WPA3 rezoud plizyè feblès WPA2 tankou KRACK.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">Wireshark</div>
+  <p class="glossary-def">Lojisyèl capture ak analize trafik rezo.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Administratè itilize Wireshark pou depane pwoblèm rezo konplèks.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">802.11</div>
+  <p class="glossary-def">Estanda IEEE pou Wi-Fi.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> 802.11ac (Wi-Fi 5) ak 802.11ax (Wi-Fi 6) se estanda modèn.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">802.1Q</div>
+  <p class="glossary-def">Estanda IEEE pou VLAN tagging sou trunk ports.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> 802.1Q ajoute yon 4-byte tag nan tèt frame pou idantifye VLAN.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">802.3</div>
+  <p class="glossary-def">Estanda IEEE pou Ethernet.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Ethernet 802.3 defini kòman done transmèt sou kab Ethernet.</div>
+</div>
+<div class="glossary-item searchable-item">
+  <div class="glossary-term">3-Way Handshake</div>
+  <p class="glossary-def">Pwosesis etabli koneksyon TCP: SYN, SYN-ACK, ACK.</p>
+  <div class="glossary-example"><span class="example-label">Egzanp:</span> Navigatè voye SYN, Sèvè reponn SYN-ACK, Navigatè fini ak ACK.</div>
+</div>
+  </div>
+  <p class="hidden" id="no-results" style="color:var(--text-muted);text-align:center;padding:2rem;">Okenn rezilta jwenn. Eseye yon lòt mo.</p>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="quiz.html" class="btn btn-secondary">← Quiz</a>
+    <a href="resources.html" class="btn btn-primary">Resous →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
