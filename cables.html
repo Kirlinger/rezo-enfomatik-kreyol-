@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kab ak Medya – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Kab ak Medya</div>
+    <h1>🔌 Kab ak Medya Rezo</h1>
+    <p>Aprann sou diferan tip kab ak medya ki itilize pou transmèt done nan rezo — Ethernet, fibè optik, San fil ak plis.</p>
+  </div>
+</div>
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="content-section">
+    <h2>Kab Ethernet (Twisté Pair)</h2>
+    <p>Kab <strong>Ethernet (Twisted Pair)</strong> se tip kab ki pi souvan itilize nan rezo lokal (LAN). Li gen <strong>4 pè fil tòde</strong> anndan pou redui entèferans. Gen de tip:</p>
+    <div class="grid grid-2 mt-2">
+      <div class="card"><span class="card-icon">🔌</span><h3>UTP – Unshielded Twisted Pair</h3><p>Pa gen pwoteksyon an metal. Bon mache epi pi souvan itilize. 100m limit maksimòm pou Ethernet.</p><span class="badge badge-blue">Pi Komen</span></div>
+      <div class="card"><span class="card-icon">🛡️</span><h3>STP – Shielded Twisted Pair</h3><p>Gen yon kouvèti metal pou pwoteje kont entèferans elektwomayetik. Pi chè men pi solid nan anviwonman ki gen anpil entèferans.</p><span class="badge badge-cyan">Pwoteje</span></div>
+    </div>
+
+    <h3>Kategori Kab Ethernet yo</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Kategori</th><th>Vitès Max</th><th>Frekans</th><th>Itilizasyon</th></tr></thead>
+        <tbody>
+          <tr><td>Cat5</td><td>100 Mbps</td><td>100 MHz</td><td>Ansyen rezo Fast Ethernet</td></tr>
+          <tr><td><strong>Cat5e</strong></td><td>1 Gbps</td><td>100 MHz</td><td>Rezo Kay ak Biwo modèn</td></tr>
+          <tr><td><strong>Cat6</strong></td><td>10 Gbps (55m)</td><td>250 MHz</td><td>Biwo ak saldonnèt</td></tr>
+          <tr><td>Cat6a</td><td>10 Gbps (100m)</td><td>500 MHz</td><td>Saldonnèt ak kampis</td></tr>
+          <tr><td>Cat7</td><td>10 Gbps</td><td>600 MHz</td><td>Saldonnèt avanse</td></tr>
+          <tr><td>Cat8</td><td>25/40 Gbps</td><td>2000 MHz</td><td>Saldonnèt dansité wo</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box tip"><div class="icon">💡</div><div class="body"><strong>Rekòmandasyon:</strong><p>Pou nouvo entalasyon lakay ou oswa biwo, itilize <strong>Cat6</strong> pou bon balans ant pri ak pèfòmans.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Konèktè RJ45</h2>
+    <p>Kab Ethernet konekte ak yon <strong>konèktè RJ45</strong> (Registered Jack 45). Li gen 8 kontakt (broches) ki koresponn ak 8 fil nan kab la.</p>
+    
+    <h3>Estanda Kablaj: T568A vs T568B</h3>
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <h3>T568B – Pi Komen</h3>
+        <p>Lòd fil yo (koule):</p>
+        <div style="display:flex;flex-direction:column;gap:0.2rem;margin-top:0.5rem;">
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;"><div style="width:16px;height:16px;background:#f97316;border-radius:2px;"></div><span>1 – Zoranj-Blan</span></div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;"><div style="width:16px;height:16px;background:#f97316;border-radius:2px;"></div><span>2 – Zoranj</span></div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;"><div style="width:16px;height:16px;background:#22c55e;border-radius:2px;"></div><span>3 – Vèt-Blan</span></div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;"><div style="width:16px;height:16px;background:#3b82f6;border-radius:2px;"></div><span>4 – Blè</span></div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;"><div style="width:16px;height:16px;background:#3b82f6;border-radius:2px;opacity:0.6;"></div><span>5 – Blè-Blan</span></div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;"><div style="width:16px;height:16px;background:#22c55e;border-radius:2px;"></div><span>6 – Vèt</span></div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;"><div style="width:16px;height:16px;background:#a855f7;border-radius:2px;"></div><span>7 – Mawon-Blan</span></div>
+          <div style="display:flex;align-items:center;gap:0.5rem;font-size:0.85rem;"><div style="width:16px;height:16px;background:#a855f7;border-radius:2px;"></div><span>8 – Mawon</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>T568A</h3>
+        <p>Menm kòm T568B men pèmite 1-2 ak 3-6. Itilize nan gouvènman US ak kèk instalayon.</p>
+        <div class="info-box warning" style="margin-top:1rem;"><div class="icon">⚠️</div><div class="body"><strong>Enpòtan:</strong><p>Se pa kalite ki enpòtan men <strong>konsistans</strong>. Itilize menm estanda nan de bout kab la.</p></div></div>
+      </div>
+    </div>
+
+    <h3>Kab Dwat (Straight-through) vs Kwaze (Crossover)</h3>
+    <div class="table-wrapper mt-2">
+      <table>
+        <thead><tr><th>Tip Kab</th><th>Kouman</th><th>Itilize pou</th><th>Egzanp</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Straight-through</strong></td><td>De bout menm estanda (T568B-T568B)</td><td>Konekte aparèy diferan</td><td>PC→Switch, Router→Switch</td></tr>
+          <tr><td><strong>Crossover</strong></td><td>De bout diferan (T568A-T568B)</td><td>Konekte aparèy menm kalite</td><td>PC→PC, Switch→Switch</td></tr>
+          <tr><td><strong>Rollover</strong></td><td>Opozit konplè</td><td>Koneksyon konsòl (console)</td><td>Laptop→Pò Console Router</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box note"><div class="icon">💡</div><div class="body"><strong>MDI-X Otomatik:</strong><p>Pifò aparèy modèn yo gen <strong>Auto MDI-X</strong> ki detekte otomatikman ki tip kab ou konekte. Donk kab crossover souvan pa nesesè ankò.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Fibè Optik (Fiber Optic)</h2>
+    <p>Kab <strong>Fibè Optik</strong> transmèt done kòm <strong>siyal limyè (photon)</strong> nan yon fil vè oswa plastik trè piti. Li pi rapid, pi long distans, ak imun kont entèferans elektwomayetik.</p>
+    
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <span class="card-icon">💛</span>
+        <h3>Single-Mode Fiber (SMF)</h3>
+        <p>Yon sèl chemen pou limyè. Pi piti (9 mikron). Pi long distans (jis 100 km). Pi chè. Jòn jeneralman.</p>
+        <span class="badge badge-yellow">Distans Long</span>
+      </div>
+      <div class="card">
+        <span class="card-icon">🟠</span>
+        <h3>Multi-Mode Fiber (MMF)</h3>
+        <p>Plizyè chemen pou limyè. Pi gwo (50/62.5 mikron). Pi kout distans (jis 2 km). Mwens chè. Oranj/Ble jeneralman.</p>
+        <span class="badge badge-cyan">Distans Kout</span>
+      </div>
+    </div>
+
+    <h3>Avantaj Fibè Optik</h3>
+    <ul>
+      <li>Vitès trè wo — jis 400 Gbps ak plis</li>
+      <li>Imun kont entèferans elektwomayetik (EMI)</li>
+      <li>Kowòp distans ki pi long (jis 100 km pou SMF)</li>
+      <li>Sekirite pi bon — difisil pou entèsepte</li>
+    </ul>
+    <div class="info-box tip"><div class="icon">🚀</div><div class="body"><strong>Ayiti ak Fibè Optik:</strong><p>Natcom ak lòt founisè entènèt an Ayiti kòmanse deploye fibè optik pou bay koneksyon pi rapid nan vil prensipal yo.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Kab Koaksyal (Coaxial)</h2>
+    <p>Kab <strong>Koaksyal (Coax)</strong> gen yon fil santral andan, yon kouch izolasyon, yon griyaj metal pou pwoteksyon, ak yon kouvèti deyò. Itilize pou TV kab ak ansyen rezo.</p>
+    <div class="grid grid-2 mt-2">
+      <div class="card"><h3>RG-6</h3><p>Itilize pou TV kab ak internet kab (Cable Modem). Plis souvan jodi a.</p></div>
+      <div class="card"><h3>RG-58</h3><p>Ansyen rezo Ethernet (10Base-2, "Thin Ethernet"). Rarement itilize jodi a.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Medya San Fil (Wireless)</h2>
+    <p>Rezo <strong>San Fil</strong> transmèt done kòm <strong>siyal radyo</strong> atravè lè a. Pa bezwen kab fizik.</p>
+    <div class="grid grid-3 mt-2">
+      <div class="card"><span class="card-icon">📶</span><h3>Wi-Fi (802.11)</h3><p>Teknoloji san fil ki pi popilè pou LAN. Itilize nan kay, biwo, kafeterya.</p></div>
+      <div class="card"><span class="card-icon">📡</span><h3>Cellular (4G/5G)</h3><p>Rezo selilè pou aparèy mobil. 5G bay vitès trè wo (jis 10 Gbps)</p></div>
+      <div class="card"><span class="card-icon">🔵</span><h3>Bluetooth</h3><p>Distans kout (~10m). Pou ekipman pèsonèl: ecoute, clavier, souris.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Jesyon Kab (Cable Management)</h2>
+    <p>Bon <strong>jesyon kab</strong> enpòtan pou rezo ki òganize, fasil depane, ak bon airflow nan rack la.</p>
+    <ul>
+      <li>Itilize <strong>velcro straps</strong> oswa tie wraps pou regwoupe kab yo</li>
+      <li>Etikete chak kab ak de bout li yo</li>
+      <li>Separe kab pouvwa ak kab done pou redui entèferans</li>
+      <li>Itilize <strong>patch panel</strong> pou koneksyon òganize</li>
+      <li>Jwenn <strong>kab bon longè</strong> — pa twò long, pa twò kout</li>
+    </ul>
+
+    <h3>Rezime Konparezyon Medya yo</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Tip Medya</th><th>Vitès</th><th>Distans Max</th><th>Koût</th><th>Entèferans</th></tr></thead>
+        <tbody>
+          <tr><td>Cat5e (UTP)</td><td>1 Gbps</td><td>100m</td><td>Bon mache</td><td>Modere</td></tr>
+          <tr><td>Cat6 (UTP)</td><td>10 Gbps / 55m</td><td>100m</td><td>Modere</td><td>Modere</td></tr>
+          <tr><td>Cat6a (STP)</td><td>10 Gbps</td><td>100m</td><td>Modere+</td><td>Fèb</td></tr>
+          <tr><td>Fibè Optik MMF</td><td>10-100 Gbps</td><td>2 km</td><td>Chè</td><td>Okenn</td></tr>
+          <tr><td>Fibè Optik SMF</td><td>400+ Gbps</td><td>100 km</td><td>Trè chè</td><td>Okenn</td></tr>
+          <tr><td>Wi-Fi (802.11ax)</td><td>9.6 Gbps teorik</td><td>~100m</td><td>Modere</td><td>Wo</td></tr>
+          <tr><td>Koaksyal</td><td>1 Gbps</td><td>500m</td><td>Modere</td><td>Fèb</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="devices.html" class="btn btn-secondary">← Aparèy Rezo</a>
+    <a href="ip-addressing.html" class="btn btn-primary">Adrès IP →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis pou étidyan ayisyen.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

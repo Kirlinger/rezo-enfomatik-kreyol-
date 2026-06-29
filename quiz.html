@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Quiz</div>
+    <h1>❓ Quiz Rezo Enfòmatik</h1>
+    <p>50 kesyon chwa miltip kouvri tout sijè rezo. Bon chans! 🇭🇹</p>
+  </div>
+</div>
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="info-box tip mb-3">
+    <div class="icon">📌</div>
+    <div class="body"><strong>Enstriksyon:</strong><p>Chwazi yon repons pou chak kesyon, apre sa klike <strong>"Verifye Repons"</strong>. Repons kòrèk yo ap parèt an vèt, mawon an wòj.</p></div>
+  </div>
+
+  <form id="quiz-form">
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q1.</span> Kisa yon rezo òdinatè ye?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q1" value="A"/>A. Yon sèl òdinatè entèlijan</label><label class="quiz-option"><input type="radio" name="q1" value="B"/>B. Yon gwoup aparèy konekte ki pataje resous ak enfòmasyon</label><label class="quiz-option"><input type="radio" name="q1" value="C"/>C. Yon pwogram pou navigasyon entènèt</label><label class="quiz-option"><input type="radio" name="q1" value="D"/>D. Yon sèvè DNS</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Yon rezo se yon gwoup aparèy konekte ki ka kominike ak pataje resous.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q2.</span> Ki sijla ki rele rezo lokal nan yon bilding oswa kay?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q2" value="A"/>A. LAN</label><label class="quiz-option"><input type="radio" name="q2" value="B"/>B. WAN</label><label class="quiz-option"><input type="radio" name="q2" value="C"/>C. MAN</label><label class="quiz-option"><input type="radio" name="q2" value="D"/>D. PAN</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> LAN = Local Area Network — rezo nan yon ti espas tankou yon bilding oswa kay.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q3.</span> Ki modèl rezo pou konekte yon vil?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q3" value="A"/>A. LAN</label><label class="quiz-option"><input type="radio" name="q3" value="B"/>B. WAN</label><label class="quiz-option"><input type="radio" name="q3" value="C"/>C. MAN</label><label class="quiz-option"><input type="radio" name="q3" value="D"/>D. PAN</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> MAN = Metropolitan Area Network — kouvri yon vil oswa rejyon.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q4.</span> Nan modèl kliyan-sèvè, ki aparèy ki bay sèvis yo?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q4" value="A"/>A. Kliyan</label><label class="quiz-option"><input type="radio" name="q4" value="B"/>B. Sèvè</label><label class="quiz-option"><input type="radio" name="q4" value="C"/>C. Switch</label><label class="quiz-option"><input type="radio" name="q4" value="D"/>D. Router</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Sèvè bay sèvis — fichye, imel, wèb. Kliyan mande sèvis yo.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q5.</span> Ki diferans ant Entènèt ak Entranèt?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q5" value="A"/>A. Entènèt se piblik, Entranèt se prive pou yon òganizasyon</label><label class="quiz-option"><input type="radio" name="q5" value="B"/>B. Yo menm bagay</label><label class="quiz-option"><input type="radio" name="q5" value="C"/>C. Entranèt se pi vit</label><label class="quiz-option"><input type="radio" name="q5" value="D"/>D. Entènèt se pou machin sèlman</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Entènèt se rezo mondyal piblik. Entranèt se rezo prive entèn yon konpayi.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q6.</span> Nan ki topoloji tout aparèy konekte a yon sèl kab santral?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q6" value="A"/>A. Star</label><label class="quiz-option"><input type="radio" name="q6" value="B"/>B. Ring</label><label class="quiz-option"><input type="radio" name="q6" value="C"/>C. Bus</label><label class="quiz-option"><input type="radio" name="q6" value="D"/>D. Mesh</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Bus topoloji itilize yon sèl kab santral — si li kase, tout rezo tonbe.</div>
+</div>
+<div class="quiz-question" data-answer="D">
+  <p class="q-text"><span class="q-num">Q7.</span> Ki topoloji ki ofri pi bon redondans kote chak aparèy konekte ak tout lòt?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q7" value="A"/>A. Bus</label><label class="quiz-option"><input type="radio" name="q7" value="B"/>B. Star</label><label class="quiz-option"><input type="radio" name="q7" value="C"/>C. Ring</label><label class="quiz-option"><input type="radio" name="q7" value="D"/>D. Mesh</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Mesh topoloji gen redondans — chak nœud gen plizyè wout.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q8.</span> Nan Star topoloji, ki aparèy ki nan mitan an?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q8" value="A"/>A. Router</label><label class="quiz-option"><input type="radio" name="q8" value="B"/>B. Switch oswa Hub</label><label class="quiz-option"><input type="radio" name="q8" value="C"/>C. Sèvè</label><label class="quiz-option"><input type="radio" name="q8" value="D"/>D. Firewall</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Nan Star topoloji, yon Switch oswa Hub nan mitan konekte tout aparèy.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q9.</span> OSI gen konbyen kouch?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q9" value="A"/>A. 4</label><label class="quiz-option"><input type="radio" name="q9" value="B"/>B. 7</label><label class="quiz-option"><input type="radio" name="q9" value="C"/>C. 5</label><label class="quiz-option"><input type="radio" name="q9" value="D"/>D. 3</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Modèl OSI gen 7 kouch — Physical, Data Link, Network, Transport, Session, Presentation, Application.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q10.</span> Ki kouch OSI ki responsab adrèsaj IP?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q10" value="A"/>A. Kouch 2</label><label class="quiz-option"><input type="radio" name="q10" value="B"/>B. Kouch 1</label><label class="quiz-option"><input type="radio" name="q10" value="C"/>C. Kouch 3</label><label class="quiz-option"><input type="radio" name="q10" value="D"/>D. Kouch 4</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Kouch 3 (Network) responsab adrèsaj IP ak routage.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q11.</span> Ki kouch OSI ki konvèti bit an siyal fizik?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q11" value="A"/>A. Kouch 1 (Physical)</label><label class="quiz-option"><input type="radio" name="q11" value="B"/>B. Kouch 2 (Data Link)</label><label class="quiz-option"><input type="radio" name="q11" value="C"/>C. Kouch 3 (Network)</label><label class="quiz-option"><input type="radio" name="q11" value="D"/>D. Kouch 4 (Transport)</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Kouch 1 (Physical) konvèti done an siyal elektrik, limyè, oswa radyo.</div>
+</div>
+<div class="quiz-question" data-answer="D">
+  <p class="q-text"><span class="q-num">Q12.</span> Ki pwotokòl ki travay nan Kouch 4 (Transport)?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q12" value="A"/>A. IP</label><label class="quiz-option"><input type="radio" name="q12" value="B"/>B. Ethernet</label><label class="quiz-option"><input type="radio" name="q12" value="C"/>C. HTTP</label><label class="quiz-option"><input type="radio" name="q12" value="D"/>D. TCP ak UDP</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> TCP ak UDP se pwotokòl Kouch 4 (Transport).</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q13.</span> TCP/IP gen konbyen kouch?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q13" value="A"/>A. 7</label><label class="quiz-option"><input type="radio" name="q13" value="B"/>B. 4</label><label class="quiz-option"><input type="radio" name="q13" value="C"/>C. 5</label><label class="quiz-option"><input type="radio" name="q13" value="D"/>D. 3</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> TCP/IP gen 4 kouch: Network Interface, Internet, Transport, Application.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q14.</span> Ki sa ki adrès 127.0.0.1 rele?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q14" value="A"/>A. Loopback</label><label class="quiz-option"><input type="radio" name="q14" value="B"/>B. APIPA</label><label class="quiz-option"><input type="radio" name="q14" value="C"/>C. Broadcast</label><label class="quiz-option"><input type="radio" name="q14" value="D"/>D. Multicast</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> 127.0.0.1 se adrès loopback — pou teste stack TCP/IP lokal.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q15.</span> Ki plaj adrès APIPA?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q15" value="A"/>A. 10.0.0.0 – 10.255.255.255</label><label class="quiz-option"><input type="radio" name="q15" value="B"/>B. 192.168.0.0 – 192.168.255.255</label><label class="quiz-option"><input type="radio" name="q15" value="C"/>C. 169.254.0.0 – 169.254.255.255</label><label class="quiz-option"><input type="radio" name="q15" value="D"/>D. 172.16.0.0 – 172.31.255.255</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> APIPA (169.254.x.x) asiye otomatikman si DHCP echwe.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q16.</span> Ki sa ki Default Gateway?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q16" value="A"/>A. Adrès sèvè DNS</label><label class="quiz-option"><input type="radio" name="q16" value="B"/>B. Routeur ki konekte rezo lokal la ak lòt rezo</label><label class="quiz-option"><input type="radio" name="q16" value="C"/>C. Masque sou-rezo a</label><label class="quiz-option"><input type="radio" name="q16" value="D"/>D. Adrès broadcast la</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Default Gateway se routeur ki voye pakè deyò rezo lokal la.</div>
+</div>
+<div class="quiz-question" data-answer="D">
+  <p class="q-text"><span class="q-num">Q17.</span> Ki adrès IP ki prive selon RFC 1918?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q17" value="A"/>A. 8.8.8.8</label><label class="quiz-option"><input type="radio" name="q17" value="B"/>B. 200.100.50.25</label><label class="quiz-option"><input type="radio" name="q17" value="C"/>C. 172.217.1.1</label><label class="quiz-option"><input type="radio" name="q17" value="D"/>D. 10.0.0.1</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> 10.0.0.0/8, 172.16.0.0/12, ak 192.168.0.0/16 se adrès prive RFC 1918.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q18.</span> Konbyen bit yon adrès IPv4 genyen?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q18" value="A"/>A. 32 bit</label><label class="quiz-option"><input type="radio" name="q18" value="B"/>B. 64 bit</label><label class="quiz-option"><input type="radio" name="q18" value="C"/>C. 128 bit</label><label class="quiz-option"><input type="radio" name="q18" value="D"/>D. 16 bit</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> IPv4 se 32 bit — ekri nan 4 oktet dezimal.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q19.</span> Ki nòtasyon ki itilize pou espesifye long prefiks sou-rezo?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q19" value="A"/>A. MAC</label><label class="quiz-option"><input type="radio" name="q19" value="B"/>B. CIDR</label><label class="quiz-option"><input type="radio" name="q19" value="C"/>C. DHCP</label><label class="quiz-option"><input type="radio" name="q19" value="D"/>D. APIPA</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> CIDR (Classless Inter-Domain Routing) itilize /xx pou eksprime long mask la.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q20.</span> Konbyen adrès ip total ki gen nan yon /24?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q20" value="A"/>A. 256</label><label class="quiz-option"><input type="radio" name="q20" value="B"/>B. 128</label><label class="quiz-option"><input type="radio" name="q20" value="C"/>C. 512</label><label class="quiz-option"><input type="radio" name="q20" value="D"/>D. 64</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> /24 gen 256 adrès (254 itilizab + 1 rezo + 1 broadcast).</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q21.</span> Nan yon sou-rezo /26, konbyen adrès itilizab genyen?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q21" value="A"/>A. 30</label><label class="quiz-option"><input type="radio" name="q21" value="B"/>B. 62</label><label class="quiz-option"><input type="radio" name="q21" value="C"/>C. 126</label><label class="quiz-option"><input type="radio" name="q21" value="D"/>D. 14</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> /26 = 64 adrès total — 62 itilizab (retire Network ID ak Broadcast).</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q22.</span> Ki adrès ki dènye nan yon sou-rezo, pou voye mesaj ak tout aparèy?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q22" value="A"/>A. Network ID</label><label class="quiz-option"><input type="radio" name="q22" value="B"/>B. Default Gateway</label><label class="quiz-option"><input type="radio" name="q22" value="C"/>C. Broadcast</label><label class="quiz-option"><input type="radio" name="q22" value="D"/>D. Loopback</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Broadcast address se dènye adrès — voye pakè ak tout aparèy nan rezo a.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q23.</span> Sou ki pò HTTP travay?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q23" value="A"/>A. 80</label><label class="quiz-option"><input type="radio" name="q23" value="B"/>B. 443</label><label class="quiz-option"><input type="radio" name="q23" value="C"/>C. 22</label><label class="quiz-option"><input type="radio" name="q23" value="D"/>D. 25</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> HTTP = port 80. HTTPS = port 443.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q24.</span> Ki pwotokòl ki ba koneksyon chifre pou administrasyon?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q24" value="A"/>A. Telnet</label><label class="quiz-option"><input type="radio" name="q24" value="B"/>B. FTP</label><label class="quiz-option"><input type="radio" name="q24" value="C"/>C. SSH</label><label class="quiz-option"><input type="radio" name="q24" value="D"/>D. SMTP</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> SSH (port 22) ba koneksyon chifre. Telnet (port 23) pa chifre.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q25.</span> Ki pwotokòl ki tradui non domèn an adrès IP?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q25" value="A"/>A. DHCP</label><label class="quiz-option"><input type="radio" name="q25" value="B"/>B. DNS</label><label class="quiz-option"><input type="radio" name="q25" value="C"/>C. ARP</label><label class="quiz-option"><input type="radio" name="q25" value="D"/>D. ICMP</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> DNS tradui non tankou google.com an adrès IP.</div>
+</div>
+<div class="quiz-question" data-answer="D">
+  <p class="q-text"><span class="q-num">Q26.</span> Sou ki pò SMTP travay?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q26" value="A"/>A. 110</label><label class="quiz-option"><input type="radio" name="q26" value="B"/>B. 143</label><label class="quiz-option"><input type="radio" name="q26" value="C"/>C. 993</label><label class="quiz-option"><input type="radio" name="q26" value="D"/>D. 25</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> SMTP = port 25 — pwotokòl pou voye imel.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q27.</span> Ki diferans ant TCP ak UDP?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q27" value="A"/>A. TCP fyab (connection-oriented), UDP pa fyab (connectionless)</label><label class="quiz-option"><input type="radio" name="q27" value="B"/>B. UDP toujou pi vit pase TCP</label><label class="quiz-option"><input type="radio" name="q27" value="C"/>C. TCP itilize nan streaming vidyo</label><label class="quiz-option"><input type="radio" name="q27" value="D"/>D. Yo menm bagay</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> TCP verifye livrezon (3-way handshake). UDP voye san verifye — pi vit men mwens garanti.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q28.</span> Ki pwotokòl ping itilize?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q28" value="A"/>A. TCP</label><label class="quiz-option"><input type="radio" name="q28" value="B"/>B. ICMP</label><label class="quiz-option"><input type="radio" name="q28" value="C"/>C. UDP</label><label class="quiz-option"><input type="radio" name="q28" value="D"/>D. ARP</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> ping itilize ICMP (Internet Control Message Protocol).</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q29.</span> Ki pò SSH travay sou li?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q29" value="A"/>A. 23</label><label class="quiz-option"><input type="radio" name="q29" value="B"/>B. 22</label><label class="quiz-option"><input type="radio" name="q29" value="C"/>C. 21</label><label class="quiz-option"><input type="radio" name="q29" value="D"/>D. 443</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> SSH = port 22. Telnet = 23. FTP = 21. HTTPS = 443.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q30.</span> Ki pwosesis DHCP la?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q30" value="A"/>A. DNS – DHCP – ACK – REQUEST</label><label class="quiz-option"><input type="radio" name="q30" value="B"/>B. OFFER – DISCOVER – ACK – REQUEST</label><label class="quiz-option"><input type="radio" name="q30" value="C"/>C. DISCOVER – OFFER – REQUEST – ACKNOWLEDGE</label><label class="quiz-option"><input type="radio" name="q30" value="D"/>D. REQUEST – ACK – OFFER – DISCOVER</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> DORA: Discover → Offer → Request → Acknowledge</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q31.</span> Ki rekò DNS ki mappe yon non domèn an IPv4?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q31" value="A"/>A. Rekò A</label><label class="quiz-option"><input type="radio" name="q31" value="B"/>B. Rekò AAAA</label><label class="quiz-option"><input type="radio" name="q31" value="C"/>C. Rekò MX</label><label class="quiz-option"><input type="radio" name="q31" value="D"/>D. Rekò CNAME</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Rekò A mappe non domèn an adrès IPv4.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q32.</span> Ki rekò DNS ki montre sèvè imel pou yon domèn?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q32" value="A"/>A. Rekò A</label><label class="quiz-option"><input type="radio" name="q32" value="B"/>B. Rekò CNAME</label><label class="quiz-option"><input type="radio" name="q32" value="C"/>C. Rekò MX</label><label class="quiz-option"><input type="radio" name="q32" value="D"/>D. Rekò TXT</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Rekò MX (Mail Exchange) endike sèvè imel pou yon domèn.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q33.</span> Ki sèvè DNS piblik Google?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q33" value="A"/>A. 1.1.1.1</label><label class="quiz-option"><input type="radio" name="q33" value="B"/>B. 8.8.8.8</label><label class="quiz-option"><input type="radio" name="q33" value="C"/>C. 9.9.9.9</label><label class="quiz-option"><input type="radio" name="q33" value="D"/>D. 208.67.222.222</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> 8.8.8.8 se sèvè DNS piblik Google. 1.1.1.1 = Cloudflare.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q34.</span> Ki ekipman ki travay nan Kouch 3 epi rote pakè ant rezo?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q34" value="A"/>A. Router</label><label class="quiz-option"><input type="radio" name="q34" value="B"/>B. Switch</label><label class="quiz-option"><input type="radio" name="q34" value="C"/>C. Hub</label><label class="quiz-option"><input type="radio" name="q34" value="D"/>D. Modem</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Router travay nan Kouch 3 — li wè adrès IP epi chwazi pi bon wout.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q35.</span> Ki pwotokòl routing dinamik ki pi popilè pou rezo antèpriz?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q35" value="A"/>A. RIP</label><label class="quiz-option"><input type="radio" name="q35" value="B"/>B. BGP</label><label class="quiz-option"><input type="radio" name="q35" value="C"/>C. OSPF</label><label class="quiz-option"><input type="radio" name="q35" value="D"/>D. EIGRP</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> OSPF trè itilize nan rezo antèpriz. BGP se pou Entènèt (ISP).</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q36.</span> Ki sa VLAN fè?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q36" value="A"/>A. Li konekte plizyè routeur</label><label class="quiz-option"><input type="radio" name="q36" value="B"/>B. Li segmante yon rezo fizik an plizyè rezo lojik</label><label class="quiz-option"><input type="radio" name="q36" value="C"/>C. Li ba IP otomatikman</label><label class="quiz-option"><input type="radio" name="q36" value="D"/>D. Li chifre done yo</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> VLAN separe rezo a lojikman — aparèy menm VLAN ka kominike.</div>
+</div>
+<div class="quiz-question" data-answer="D">
+  <p class="q-text"><span class="q-num">Q37.</span> Ki tip pò switch ki transfere trafik pou plizyè VLAN?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q37" value="A"/>A. Access Port</label><label class="quiz-option"><input type="radio" name="q37" value="B"/>B. Host Port</label><label class="quiz-option"><input type="radio" name="q37" value="C"/>C. Uplink Port</label><label class="quiz-option"><input type="radio" name="q37" value="D"/>D. Trunk Port</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Trunk Port ka transfere trafik pou plizyè VLAN an menm tan.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q38.</span> Ki estanda IEEE ki defini VLAN tagging?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q38" value="A"/>A. 802.1Q</label><label class="quiz-option"><input type="radio" name="q38" value="B"/>B. 802.11</label><label class="quiz-option"><input type="radio" name="q38" value="C"/>C. 802.3</label><label class="quiz-option"><input type="radio" name="q38" value="D"/>D. 802.1X</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> IEEE 802.1Q defini pwotokòl VLAN tagging — pou trunk ports.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q39.</span> Ki frekans Wi-Fi ki pase miray pi fasil?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q39" value="A"/>A. 2.4 GHz</label><label class="quiz-option"><input type="radio" name="q39" value="B"/>B. 5 GHz</label><label class="quiz-option"><input type="radio" name="q39" value="C"/>C. 6 GHz</label><label class="quiz-option"><input type="radio" name="q39" value="D"/>D. 60 GHz</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> 2.4 GHz pase obstak pi fasil — longè dond pi long. Men pi lent.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q40.</span> Ki estanda sekirite Wi-Fi ki pi sekirize aktyèlman?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q40" value="A"/>A. WEP</label><label class="quiz-option"><input type="radio" name="q40" value="B"/>B. WPA</label><label class="quiz-option"><input type="radio" name="q40" value="C"/>C. WPA3</label><label class="quiz-option"><input type="radio" name="q40" value="D"/>D. WPA2</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> WPA3 se pi nouvo ak pi sekirize. WEP depase depi lontan.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q41.</span> Ki sa SSID ye?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q41" value="A"/>A. Adrès IP pwen aksè a</label><label class="quiz-option"><input type="radio" name="q41" value="B"/>B. Non rezo Wi-Fi a</label><label class="quiz-option"><input type="radio" name="q41" value="C"/>C. Modèl pwen aksè a</label><label class="quiz-option"><input type="radio" name="q41" value="D"/>D. Frekans Wi-Fi a</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> SSID (Service Set Identifier) se non rezo Wi-Fi a.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q42.</span> Ki twa pilye sekirite yo rele?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q42" value="A"/>A. CIA Triad: Confidentialite, Entegrite, Disponibilite</label><label class="quiz-option"><input type="radio" name="q42" value="B"/>B. ABC: Authentication, Biometrics, Confidentiality</label><label class="quiz-option"><input type="radio" name="q42" value="C"/>C. DES: Defense, Encryption, Security</label><label class="quiz-option"><input type="radio" name="q42" value="D"/>D. IPS, IDS, VPN</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> CIA Triad = Confidentialite + Entegrite + Disponibilite.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q43.</span> Ki atitid ki rantre ant de pati ki kominike?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q43" value="A"/>A. Phishing</label><label class="quiz-option"><input type="radio" name="q43" value="B"/>B. DDoS</label><label class="quiz-option"><input type="radio" name="q43" value="C"/>C. Man-in-the-Middle</label><label class="quiz-option"><input type="radio" name="q43" value="D"/>D. Malware</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Man-in-the-Middle (MitM) — atakè entèsèpte kominikasyon ant 2 pati.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q44.</span> Ki sa VPN fè?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q44" value="A"/>A. Li fè entènèt pi vit</label><label class="quiz-option"><input type="radio" name="q44" value="B"/>B. Li kreye yon tunel chifre pou kominikasyon sekirize</label><label class="quiz-option"><input type="radio" name="q44" value="C"/>C. Li bloke sit wèb</label><label class="quiz-option"><input type="radio" name="q44" value="D"/>D. Li ba adrès IP piblik</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> VPN kreye koneksyon chifre sekirize sou rezo piblik.</div>
+</div>
+<div class="quiz-question" data-answer="D">
+  <p class="q-text"><span class="q-num">Q45.</span> Ki atitid ki itilize imel fo pou vòlè enfòmasyon?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q45" value="A"/>A. Malware</label><label class="quiz-option"><input type="radio" name="q45" value="B"/>B. DDoS</label><label class="quiz-option"><input type="radio" name="q45" value="C"/>C. Rogue AP</label><label class="quiz-option"><input type="radio" name="q45" value="D"/>D. Phishing</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Phishing itilize imel, mesaj, oswa sit wèb fo pou pran done pèsonèl.</div>
+</div>
+<div class="quiz-question" data-answer="A">
+  <p class="q-text"><span class="q-num">Q46.</span> Ki kòmand ki montre konfigirasyon IP yon sistèm Windows?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q46" value="A"/>A. ipconfig /all</label><label class="quiz-option"><input type="radio" name="q46" value="B"/>B. ping localhost</label><label class="quiz-option"><input type="radio" name="q46" value="C"/>C. netstat -an</label><label class="quiz-option"><input type="radio" name="q46" value="D"/>D. nslookup</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> ipconfig /all montre tout konfigirasyon IP: adrès, masque, gateway, DNS, MAC.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q47.</span> Ki kòmand ki montre wout yon pakè pran pou rive destinasyon?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q47" value="A"/>A. ping</label><label class="quiz-option"><input type="radio" name="q47" value="B"/>B. netstat</label><label class="quiz-option"><input type="radio" name="q47" value="C"/>C. tracert / traceroute</label><label class="quiz-option"><input type="radio" name="q47" value="D"/>D. arp</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> tracert (Windows) oswa traceroute (Linux) montre chak hop nan wout la.</div>
+</div>
+<div class="quiz-question" data-answer="B">
+  <p class="q-text"><span class="q-num">Q48.</span> Ki kòmand ki montre tab korèspondans IP-MAC lokal la?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q48" value="A"/>A. ping</label><label class="quiz-option"><input type="radio" name="q48" value="B"/>B. arp -a</label><label class="quiz-option"><input type="radio" name="q48" value="C"/>C. ipconfig</label><label class="quiz-option"><input type="radio" name="q48" value="D"/>D. nslookup</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> arp -a montre tab ARP — korespondans IP ak adrès MAC lokal.</div>
+</div>
+<div class="quiz-question" data-answer="D">
+  <p class="q-text"><span class="q-num">Q49.</span> Si ping 8.8.8.8 reisi men ping google.com echwe, ki pwoblèm?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q49" value="A"/>A. Kab fizik pa bon</label><label class="quiz-option"><input type="radio" name="q49" value="B"/>B. IP fòm ou pa bon</label><label class="quiz-option"><input type="radio" name="q49" value="C"/>C. Gateway pa reponn</label><label class="quiz-option"><input type="radio" name="q49" value="D"/>D. Pwoblèm DNS</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Si IP piblik ping reisi men non domèn echwe, DNS pa travay kòrèkteman.</div>
+</div>
+<div class="quiz-question" data-answer="C">
+  <p class="q-text"><span class="q-num">Q50.</span> Ki sa ki default route (0.0.0.0/0) siyifi?</p>
+  <div class="quiz-options"><label class="quiz-option"><input type="radio" name="q50" value="A"/>A. Li bloke tout trafik</label><label class="quiz-option"><input type="radio" name="q50" value="B"/>B. Li rote sèlman trafik lokal</label><label class="quiz-option"><input type="radio" name="q50" value="C"/>C. Li voye pakè ki pa konn kote bay Gateway defaut</label><label class="quiz-option"><input type="radio" name="q50" value="D"/>D. Li anile routing table a</label></div>
+  <div class="quiz-explanation hidden"><span>💡</span> Default route (0.0.0.0/0) voye nenpòt pakè ki pa gen wout espesifik bay gateway defaut.</div>
+</div>
+  </form>
+
+  <div class="quiz-actions mt-3">
+    <button class="btn btn-primary" id="quiz-submit">✅ Verifye Repons</button>
+    <button class="btn btn-secondary" id="quiz-reset" style="display:none">🔄 Rekòmanse</button>
+  </div>
+
+  <div id="quiz-result" class="quiz-result mt-3">
+    <h2>Rezilta Ou</h2>
+    <div class="result-score-big"><span id="quiz-score">0 / 50</span></div>
+    <p id="quiz-feedback"></p>
+    <button class="btn btn-secondary mt-2" id="quiz-show-answers">👁️ Wè Tout Repons</button>
+    <button class="btn btn-primary mt-2" id="quiz-reset-2">🔄 Rekòmanse</button>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="labs.html" class="btn btn-secondary">← Labs</a>
+    <a href="glossary.html" class="btn btn-primary">Glosè →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

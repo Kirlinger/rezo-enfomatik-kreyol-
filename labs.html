@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Labs Pratik – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Labs Pratik</div>
+    <h1>🧪 Labs Pratik Rezo</h1>
+    <p>10 labs pratik pou mete konesans ou an pratik — soti nan baz jiska konfigirasyon avanse.</p>
+  </div>
+</div>
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="info-box tip"><div class="icon">🎯</div><div class="body"><strong>Konsèy:</strong><p>Fè chak lab nan lòd yo. Chak youn baze sou konesans lab anvan an. Ou ka fè yo nan Cisco Packet Tracer, VirtualBox, oswa materyèl reyèl.</p></div></div>
+
+  <!-- Lab 1 -->
+  <div class="lab-card mt-3">
+    <div class="lab-card-header">
+      <div><div class="lab-num">Lab 1</div><h3>Idantifye Aparèy Rezo yo</h3></div>
+      <span class="badge badge-green">Debitan</span>
+    </div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Idantifye diferan aparèy rezo ak wòl yo nan yon dyagram.</p></div>
+      <div class="lab-section"><h4>🛠️ Zouti Nesesè</h4><ul><li>Papye ak kreyon oswa Packet Tracer</li><li>Dyagram rezo ki bay nan paj <a href="devices.html">Aparèy</a></li></ul></div>
+      <div class="lab-section"><h4>📋 Etap yo</h4><ol style="padding-left:1.5rem;color:var(--text-secondary);font-size:0.88rem;"><li style="padding:0.3rem 0;">Gade dyagram rezo a</li><li style="padding:0.3rem 0;">Idantifye chak aparèy: Router, Switch, Hub, PC, Sèvè</li><li style="padding:0.3rem 0;">Ekri wòl chak aparèy ak kouch OSI yo opere nan</li><li style="padding:0.3rem 0;">Yon Router = Kouch 3, Switch = Kouch 2, Hub = Kouch 1</li></ol></div>
+      <div class="lab-section"><h4>✅ Rezilta Espere</h4><p>Ou ka idantifye kòrèkteman chak aparèy ak wòl li.</p></div>
+      <div class="lab-section"><h4>💬 Kesyon Refleksyon</h4><ul><li>Ki diferans ant Switch ak Hub?</li><li>Poukisa Router opere nan Kouch 3?</li></ul></div>
+      <div class="img-placeholder mt-2"><div class="ph-icon">📸</div><p>Kaptire ekran / foto dyagram ou idantifye a</p></div>
+    </div>
+  </div>
+
+  <!-- Lab 2 -->
+  <div class="lab-card mt-3">
+    <div class="lab-card-header">
+      <div><div class="lab-num">Lab 2</div><h3>Konekte PC a Switch ak Router</h3></div>
+      <span class="badge badge-green">Debitan</span>
+    </div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Bati yon rezo debaz ak 2 PC, 1 switch, ak 1 routeur nan Packet Tracer.</p></div>
+      <div class="lab-section"><h4>🛠️ Zouti</h4><ul><li>Cisco Packet Tracer (gratis — netacad.com)</li></ul></div>
+      <div class="lab-section"><h4>📋 Etap yo</h4><ol style="padding-left:1.5rem;color:var(--text-secondary);font-size:0.88rem;"><li style="padding:0.3rem 0;">Ouvri Packet Tracer, ajoute: 2 PC, 1 Switch 2960, 1 Router 1941</li><li style="padding:0.3rem 0;">Konekte PC1 → Switch (pò Fa0/1) ak PC2 → Switch (pò Fa0/2)</li><li style="padding:0.3rem 0;">Konekte Switch (pò Fa0/24) → Router (pò Gig0/0)</li><li style="padding:0.3rem 0;">Konfigire IP sou PC1: 192.168.1.10/24, Gateway: 192.168.1.1</li><li style="padding:0.3rem 0;">Konfigire IP sou PC2: 192.168.1.20/24, Gateway: 192.168.1.1</li><li style="padding:0.3rem 0;">Konfigire Router entèfas: ip address 192.168.1.1 255.255.255.0</li></ol></div>
+      <div class="lab-section"><h4>✅ Rezilta Espere</h4><p>PC1 ka ping PC2 ak Router.</p></div>
+      <div class="lab-section"><h4>💬 Kesyon Refleksyon</h4><ul><li>Poukisa Gateway enpòtan?</li><li>Ki sa ki ta pase si masque sou-rezo diferan?</li></ul></div>
+    </div>
+  </div>
+
+  <!-- Lab 3 -->
+  <div class="lab-card mt-3">
+    <div class="lab-card-header">
+      <div><div class="lab-num">Lab 3</div><h3>Konfigire Adrès IP Manyèlman</h3></div>
+      <span class="badge badge-blue">Debitan+</span>
+    </div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Konfigire adrès IP estatik sou Windows ak Linux manyèlman.</p></div>
+      <div class="lab-section"><h4>📋 Etap yo (Windows)</h4>
+        <div class="code-block" style="font-size:0.82rem;">
+          <span class="comment"># Metòd 1: GUI</span><br/>
+          Network Settings → Change adapter options → Properties → IPv4<br/>
+          IP: 192.168.1.50, Masque: 255.255.255.0, Gateway: 192.168.1.1<br/><br/>
+          <span class="comment"># Metòd 2: Kòmand (Admin)</span><br/>
+          netsh interface ip set address "Ethernet" static 192.168.1.50 255.255.255.0 192.168.1.1
+        </div>
+      </div>
+      <div class="lab-section"><h4>📋 Etap yo (Linux)</h4>
+        <div class="code-block" style="font-size:0.82rem;">
+          <span class="comment"># Tanporèrman</span><br/>
+          sudo ip addr add 192.168.1.50/24 dev eth0<br/>
+          sudo ip route add default via 192.168.1.1<br/><br/>
+          <span class="comment"># Pèmanan (Ubuntu/Debian — /etc/netplan/)</span><br/>
+          network:<br/>
+          &nbsp;&nbsp;ethernets:<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;eth0:<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;addresses: [192.168.1.50/24]<br/>
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;gateway4: 192.168.1.1
+        </div>
+      </div>
+      <div class="lab-section"><h4>💬 Kesyon Refleksyon</h4><ul><li>Diferans ant IP estatik ak DHCP?</li><li>Ki aparèy ki dwe toujou gen IP estatik?</li></ul></div>
+    </div>
+  </div>
+
+  <!-- Lab 4 -->
+  <div class="lab-card mt-3">
+    <div class="lab-card-header">
+      <div><div class="lab-num">Lab 4</div><h3>Tès Koneksyon ak ping</h3></div>
+      <span class="badge badge-blue">Debitan+</span>
+    </div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Itilize <code>ping</code> pou tès koneksyon nan diferan nivo.</p></div>
+      <div class="lab-section"><h4>📋 Etap yo</h4>
+        <div class="code-block" style="font-size:0.82rem;">
+          <span class="comment"># Etap 1: Teste loopback (stack TCP/IP lokal)</span><br/>
+          ping 127.0.0.1<br/><br/>
+          <span class="comment"># Etap 2: Teste adrès IP pa ou</span><br/>
+          ping 192.168.1.50<br/><br/>
+          <span class="comment"># Etap 3: Teste gateway (routeur)</span><br/>
+          ping 192.168.1.1<br/><br/>
+          <span class="comment"># Etap 4: Teste sèvè DNS piblik</span><br/>
+          ping 8.8.8.8<br/><br/>
+          <span class="comment"># Etap 5: Teste nom domèn (DNS)</span><br/>
+          ping google.com
+        </div>
+      </div>
+      <div class="lab-section"><h4>✅ Rezilta Espere</h4><p>Tout 5 tès reisi. Si Etap 4 travay men 5 echwe — pwoblèm DNS.</p></div>
+      <div class="lab-section"><h4>💬 Kesyon Refleksyon</h4><ul><li>Si ping 127.0.0.1 echwe, ki pwoblèm sa montre?</li><li>Si Etap 3 echwe men Etap 2 travay, ki pwoblèm sa?</li></ul></div>
+    </div>
+  </div>
+
+  <!-- Lab 5-10 condensed -->
+  <div class="lab-card mt-3">
+    <div class="lab-card-header"><div><div class="lab-num">Lab 5</div><h3>Trace Wout ak tracert</h3></div><span class="badge badge-cyan">Entèmedyè</span></div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Itilize tracert/traceroute pou idantifye chak hop nan wout yon pakè.</p></div>
+      <div class="lab-section"><h4>📋 Etap yo</h4>
+        <div class="code-block" style="font-size:0.82rem;">
+          <span class="comment"># Windows</span><br/>
+          tracert google.com<br/><br/>
+          <span class="comment"># Linux/Mac</span><br/>
+          traceroute google.com<br/><br/>
+          <span class="comment"># Analiz chak liy:</span><br/>
+          <span class="output">1  &lt;1ms  192.168.1.1   ← Routeur lokal</span><br/>
+          <span class="output">2  10ms  10.x.x.x     ← ISP</span><br/>
+          <span class="output">3  *.*   * * *        ← Hop ki pa reponn (pa nòmal)</span>
+        </div>
+      </div>
+      <div class="lab-section"><h4>💬 Kesyon Refleksyon</h4><ul><li>Poukisa kèk hop montre * * *?</li><li>Ki valè TTL la fè?</li></ul></div>
+    </div>
+  </div>
+
+  <div class="lab-card mt-3">
+    <div class="lab-card-header"><div><div class="lab-num">Lab 6</div><h3>Rekèt DNS ak nslookup</h3></div><span class="badge badge-cyan">Entèmedyè</span></div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Itilize nslookup pou verifye rekò DNS.</p></div>
+      <div class="lab-section"><h4>📋 Etap yo</h4>
+        <div class="code-block" style="font-size:0.82rem;">
+          <span class="comment"># Rekèt debaz</span><br/>
+          nslookup google.com<br/><br/>
+          <span class="comment"># Rekèt type MX (rekò imel)</span><br/>
+          nslookup -type=MX gmail.com<br/><br/>
+          <span class="comment"># Rekèt avèk yon sèvè DNS espesifik</span><br/>
+          nslookup google.com 8.8.8.8<br/><br/>
+          <span class="comment"># Reverse DNS lookup (IP → Nom)</span><br/>
+          nslookup 8.8.8.8
+        </div>
+      </div>
+      <div class="lab-section"><h4>💬 Kesyon Refleksyon</h4><ul><li>Ki rekò DNS ki retounen pou <code>nslookup -type=MX gmail.com</code>?</li><li>Poukisa rekèt avèk 8.8.8.8 bay menm rezilta?</li></ul></div>
+    </div>
+  </div>
+
+  <div class="lab-card mt-3">
+    <div class="lab-card-header"><div><div class="lab-num">Lab 7</div><h3>Kreye VLAN Konseptyèlman</h3></div><span class="badge badge-yellow">Avanse</span></div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Konfigire VLAN sou yon switch Cisco nan Packet Tracer.</p></div>
+      <div class="lab-section"><h4>📋 Etap yo</h4>
+        <div class="code-block" style="font-size:0.82rem;">
+          <span class="comment"># Kreye VLAN sou Switch Cisco</span><br/>
+          Switch&gt; enable<br/>
+          Switch# configure terminal<br/>
+          Switch(config)# vlan 10<br/>
+          Switch(config-vlan)# name IT<br/>
+          Switch(config)# vlan 20<br/>
+          Switch(config-vlan)# name Finance<br/><br/>
+          <span class="comment"># Asiye pò bay VLAN (Access Port)</span><br/>
+          Switch(config)# interface fa0/1<br/>
+          Switch(config-if)# switchport mode access<br/>
+          Switch(config-if)# switchport access vlan 10<br/><br/>
+          <span class="comment"># Verifye VLAN</span><br/>
+          Switch# show vlan brief
+        </div>
+      </div>
+      <div class="lab-section"><h4>💬 Kesyon Refleksyon</h4><ul><li>Poukisa PC nan VLAN 10 pa ka ping PC nan VLAN 20?</li><li>Ki sa ki nesesè pou kominikasyon ant VLAN yo?</li></ul></div>
+    </div>
+  </div>
+
+  <div class="lab-card mt-3">
+    <div class="lab-card-header"><div><div class="lab-num">Lab 8</div><h3>Egzèsis Subnetting Pratik</h3></div><span class="badge badge-yellow">Avanse</span></div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Kalkile 4 sou-rezo soti nan 192.168.5.0/24 pou 4 depatman.</p></div>
+      <div class="lab-section"><h4>📋 Pwoblèm</h4><p>Depatman yo bezwen:</p><ul><li>IT: 60 aparèy</li><li>Finansye: 25 aparèy</li><li>RH: 10 aparèy</li><li>Manasman: 5 aparèy</li></ul></div>
+      <div class="lab-section"><h4>✅ Solisyon</h4>
+        <div class="code-block" style="font-size:0.82rem;">
+          <span class="comment"># IT: 60 aparèy → /26 (62 max)</span><br/>
+          Rezo: 192.168.5.0/26  Òs: .1-.62  Broadcast: .63<br/><br/>
+          <span class="comment"># Finansye: 25 aparèy → /27 (30 max)</span><br/>
+          Rezo: 192.168.5.64/27  Òs: .65-.94  Broadcast: .95<br/><br/>
+          <span class="comment"># RH: 10 aparèy → /28 (14 max)</span><br/>
+          Rezo: 192.168.5.96/28  Òs: .97-.110  Broadcast: .111<br/><br/>
+          <span class="comment"># Manasman: 5 aparèy → /29 (6 max)</span><br/>
+          Rezo: 192.168.5.112/29  Òs: .113-.118  Broadcast: .119
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="lab-card mt-3">
+    <div class="lab-card-header"><div><div class="lab-num">Lab 9</div><h3>Depane "Pa Gen Entènèt"</h3></div><span class="badge badge-cyan">Entèmedyè</span></div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Suiv yon pwosesis sistematik pou depane koneksyon Entènèt ki pa fonksyone.</p></div>
+      <div class="lab-section"><h4>📋 Etap yo</h4>
+        <div class="code-block" style="font-size:0.82rem;">
+          <span class="comment"># 1. Wè konfigirasyon IP</span><br/>
+          ipconfig /all<br/>
+          <span class="output"># Verifye: IPv4, Masque, Gateway, DNS</span><br/><br/>
+          <span class="comment"># 2. Teste loopback</span><br/>
+          ping 127.0.0.1<br/><br/>
+          <span class="comment"># 3. Teste gateway</span><br/>
+          ping 192.168.1.1<br/><br/>
+          <span class="comment"># 4. Teste DNS piblik</span><br/>
+          ping 8.8.8.8<br/><br/>
+          <span class="comment"># 5. Teste DNS name resolution</span><br/>
+          ping google.com<br/><br/>
+          <span class="comment"># 6. Si DHCP pa mache</span><br/>
+          ipconfig /release<br/>
+          ipconfig /renew
+        </div>
+      </div>
+      <div class="lab-section"><h4>💬 Kesyon Refleksyon</h4><ul><li>Si etap 3 echwe men 2 travay, ki pwoblèm?</li><li>Si etap 4 travay men 5 pa, ki koz posib?</li></ul></div>
+    </div>
+  </div>
+
+  <div class="lab-card mt-3">
+    <div class="lab-card-header"><div><div class="lab-num">Lab 10</div><h3>Sekirize Rezo Wi-Fi Kay ou</h3></div><span class="badge badge-yellow">Avanse</span></div>
+    <div class="lab-card-body">
+      <div class="lab-section"><h4>🎯 Objektif</h4><p>Konfigire yon rezo Wi-Fi kay la pou maksimize sekirite.</p></div>
+      <div class="lab-section"><h4>📋 Etap yo</h4><ol style="padding-left:1.5rem;color:var(--text-secondary);font-size:0.88rem;"><li style="padding:0.3rem 0;">Chanje mo de pase defaut admin routeur la (192.168.1.1 oswa 192.168.0.1)</li><li style="padding:0.3rem 0;">Chanje SSID a — pa itilize non ou, adrès ou, oswa "default"</li><li style="padding:0.3rem 0;">Aktive WPA3 (oswa WPA2-AES si WPA3 pa disponib)</li><li style="padding:0.3rem 0;">Chanje mo de pase Wi-Fi — minimòm 12 karaktè</li><li style="padding:0.3rem 0;">Aktive Rezo Envite pou vizitè</li><li style="padding:0.3rem 0;">Dezaktive WPS (vulnerability)</li><li style="padding:0.3rem 0;">Mete ajou firmware routeur la</li><li style="padding:0.3rem 0;">Aktive firewall routeur la</li></ol></div>
+      <div class="lab-section"><h4>💬 Kesyon Refleksyon</h4><ul><li>Poukisa WPS se yon risk sekirite?</li><li>Poukisa rezo envite enpòtan?</li></ul></div>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="homelab.html" class="btn btn-secondary">← Home Lab</a>
+    <a href="quiz.html" class="btn btn-primary">Quiz →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

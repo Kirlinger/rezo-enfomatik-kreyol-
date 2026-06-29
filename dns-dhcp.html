@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>DNS ak DHCP – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › DNS ak DHCP</div>
+    <h1>🗂️ DNS ak DHCP</h1>
+    <p>Konprann kijan DNS tradui non domèn an IP, ak kijan DHCP asiye adrès IP otomatik.</p>
+  </div>
+</div>
+
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <!-- DNS Section -->
+  <div class="content-section">
+    <h2>DNS – Domain Name System</h2>
+    <p><strong>DNS (Domain Name System)</strong> se "anyè telefòn" Entènèt la. Li tradui <strong>non domèn</strong> lisib pou moun (tankou <code>google.com</code>) an <strong>adrès IP nimerik</strong> (tankou <code>142.250.80.46</code>) ke òdinatè yo ka itilize.</p>
+
+    <div class="callout">
+      <h3>📞 Analoji: Anyè Telefòn</h3>
+      <p>Imajine ou vle rele "Legliz Sentkatren". Ou pa konnen nimewo a — ou chèche nan anyè. DNS se menm bagay — ou tape <code>facebook.com</code>, DNS jwenn IP <code>157.240.x.x</code> pou ou.</p>
+    </div>
+
+    <h3>Kijan Rezolisyon DNS Fonksyone (Etap pa Etap)</h3>
+    <div class="steps mt-3">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Demann Kliyan</h4><p>Ou tape <code>www.google.com</code> nan navigatè ou. Òdinatè ou mande sèvè DNS ou (jeneralman routeur ou oswa 8.8.8.8).</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Cache Lokal</h4><p>Èske repons lan nan cache lokal? Si wi, retounen IP dirèkteman. Si non, kontinye.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><h4>DNS Recursive Resolver</h4><p>Sèvè DNS ISP ou mande yon <strong>Root Name Server</strong> kijan pou jwenn <code>.com</code>.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><h4>TLD Name Server</h4><p>Root Server voye sèvè DNS la bay <strong>TLD Server</strong> pou <code>.com</code> ki di li kote jwenn <code>google.com</code>.</p></div></div>
+      <div class="step"><div class="step-num">5</div><div class="step-content"><h4>Authoritative Name Server</h4><p>Sèvè otorite Google bay <strong>adrès IP reyèl</strong> pou <code>www.google.com</code>.</p></div></div>
+      <div class="step"><div class="step-num">6</div><div class="step-content"><h4>Repons bay Kliyan</h4><p>Sèvè DNS la retounen IP la bay navigatè ou, ki konekte ak sèvè Google an dirèkteman.</p></div></div>
+    </div>
+
+    <!-- DNS Diagram -->
+    <div class="diagram mt-3" style="flex-direction:column;gap:0.8rem;">
+      <div style="display:flex;align-items:center;gap:1rem;flex-wrap:wrap;justify-content:center;">
+        <div class="diagram-node"><div class="d-icon">💻</div><span>Kliyan</span></div>
+        <div class="diagram-arrow">→</div>
+        <div class="diagram-node"><div class="d-icon">🗂️</div><span>Recursive<br/>Resolver</span></div>
+        <div class="diagram-arrow">→</div>
+        <div class="diagram-node"><div class="d-icon">🌍</div><span>Root<br/>Server</span></div>
+        <div class="diagram-arrow">→</div>
+        <div class="diagram-node"><div class="d-icon">🗃️</div><span>TLD Server<br/>(.com)</span></div>
+        <div class="diagram-arrow">→</div>
+        <div class="diagram-node"><div class="d-icon">📋</div><span>Authoritative<br/>Server</span></div>
+      </div>
+      <p style="font-size:0.8rem;color:var(--text-muted);text-align:center;">Pwosesis Rezolisyon DNS (tipikman &lt;100ms)</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Rekò DNS yo (DNS Records)</h2>
+    <p>Yon <strong>rekò DNS</strong> se yon antre nan yon zòn DNS ki bay enfòmasyon sou yon domèn. Gen plizyè tip:</p>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Tip Rekò</th><th>Non</th><th>Wòl</th><th>Egzanp</th></tr></thead>
+        <tbody>
+          <tr><td><span class="badge badge-blue">A</span></td><td>Address</td><td>Maps non domèn an IPv4</td><td><code>google.com → 142.250.80.46</code></td></tr>
+          <tr><td><span class="badge badge-cyan">AAAA</span></td><td>Quad-A</td><td>Maps non domèn an IPv6</td><td><code>google.com → 2607:f8b0::...  </code></td></tr>
+          <tr><td><span class="badge badge-yellow">CNAME</span></td><td>Canonical Name</td><td>Yon alis (pseudonym) pou yon lòt non</td><td><code>www → monsite.com</code></td></tr>
+          <tr><td><span class="badge badge-green">MX</span></td><td>Mail Exchange</td><td>Defini sèvè imel pou domèn nan</td><td><code>gmail.com MX → googlemail.com</code></td></tr>
+          <tr><td><span class="badge badge-red">NS</span></td><td>Name Server</td><td>Defini sèvè DNS otorite pou domèn nan</td><td><code>monsite.com NS → ns1.provider.com</code></td></tr>
+          <tr><td><span class="badge badge-blue">TXT</span></td><td>Text</td><td>Estoke enfòmasyon tèks (SPF, DKIM, verifikasyon)</td><td>SPF records pou imel</td></tr>
+          <tr><td><span class="badge badge-cyan">PTR</span></td><td>Pointer</td><td>Konvèsyon Revès: IP → Non (Reverse DNS)</td><td><code>142.250.80.46 → google.com</code></td></tr>
+          <tr><td><span class="badge badge-yellow">SOA</span></td><td>Start of Authority</td><td>Enfòmasyon otorite zòn nan</td><td>Administratè, TTL, seri nimewo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Sèvè DNS Piblik yo</h2>
+    <div class="grid grid-3 mt-2">
+      <div class="card"><span class="card-icon">🔵</span><h3>Google DNS</h3><p>IP: <code>8.8.8.8</code> ak <code>8.8.4.4</code>. Rapid ak fyab. Pi souvan itilize nan mond antye.</p></div>
+      <div class="card"><span class="card-icon">🟠</span><h3>Cloudflare DNS</h3><p>IP: <code>1.1.1.1</code> ak <code>1.0.0.1</code>. Pi rapid nan mond selon tès. Aksan sou konfidansyalite.</p></div>
+      <div class="card"><span class="card-icon">🟢</span><h3>OpenDNS</h3><p>IP: <code>208.67.222.222</code>. Bay filtraj kontni — bon pou fanmi ak lekòl.</p></div>
+    </div>
+  </div>
+
+  <!-- DHCP Section -->
+  <div class="content-section">
+    <h2>DHCP – Dynamic Host Configuration Protocol</h2>
+    <p><strong>DHCP (Dynamic Host Configuration Protocol)</strong> otomatize asiyasyon <strong>adrès IP</strong> bay aparèy sou yon rezo. San DHCP, ou ta dwe konfigire manyèlman chak aparèy.</p>
+
+    <div class="callout">
+      <h3>🏨 Analoji: Otèl</h3>
+      <p>Lè ou rive nan yon otèl, resepsyon ba ou yon chanm (nimewo). Lè ou pati, chanm nan disponib pou lòt moun. Se menm bagay ak DHCP — li bay adrès IP tanporèrman, epi reprann li lè aparèy la pa la ankò.</p>
+    </div>
+
+    <h3>Konfigirasyon DHCP tipik</h3>
+    <div class="code-block">
+      <span class="comment"># Konfigirasyon DHCP Scope</span><br/>
+      Scope:           192.168.1.0/24<br/>
+      Plag Asiyasyon:  192.168.1.100 – 192.168.1.200<br/>
+      Adrès Ekskli:    192.168.1.1 – 192.168.1.99  <span class="comment">(estatik)</span><br/>
+      Pasrèl Defo:     192.168.1.1<br/>
+      Sèvè DNS:        8.8.8.8, 8.8.4.4<br/>
+      Dire Bèy (Lease): 8 jè (pa defo)
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Pwosesis DORA – Kijan DHCP Travay</h2>
+    <p>DHCP itilize yon pwosesis 4 etap yo rele <strong>DORA</strong>:</p>
+
+    <div class="dora-row mt-3">
+      <div class="dora-step">
+        <div class="d-icon">📢</div>
+        <div class="d-letter">D</div>
+        <div class="d-word">DISCOVER</div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.4rem;">Kliyan broadcast: "Ki sèvè DHCP disponib?"</p>
+      </div>
+      <div class="dora-arrow">→</div>
+      <div class="dora-step">
+        <div class="d-icon">🎁</div>
+        <div class="d-letter">O</div>
+        <div class="d-word">OFFER</div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.4rem;">Sèvè ofri yon IP: "Pran 192.168.1.105"</p>
+      </div>
+      <div class="dora-arrow">→</div>
+      <div class="dora-step">
+        <div class="d-icon">✋</div>
+        <div class="d-letter">R</div>
+        <div class="d-word">REQUEST</div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.4rem;">Kliyan aksepte: "M vle IP sa a"</p>
+      </div>
+      <div class="dora-arrow">→</div>
+      <div class="dora-step">
+        <div class="d-icon">✅</div>
+        <div class="d-letter">A</div>
+        <div class="d-word">ACKNOWLEDGE</div>
+        <p style="font-size:0.78rem;color:var(--text-muted);margin-top:0.4rem;">Sèvè konfime: "Dakò, IP la se pou ou pou 8 jè"</p>
+      </div>
+    </div>
+
+    <div class="info-box note"><div class="icon">📡</div><div class="body"><strong>Nòt Teknik:</strong><p>Mesaj Discover ak Offer yo voye sou <strong>pò UDP 67 (sèvè)</strong> ak <strong>pò 68 (kliyan)</strong>. DHCP itilize UDP paske koneksyon pa etabli pou komansman — kliyan a pa gen IP ankò!</p></div></div>
+
+    <h3>Bèy DHCP (DHCP Lease)</h3>
+    <p>Yon <strong>bèy (lease)</strong> se dire pou yon IP asiye bay yon aparèy. Lè bèy la ekspire, kliyan la dwe renouvle li oswa mande yon nouvo IP. Si aparèy la pa renouvle, IP a disponib pou lòt.</p>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Evenman</th><th>Deskripsyon</th></tr></thead>
+        <tbody>
+          <tr><td>Bèy Akòde</td><td>IP asiye bay aparèy pou dire defini</td></tr>
+          <tr><td>50% Dire Bèy</td><td>Kliyan eseye renouvle bèy ak menm sèvè a</td></tr>
+          <tr><td>87.5% Dire Bèy</td><td>Kliyan broadcast pou jwenn nenpòt sèvè DHCP</td></tr>
+          <tr><td>Ekspire Bèy</td><td>IP a retounen nan pool DHCP a</td></tr>
+          <tr><td>APIPA (169.254.x.x)</td><td>Kliyan asiye IP pou tèt li si DHCP pa disponib</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>DHCP Reservation</h2>
+    <p>Ou ka konfigire yon sèvè DHCP pou <strong>toujou bay menm IP bay menm aparèy</strong> selon adrès MAC li. Sa bay avantaj IP prive san konfigirasyon manyèl sou chak aparèy.</p>
+    <div class="code-block">
+      <span class="comment"># Reservation pou Imprimant rezo</span><br/>
+      Aparèy:  Imprimant HP<br/>
+      MAC:     00:1A:2B:3C:4D:5E<br/>
+      IP Rezève: 192.168.1.50<br/>
+      <span class="output"># Chak fwa aparèy sa konekte, li resevwa 192.168.1.50</span>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="protocols.html" class="btn btn-secondary">← Pwotokòl</a>
+    <a href="routing-switching.html" class="btn btn-primary">Routing & Switching →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

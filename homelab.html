@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Home Lab – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Home Lab</div>
+    <h1>🏡 Gid Home Lab Konplè</h1>
+    <p>Yon gid konplè pou bati yon labo rezo lakay ou — soti nan materyèl jiska vityalizasyon.</p>
+  </div>
+</div>
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="callout">
+    <h3>💡 Poukisa Fè yon Home Lab?</h3>
+    <p>Yon home lab ba ou yon anviwonman <strong>reyèl pou pratike</strong> san pè kase nenpòt. Se pi bon fason pou aprann networking — moun têtid (têtdi) pa janm grandi ann aprann sèlman de liv.</p>
+  </div>
+
+  <div class="content-section">
+    <h2>Ekipman Fizik Rekòmande</h2>
+    <div class="grid grid-auto mt-2">
+      <div class="card"><span class="card-icon">💻</span><h3>Laptop/PC</h3><p>Yon laptop debaz oswa yon ansyen PC ka sèvi. Pou vityalizasyon, rekòmande 16GB RAM ak CPU ki sipòte virtualizasyon (VT-x/AMD-V).</p><span class="badge badge-blue">Esansyèl</span></div>
+      <div class="card"><span class="card-icon">🌐</span><h3>Routeur</h3><p>Yon routeur Cisco 800 seri (egzanp 891), pfSense sou mini PC, oswa routeur Linksys/ASUS ak firmware OpenWRT.</p><span class="badge badge-blue">Esansyèl</span></div>
+      <div class="card"><span class="card-icon">🔌</span><h3>Switch Managed</h3><p>Cisco Catalyst 2960, HP ProCurve, oswa Netgear GS308E. Bezwen sipòte VLAN (IEEE 802.1Q) pou pratike.</p><span class="badge badge-cyan">Rekòmande</span></div>
+      <div class="card"><span class="card-icon">📡</span><h3>Access Point</h3><p>Ubiquiti UniFi AP, TP-Link EAP, oswa routeur ansyen rekonvèti an access point.</p><span class="badge badge-cyan">Rekòmande</span></div>
+      <div class="card"><span class="card-icon">🔋</span><h3>UPS</h3><p>Pwoteje ekipman yo kont koupe kouran. APC Back-UPS 650VA sifi pou yon ti lab. Enpòtan pou Ayiti!</p><span class="badge badge-yellow">Bon pou Ayiti</span></div>
+      <div class="card"><span class="card-icon">🗄️</span><h3>Mini PC/Server</h3><p>Raspberry Pi 4, Intel NUC, oswa ansyen laptop kòm sèvè. Pou DNS, DHCP, ak sèvè fichye.</p><span class="badge badge-cyan">Rekòmande</span></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Vityalizasyon – Lab San Anpil Materyèl</h2>
+    <p>Ak <strong>VMware Workstation</strong>, <strong>VirtualBox</strong>, oswa <strong>Hyper-V</strong>, ou ka kreye plizyè VM (machin vityèl) sou yon sèl PC pou simile yon rezo konplè.</p>
+    <div class="grid grid-3 mt-2">
+      <div class="card"><span class="card-icon">🔷</span><h3>VMware Workstation</h3><p>Trè popilè pou labs. Sipòte plizyè OS. Pro: $, Player: Gratis.</p><a href="https://www.vmware.com" target="_blank" rel="noopener" class="card-link">vmware.com →</a></div>
+      <div class="card"><span class="card-icon">📦</span><h3>VirtualBox</h3><p>100% gratis ak open source. Bon pou debitan. Sipòte Windows, Linux, macOS.</p><a href="https://www.virtualbox.org" target="_blank" rel="noopener" class="card-link">virtualbox.org →</a></div>
+      <div class="card"><span class="card-icon">🌐</span><h3>GNS3 / EVE-NG</h3><p>Spesyalize pou labs rezo — simulasyon Cisco, routeur, ak switch. Ideal pou CCNA/Network+.</p><a href="https://gns3.com" target="_blank" rel="noopener" class="card-link">gns3.com →</a></div>
+    </div>
+
+    <h3>VM Rekòmande pou Lab</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>VM</th><th>Wòl</th><th>Kote Telechaje</th></tr></thead>
+        <tbody>
+          <tr><td>Windows 10/11</td><td>Kliyan Windows pou tès</td><td>microsoft.com/evaluation-center</td></tr>
+          <tr><td>Ubuntu Server</td><td>Sèvè Linux gratis</td><td>ubuntu.com/download/server</td></tr>
+          <tr><td>Kali Linux</td><td>Tès sekirite (lab lejèlman sèlman)</td><td>kali.org</td></tr>
+          <tr><td>pfSense</td><td>Routeur/Firewall open source</td><td>pfsense.org</td></tr>
+          <tr><td>OPNsense</td><td>Altènatif pfSense</td><td>opnsense.org</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box warning"><div class="icon">⚠️</div><div class="body"><strong>Avis pou Kali Linux:</strong><p>Kali Linux se pou <strong>tès sekirite legal</strong> sèlman — sou sistèm ou oswa sistèm ou gen pèmisyon ekri. Itilize li sèlman nan lab ou. Pa janm fè atak sou sistèm yo pa ou.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Cisco Packet Tracer</h2>
+    <p><strong>Cisco Packet Tracer</strong> se yon simulatè rezo <strong>gratis</strong> ki ba ou pou konfigire routeur, switch, ak lòt aparèy Cisco virtuèlman. Ideal pou CCNA ak Network+.</p>
+    <div class="steps mt-2">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Kreye Kont Cisco NetAcad</h4><p>Ale sou netacad.com epi kreye yon kont gratis.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Telechaje Packet Tracer</h4><p>Telechaje pou Windows, Linux, oswa macOS.</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Kòmanse ak Topoloji Senp</h4><p>Ajoute 2 PC ak 1 switch, konfigure IP, epi ping youn ak lòt.</p></div></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Pwojè Lab Rekòmande</h2>
+    <div class="grid grid-auto mt-2">
+      <div class="card"><span class="card-icon">🔌</span><h3>Lab VLAN</h3><p>Kreye 3 VLAN sou yon switch managed, konfigire access ports ak trunk ports, ak tès separasyon.</p><span class="badge badge-cyan">Entèmedyè</span></div>
+      <div class="card"><span class="card-icon">🗂️</span><h3>Lab DHCP</h3><p>Konfigire yon sèvè DHCP sou Windows Server oswa Linux (isc-dhcp-server) ak tès kliyan.</p><span class="badge badge-cyan">Entèmedyè</span></div>
+      <div class="card"><span class="card-icon">🌐</span><h3>Lab DNS</h3><p>Enstale BIND oswa Windows DNS Server. Kreye rekò A, CNAME, ak MX. Tès ak nslookup.</p><span class="badge badge-cyan">Entèmedyè</span></div>
+      <div class="card"><span class="card-icon">🔥</span><h3>Lab pfSense Firewall</h3><p>Enstale pfSense kòm VM routeur/firewall. Konfigire règ firewall, NAT, ak VPN.</p><span class="badge badge-yellow">Avanse</span></div>
+      <div class="card"><span class="card-icon">📶</span><h3>Lab Wi-Fi Sekirite</h3><p>Konfigire WPA2/WPA3, kreye rezo envite, teste sekirite Wi-Fi ou (sèlman sou rezo pa ou).</p><span class="badge badge-cyan">Entèmedyè</span></div>
+      <div class="card"><span class="card-icon">🔀</span><h3>Lab Routing Dinamik</h3><p>Konfigire OSPF ant 2+ routeur nan GNS3. Teste konvèjans ak failover.</p><span class="badge badge-yellow">Avanse</span></div>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="troubleshooting.html" class="btn btn-secondary">← Depannaj</a>
+    <a href="labs.html" class="btn btn-primary">Labs Pratik →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

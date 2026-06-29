@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Sekirite Rezo – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Sekirite Rezo</div>
+    <h1>🛡️ Sekirite Rezo</h1>
+    <p>CIA Triad, Firewall, IDS/IPS, VPN, bon pratik, ak atak komen yo eksplike an Kreyòl.</p>
+  </div>
+</div>
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="info-box danger"><div class="icon">⚠️</div><div class="body"><strong>Avètisman:</strong><p>Enfòmasyon sa yo pou edikasyon <strong>defansiv sèlman</strong>. Itilize konesans sa yo pou pwoteje rezo ou — pa pou atak ilegal. Atak enfòmatik san pèmisyon se krim an Ayiti ak lòt peyi.</p></div></div>
+
+  <div class="content-section">
+    <h2>CIA Triad – Twa Pilye Sekirite</h2>
+    <div class="grid grid-3 mt-2">
+      <div class="card">
+        <span class="card-icon">🔒</span>
+        <h3>C – Confidentialité (Konfidansyalite)</h3>
+        <p>Asire done sansib aksesib sèlman pou moun ki gen otorizasyon. Lèzòt pa ka li yo.</p>
+        <p><strong>Zouti:</strong> Chifraj, kontròl aksè, VPN, klasifikasyon done.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">✅</span>
+        <h3>I – Intégrité</h3>
+        <p>Asire done pa chanje san otorizasyon — yo toujou egzak ak konplè.</p>
+        <p><strong>Zouti:</strong> Hashing (MD5, SHA), siyati dijital, kontrole aksè.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🌐</span>
+        <h3>A – Disponibilité (Availability)</h3>
+        <p>Asire sistèm ak done disponib pou moun ki otorize lè yo bezwen yo.</p>
+        <p><strong>Zouti:</strong> Redondans, backup, UPS, DDoS protection.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Firewall</h2>
+    <p>Yon <strong>Firewall</strong> filtre trafik rezo pou bloke trafik malveyan epi pèmèt trafik lejitim. Li se premye liy defans rezo ou.</p>
+    <div class="grid grid-3 mt-2">
+      <div class="card"><span class="card-icon">📋</span><h3>Packet Filtering</h3><p>Inspecte chak pakè selon règ IP ak pò. Rapid men pa wè kontni.</p></div>
+      <div class="card"><span class="card-icon">🔍</span><h3>Stateful Firewall</h3><p>Suiv eta koneksyon — wè ki pakè se pati yon koneksyon lejitim.</p></div>
+      <div class="card"><span class="card-icon">🛡️</span><h3>NGFW (Next-Gen)</h3><p>Inspecte kontni, kontwole aplikasyon, IPS entegre. Pi konplè.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>IDS ak IPS</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <span class="card-icon">👁️</span>
+        <h3>IDS – Intrusion Detection System</h3>
+        <p>Detekte aktivite sispèk epi <strong>alète</strong> administratè. Li <strong>pa bloke</strong> trafik — li sèlman gade ak rapòte. Passive.</p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🛡️</span>
+        <h3>IPS – Intrusion Prevention System</h3>
+        <p>Detekte <strong>epi bloke</strong> aktivite sispèk an tan reyèl. Li aktif nan chemen trafik la. Inline (plis enpak potansyèl).</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>VPN – Virtual Private Network</h2>
+    <p>Yon <strong>VPN</strong> kreye yon <strong>tunel chifre</strong> sou Entènèt piblik — tankou yon wout sekrè. Pèmèt travay distans sekisman oswa konekte de biwo ansanm sou Entènèt.</p>
+    <div class="grid grid-2 mt-2">
+      <div class="card"><span class="card-icon">👤</span><h3>VPN Aksè Distans</h3><p>Travayè lakay konekte sekirize nan rezo biwo yo. Egzanp: OpenVPN, Cisco AnyConnect.</p></div>
+      <div class="card"><span class="card-icon">🔗</span><h3>VPN Site-à-Site</h3><p>Konekte de biwo nan diferan vil oswa peyi sou Entènèt. Pèmèt yo pataje resous kòm si yo nan menm rezo.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Bon Pratik Sekirite</h2>
+    <div class="grid grid-3 mt-2">
+      <div class="card"><span class="card-icon">🔑</span><h3>Mo de Pase Solid</h3><p>Minimum 12 karaktè, melanje lèt, chif, ak senbòl. Pa reutilize. Itilize yon gestyon mo de pase (password manager).</p></div>
+      <div class="card"><span class="card-icon">📱</span><h3>MFA (Multi-Factor Auth)</h3><p>Plis pase yon faktè pou konekte: mo de pase + kòd SMS oswa aplikasyon authentificateur.</p></div>
+      <div class="card"><span class="card-icon">🔄</span><h3>Mete Ajou Regilyèman</h3><p>Patch management — mete ajou sistèm operasyon, aplikasyon, ak firmware routeur/switch touswit.</p></div>
+      <div class="card"><span class="card-icon">🎯</span><h3>Principle of Least Privilege</h3><p>Ba chak itilizatè sèlman aksè li absoliman bezwen pou travay li. Pa ba dwa admin a tout moun.</p></div>
+      <div class="card"><span class="card-icon">🔌</span><h3>Segmentasyon VLAN</h3><p>Separe aparèy sensitif (sèvè, kamera) nan VLAN pa yo ak kontwòl aksè strict ant VLAN yo.</p></div>
+      <div class="card"><span class="card-icon">💾</span><h3>Backup Regilyèman</h3><p>Suiv règ 3-2-1: 3 kopi, 2 medya diferan, 1 kopi hors site. Tès restaurasyon regilyèman.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Atak Komen yo (Ak Kijan Pwoteje Ou)</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">🎣 Phishing – Lapèch <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">
+          <p><strong>Kisa li ye:</strong> Atakè voye imel, SMS, oswa lyen kap prete pou yo soti nan yon sous lejitim (Google, bank, Facebook) pou vòlò enfòmasyon ou (pou de pase, kat kredi).</p>
+          <p><strong>Pwoteksyon:</strong> Verifye URL avan ou klike. Pa tape mo de pase si paj la pa gen HTTPS. Aktive MFA.</p>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🦠 Malware – Lojisyèl Malveyan <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">
+          <p><strong>Kisa li ye:</strong> Lojisyèl ki kreye pou domaje, vòlò, oswa kontwole sistèm ou — viris, trojan, ransomware, spyware.</p>
+          <p><strong>Pwoteksyon:</strong> Antivirus ajou, pa telechaje fichye sispèk, mete ajou OS, backup regilyèman.</p>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">🕵️ Man-in-the-Middle (MitM) <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">
+          <p><strong>Kisa li ye:</strong> Atakè pozisyone li ant kliyan ak sèvè pou entèsepte kominikasyon yo san youn ak lòt konn li.</p>
+          <p><strong>Pwoteksyon:</strong> Itilize HTTPS toujou, VPN sou Wi-Fi piblik, sètifika SSL/TLS valid.</p>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">💥 DoS / DDoS – Déni de Service <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">
+          <p><strong>Kisa li ye:</strong> Inondasyon yon sèvè ak trafik pou li pa ka reponn itilizatè lejitim yo. DDoS = plizyè sous (botnet).</p>
+          <p><strong>Pwoteksyon:</strong> Firewall, rate limiting, CDN, DDoS mitigation service (Cloudflare, AWS Shield).</p>
+        </div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">📡 Rogue AP / Evil Twin <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner">
+          <p><strong>Kisa li ye:</strong> Yon atakè kreye yon fake access point ak menm non rezo lejitim la (Evil Twin) pou voye trafik okap li.</p>
+          <p><strong>Pwoteksyon:</strong> VPN sou Wi-Fi piblik, verifye sètifika HTTPS, evite Wi-Fi piblik san VPN pou tranzaksyon sensitif.</p>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="wireless.html" class="btn btn-secondary">← Wi-Fi</a>
+    <a href="troubleshooting.html" class="btn btn-primary">Depannaj →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis pou étidyan ayisyen.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
