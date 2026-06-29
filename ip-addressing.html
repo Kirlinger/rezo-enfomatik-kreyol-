@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Adrès IP – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Adrès IP</div>
+    <h1>🔢 Adrès IP</h1>
+    <p>Konprann kijan adrès IP travay — IPv4, IPv6, IP piblik vs prive, masque sou-rezo, CIDR, ak plis.</p>
+  </div>
+</div>
+
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="content-section">
+    <h2>Kisa yon Adrès IP Ye?</h2>
+    <p>Yon <strong>adrès IP (Internet Protocol address)</strong> se yon nimewo inik ki asiye bay chak aparèy nan yon rezo pou idantifye li. Se tankou yon <strong>adrès postal</strong> pou òdinatè ou — li pèmèt done jwenn destinasyon yo.</p>
+    <div class="callout">
+      <h3>📬 Analoji Senp</h3>
+      <p>Imajine Entènèt la se yon gwo vil ak milyon kay. Chak kay bezwen yon adrès pou faktè (lapòs) ka delivre pako yo. Adrès IP se adrès postal aparèy ou sou Entènèt la.</p>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>IPv4 – Version 4</h2>
+    <p><strong>IPv4 (Internet Protocol Version 4)</strong> se vèsyon ki pi souvan itilize. Li fòme de <strong>4 okté (32 bits)</strong> separe pa yon pwen.</p>
+
+    <div class="code-block">
+      <span class="comment"># Fòmat IPv4</span><br/>
+      192.168.1.100<br/>
+      <span class="output">│   │   │  └─ Idenite Òs (Host ID)</span><br/>
+      <span class="output">│   │   └──── Sou-rezo</span><br/>
+      <span class="output">│   └──────── Rezo Prive</span><br/>
+      <span class="output">└──────────── Klas Rezo</span>
+    </div>
+
+    <h3>Rezo IPv4 yo (Klas A, B, C)</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Klas</th><th>Premye Okté</th><th>Rezo yo</th><th>Òs pa Rezo</th><th>Egzanp</th></tr></thead>
+        <tbody>
+          <tr><td><strong>A</strong></td><td>1–126</td><td>126</td><td>16,777,214</td><td>10.0.0.1</td></tr>
+          <tr><td><strong>B</strong></td><td>128–191</td><td>16,384</td><td>65,534</td><td>172.16.0.1</td></tr>
+          <tr><td><strong>C</strong></td><td>192–223</td><td>2,097,152</td><td>254</td><td>192.168.1.1</td></tr>
+          <tr><td>D</td><td>224–239</td><td>Multicast</td><td>—</td><td>224.0.0.1</td></tr>
+          <tr><td>E</td><td>240–255</td><td>Rezerve/Rechèch</td><td>—</td><td>—</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Adrès IPv4 Prive (RFC 1918)</h3>
+    <p>Adrès <strong>prive</strong> yo rezève pou rezo entèn — yo pa routab sou Entènèt piblik. NAT (Network Address Translation) konvèti yo an IP piblik.</p>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Plag Prive</th><th>Klas</th><th>CIDR</th><th>Kantite Adrès</th><th>Itilizasyon</th></tr></thead>
+        <tbody>
+          <tr><td><code>10.0.0.0 – 10.255.255.255</code></td><td>A</td><td>/8</td><td>16,777,216</td><td>Gwo antrepriz</td></tr>
+          <tr><td><code>172.16.0.0 – 172.31.255.255</code></td><td>B</td><td>/12</td><td>1,048,576</td><td>Antrepriz medyòm</td></tr>
+          <tr><td><code>192.168.0.0 – 192.168.255.255</code></td><td>C</td><td>/16</td><td>65,536</td><td>Kay ak ti biwo</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Adrès Espesyal yo</h3>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Adrès</th><th>Non</th><th>Deskripsyon</th></tr></thead>
+        <tbody>
+          <tr><td><code>127.0.0.1</code></td><td>Loopback</td><td>Refere a aparèy ou menm. <code>ping 127.0.0.1</code> teste stack TCP/IP lokal ou.</td></tr>
+          <tr><td><code>169.254.x.x</code></td><td>APIPA</td><td>Otomatik lè DHCP pa disponib. Siy yon pwoblèm rezo.</td></tr>
+          <tr><td><code>0.0.0.0</code></td><td>Tout Rezo</td><td>Montre "tout rezo" oswa adres ki pa defini.</td></tr>
+          <tr><td><code>255.255.255.255</code></td><td>Broadcast Limited</td><td>Voye bay tout aparèy sou rezo lokal la.</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box warning"><div class="icon">⚠️</div><div class="body"><strong>APIPA – 169.254.x.x:</strong><p>Lè ou wè yon adrès <code>169.254.x.x</code>, sa vle di aparèy la pa ka jwenn yon sèvè DHCP. Verifye koneksyon rezo ou ak sèvè DHCP a.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Masque Sou-Rezo (Subnet Mask)</h2>
+    <p>Yon <strong>masque sou-rezo</strong> se yon nimewo 32-bit ki defini ki pati nan adrès IP la se <strong>Rezo ID</strong> ak ki pati se <strong>Òs ID</strong>.</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Masque</th><th>CIDR</th><th>Klas</th><th>Egzanp Rezo</th><th>Òs Disponibl</th></tr></thead>
+        <tbody>
+          <tr><td><code>255.0.0.0</code></td><td>/8</td><td>A</td><td>10.0.0.0</td><td>16,777,214</td></tr>
+          <tr><td><code>255.255.0.0</code></td><td>/16</td><td>B</td><td>172.16.0.0</td><td>65,534</td></tr>
+          <tr><td><code>255.255.255.0</code></td><td>/24</td><td>C</td><td>192.168.1.0</td><td>254</td></tr>
+          <tr><td><code>255.255.255.128</code></td><td>/25</td><td>C</td><td>192.168.1.0</td><td>126</td></tr>
+          <tr><td><code>255.255.255.192</code></td><td>/26</td><td>C</td><td>192.168.1.0</td><td>62</td></tr>
+          <tr><td><code>255.255.255.224</code></td><td>/27</td><td>C</td><td>192.168.1.0</td><td>30</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Egzanp Konkrè</h3>
+    <div class="code-block">
+      <span class="comment"># Rezo Biwo</span><br/>
+      Adrès IP:    192.168.1.50<br/>
+      Masque:      255.255.255.0  (/24)<br/>
+      Rezo ID:     192.168.1.0<br/>
+      Broadcast:   192.168.1.255<br/>
+      Premye Òs:   192.168.1.1<br/>
+      Dènye Òs:    192.168.1.254<br/>
+      Òs Disponibl: 254
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>IP Piblik vs IP Prive</h2>
+    <div class="diagram">
+      <div class="diagram-node"><div class="d-icon">💻</div><span>PC<br/><small>192.168.1.2</small></span></div>
+      <div class="diagram-line"></div>
+      <div class="diagram-node"><div class="d-icon">🌐</div><span>Router/NAT<br/><small>IP Piblik: 203.x.x.x</small></span></div>
+      <div class="diagram-line"></div>
+      <div class="diagram-node"><div class="d-icon">☁️</div><span>Entènèt<br/><small>IP Piblik yo</small></span></div>
+    </div>
+    <div class="grid grid-2 mt-3">
+      <div class="card">
+        <span class="card-icon">🏠</span>
+        <h3>IP Prive</h3>
+        <p>Adrès pou rezo entèn sèlman. Pa routab sou Entènèt. Plizyè rezo ka itilize menm adrès yo san konfli.</p>
+        <p><strong>Egzanp:</strong> <code>192.168.1.x</code>, <code>10.x.x.x</code>, <code>172.16-31.x.x</code></p>
+      </div>
+      <div class="card">
+        <span class="card-icon">🌐</span>
+        <h3>IP Piblik</h3>
+        <p>Adrès inik sou tout Entènèt. Asiye pa ISP ou (founisè entènèt). Nenpòt moun nan Entènèt ka rive jwenn li.</p>
+        <p><strong>Egzanp:</strong> <code>8.8.8.8</code> (Google DNS), <code>1.1.1.1</code> (Cloudflare)</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>IP Estatik vs IP Dinamik</h2>
+    <div class="grid grid-2 mt-2">
+      <div class="card">
+        <span class="card-icon">📌</span>
+        <h3>IP Estatik</h3>
+        <p>Adrès manyèlman konfigire ki <strong>pa chanje</strong>. Itilize pou sèvè, imprimant rezo, kamera sekirite.</p>
+        <ul><li>Pi fasil pou jwenn toulejou</li><li>Mwens dependan sou DHCP</li><li>Pi chè si IP Piblik</li></ul>
+      </div>
+      <div class="card">
+        <span class="card-icon">🔄</span>
+        <h3>IP Dinamik</h3>
+        <p>Adrès otomatikman asiye pa <strong>DHCP</strong>. Chanje chak fwa aparèy la konekte. Pi souvan pou kliyan.</p>
+        <ul><li>Pa bezwen konfigirasyon manyèl</li><li>Jere otomatikman</li><li>Adrès ka chanje</li></ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>IPv6 – Version 6</h2>
+    <p><strong>IPv6</strong> se vèsyon ki ranplase IPv4 paske adrès IPv4 yo fini. Li gen <strong>128 bits</strong> konpare ak 32 bits pou IPv4. Li ekri an <strong>hexadecimal</strong>, separe pa pwen-divi.</p>
+
+    <div class="code-block">
+      <span class="comment"># Egzanp adrès IPv6</span><br/>
+      2001:0db8:85a3:0000:0000:8a2e:0370:7334<br/>
+      <span class="output"># Fòm abrejye (zeros konsekitif = ::)</span><br/>
+      2001:db8:85a3::8a2e:370:7334
+    </div>
+
+    <div class="table-wrapper mt-2">
+      <table>
+        <thead><tr><th>Karakteristik</th><th>IPv4</th><th>IPv6</th></tr></thead>
+        <tbody>
+          <tr><td>Longè Adrès</td><td>32 bits</td><td>128 bits</td></tr>
+          <tr><td>Kantite Adrès</td><td>~4 milya</td><td>~340 undecilyon</td></tr>
+          <tr><td>Fòmat</td><td>Desimal puntué</td><td>Hexadecimal pwen-divi</td></tr>
+          <tr><td>Konfigirasyon</td><td>Manyèl / DHCP</td><td>SLAAC / DHCPv6</td></tr>
+          <tr><td>Sekirite</td><td>Opsyonèl (IPSec)</td><td>Entegre (IPSec)</td></tr>
+          <tr><td>NAT</td><td>Nesesè</td><td>Pa nesesè</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <h3>Tip Adrès IPv6 Kle yo</h3>
+    <ul>
+      <li><code>2000::/3</code> – <strong>Global Unicast</strong> – IP piblik IPv6 (ekivalan IP piblik IPv4)</li>
+      <li><code>FE80::/10</code> – <strong>Link-Local</strong> – Otomatik sou chak entèfas (ekivalan 169.254.x.x)</li>
+      <li><code>::1</code> – <strong>Loopback</strong> – Ekivalan <code>127.0.0.1</code></li>
+      <li><code>FF00::/8</code> – <strong>Multicast</strong> – Voye bay gwoup aparèy</li>
+    </ul>
+  </div>
+
+  <div class="content-section">
+    <h2>Adrès MAC</h2>
+    <p>Yon <strong>adrès MAC (Media Access Control)</strong> se yon identifyan inik 48-bit asiye nan fabrik nan chak NIC. Li opere nan Kouch 2 (Data Link).</p>
+    <div class="code-block">
+      <span class="comment"># Fòmat Adrès MAC</span><br/>
+      00:1A:2B:3C:4D:5E<br/>
+      <span class="output">│──────────│ │──────────│</span><br/>
+      <span class="output">OUI (Fabrikant)  Nimewo Idantifyan</span><br/><br/>
+      <span class="comment"># Kòman pou wè MAC address ou sou Windows</span><br/>
+      ipconfig /all<br/>
+      <span class="comment"># Sou Linux/Mac</span><br/>
+      ip addr  <span class="comment">oswa</span>  ifconfig
+    </div>
+    <div class="info-box note"><div class="icon">💡</div><div class="body"><strong>MAC vs IP:</strong><p>Adrès MAC se pou komunikasyon <strong>lokal</strong> (Kouch 2). Adrès IP se pou komunikasyon <strong>rezo</strong> ak routage (Kouch 3). Les de travay ansanm.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Pasrèl Defo (Default Gateway)</h2>
+    <p>Yon <strong>default gateway</strong> se adrès IP routeur lokal la. Lè yon aparèy vle kominike ak yon aparèy <strong>deyò rezo lokal li</strong> (pa egzanp, sou Entènèt), li voye pakè a bay gateway la.</p>
+    <div class="diagram">
+      <div class="diagram-node"><div class="d-icon">💻</div><span>PC<br/><small>192.168.1.100</small></span></div>
+      <div style="display:flex;flex-direction:column;align-items:center;gap:0.2rem;">
+        <div class="diagram-line" style="width:80px;"></div>
+        <small style="font-size:0.7rem;color:var(--text-muted);">Gateway: 192.168.1.1</small>
+      </div>
+      <div class="diagram-node"><div class="d-icon">🌐</div><span>Router<br/><small>192.168.1.1</small></span></div>
+      <div class="diagram-line"></div>
+      <div class="diagram-node"><div class="d-icon">☁️</div><span>Entènèt<br/><small>8.8.8.8</small></span></div>
+    </div>
+    <div class="code-block mt-2">
+      <span class="comment"># Konfigirasyon tipik rezo kay</span><br/>
+      Adrès IP:        192.168.1.100<br/>
+      Masque Sou-rezo: 255.255.255.0<br/>
+      Pasrèl Defo:     192.168.1.1      <span class="comment">← Routeur</span><br/>
+      DNS Prefere:     8.8.8.8          <span class="comment">← Google DNS</span>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="cables.html" class="btn btn-secondary">← Kab ak Medya</a>
+    <a href="subnetting.html" class="btn btn-primary">Subnetting →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

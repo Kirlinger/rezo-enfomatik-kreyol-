@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Subnetting – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Subnetting</div>
+    <h1>📊 Subnetting – Sou-Rezo</h1>
+    <p>Aprann kalkile sou-rezo an Kreyòl ak egzanp klè, tablo, ak kesyon pratik.</p>
+  </div>
+</div>
+
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="content-section">
+    <h2>Poukisa Subnetting Itil?</h2>
+    <p><strong>Subnetting</strong> se pwosesis divize yon gwo rezo IP an <strong>plizyè ti sou-rezo</strong>. Sa pèmèt:</p>
+    <div class="grid grid-3 mt-2">
+      <div class="card"><span class="card-icon">🏢</span><h3>Òganizasyon</h3><p>Separe rezo biwo diferan: Depatman Finansye, IT, RH — chak nan sou-rezo pa yo.</p></div>
+      <div class="card"><span class="card-icon">🛡️</span><h3>Sekirite</h3><p>Limite kominikasyon ant depatman yo pou redui enpak si yon depatman konpwomèt.</p></div>
+      <div class="card"><span class="card-icon">⚡</span><h3>Pèfòmans</h3><p>Redui trafik broadcast — broadcast pa vwayaje ant sou-rezo diferan.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Konsèp Fondamantal yo</h2>
+
+    <div class="grid grid-2 mt-2">
+      <div class="card"><span class="card-icon">🔢</span><h3>Network ID (Rezo)</h3><p>Premye adrès nan sou-rezo a. Reprezante rezo a antye. <strong>Pa ka asiye bay yon òs.</strong></p><p>Egzanp: <code>192.168.1.0/24</code></p></div>
+      <div class="card"><span class="card-icon">📢</span><h3>Broadcast Address</h3><p>Dènye adrès nan sou-rezo a. Pakè voye bay <strong>tout aparèy</strong> nan sou-rezo a an menm tan. <strong>Pa ka asiye bay yon òs.</strong></p><p>Egzanp: <code>192.168.1.255</code></p></div>
+      <div class="card"><span class="card-icon">💻</span><h3>Usable Host Range</h3><p>Tout adrès ant Network ID ak Broadcast. Sa ou ka asiye bay òdinatè, sèvè, routeur, ak lòt aparèy.</p></div>
+      <div class="card"><span class="card-icon">🔢</span><h3>CIDR Notation</h3><p>Pou ekri adrès rezo avèk masque li: <code>192.168.1.0/24</code> vle di masque a gen 24 bit "1" konsekitif.</p></div>
+    </div>
+
+    <div class="info-box note"><div class="icon">📐</div><div class="body"><strong>Fòmil Fondamantal:</strong><p>Kantite Òs Itilizabl = <strong>2ⁿ − 2</strong> kote <strong>n</strong> = kantite bit ki rezève pou pati Òs la. Nou retire 2 pou Network ID ak Broadcast.</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Tablo Subnetting /24 Konplè</h2>
+    <p>Nan egzanp sa, nou pran rezo <strong>192.168.1.0/24</strong> epi nou divize li an sou-rezo pi piti:</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>CIDR</th><th>Masque</th><th>Sou-Rezo</th><th>Òs Itilizabl</th><th>Network ID</th><th>Broadcast</th><th>Plag Òs</th></tr></thead>
+        <tbody>
+          <tr class="subnet-row-highlight"><td><code>/24</code></td><td>255.255.255.0</td><td>1</td><td>254</td><td>.0</td><td>.255</td><td>.1 – .254</td></tr>
+          <tr><td><code>/25</code></td><td>255.255.255.128</td><td>2</td><td>126</td><td>.0 / .128</td><td>.127 / .255</td><td>.1–.126 / .129–.254</td></tr>
+          <tr><td><code>/26</code></td><td>255.255.255.192</td><td>4</td><td>62</td><td>.0/.64/.128/.192</td><td>.63/.127/.191/.255</td><td>.1–.62, .65–.126...</td></tr>
+          <tr><td><code>/27</code></td><td>255.255.255.224</td><td>8</td><td>30</td><td>.0/.32/.64/...</td><td>.31/.63/.95/...</td><td>.1–.30, .33–.62...</td></tr>
+          <tr><td><code>/28</code></td><td>255.255.255.240</td><td>16</td><td>14</td><td>.0/.16/.32/...</td><td>.15/.31/.47/...</td><td>.1–.14, .17–.30...</td></tr>
+          <tr><td><code>/29</code></td><td>255.255.255.248</td><td>32</td><td>6</td><td>.0/.8/.16/...</td><td>.7/.15/.23/...</td><td>.1–.6, .9–.14...</td></tr>
+          <tr><td><code>/30</code></td><td>255.255.255.252</td><td>64</td><td>2</td><td>.0/.4/.8/...</td><td>.3/.7/.11/...</td><td>.1–.2, .5–.6...</td></tr>
+          <tr><td><code>/32</code></td><td>255.255.255.255</td><td>1 òs</td><td>1 (Loopback)</td><td>—</td><td>—</td><td>Yon sèl òs</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Egzanp Detaye — Kalkile yon Sou-Rezo /26</h2>
+
+    <div class="callout">
+      <h3>🎯 Pwoblèm</h3>
+      <p>Ou gen rezo <strong>192.168.10.0/24</strong>. Ou bezwen divize li an <strong>4 sou-rezo egal</strong> pou 4 depatman ki chak bezwen ~60 aparèy. Ki CIDR pou itilize?</p>
+    </div>
+
+    <div class="steps mt-3">
+      <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Detèmine Bit Nesesè</h4><p>62 òs útilizabl = /26 (2⁶ − 2 = 62). Donk nou bezwen 6 bit pou pati Òs la.</p></div></div>
+      <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Kalkile Masque</h4><p>/26 = 32 − 6 = 26 bit pou pati rezo. Masque: 255.255.255.192 (192 = 11000000 binè)</p></div></div>
+      <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Idantifye Entèval (Block Size)</h4><p>256 − 192 = 64. Chak sou-rezo avanse pa 64.</p></div></div>
+      <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Kalkile Chak Sou-Rezo</h4><p>Sou-rezo #1: .0, Sou-rezo #2: .64, Sou-rezo #3: .128, Sou-rezo #4: .192</p></div></div>
+    </div>
+
+    <div class="table-wrapper mt-3">
+      <table>
+        <thead><tr><th>Sou-Rezo</th><th>Network ID</th><th>Broadcast</th><th>Premye Òs</th><th>Dènye Òs</th><th>Depatman</th></tr></thead>
+        <tbody>
+          <tr><td>Sou-Rezo 1</td><td>192.168.10.0/26</td><td>192.168.10.63</td><td>192.168.10.1</td><td>192.168.10.62</td><td>Depatman IT</td></tr>
+          <tr><td>Sou-Rezo 2</td><td>192.168.10.64/26</td><td>192.168.10.127</td><td>192.168.10.65</td><td>192.168.10.126</td><td>Finansye</td></tr>
+          <tr><td>Sou-Rezo 3</td><td>192.168.10.128/26</td><td>192.168.10.191</td><td>192.168.10.129</td><td>192.168.10.190</td><td>Vant</td></tr>
+          <tr><td>Sou-Rezo 4</td><td>192.168.10.192/26</td><td>192.168.10.255</td><td>192.168.10.193</td><td>192.168.10.254</td><td>RH</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Egzanp /27 — Kalkile Sou-Rezo 8 yo</h2>
+    <div class="code-block">
+      <span class="comment"># Rezo: 192.168.1.0/27 (Masque: 255.255.255.224)</span><br/>
+      <span class="comment"># Block Size: 256 − 224 = 32</span><br/>
+      <span class="comment"># Chak sou-rezo gen 30 Òs itilizabl (2⁵ − 2)</span><br/><br/>
+      Sou-Rezo 1: 192.168.1.0   – Broadcast .31   – Òs .1  à .30<br/>
+      Sou-Rezo 2: 192.168.1.32  – Broadcast .63   – Òs .33 à .62<br/>
+      Sou-Rezo 3: 192.168.1.64  – Broadcast .95   – Òs .65 à .94<br/>
+      Sou-Rezo 4: 192.168.1.96  – Broadcast .127  – Òs .97 à .126<br/>
+      Sou-Rezo 5: 192.168.1.128 – Broadcast .159  – Òs .129 à .158<br/>
+      Sou-Rezo 6: 192.168.1.160 – Broadcast .191  – Òs .161 à .190<br/>
+      Sou-Rezo 7: 192.168.1.192 – Broadcast .223  – Òs .193 à .222<br/>
+      Sou-Rezo 8: 192.168.1.224 – Broadcast .255  – Òs .225 à .254
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Kesyon Pratik — Eseye Tèt Ou!</h2>
+    <div class="accordion">
+      <div class="accordion-item">
+        <button class="accordion-header">❓ Kesyon 1: Konbyen Òs itilizabl gen nan 192.168.5.0/27? <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner"><p><strong>Repons:</strong> /27 = 5 bit pou òs. 2⁵ − 2 = 32 − 2 = <strong>30 òs itilizabl</strong>. Masque: 255.255.255.224.</p></div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">❓ Kesyon 2: Broadcast pou 10.0.1.64/26 se ki adrès? <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner"><p><strong>Repons:</strong> /26 gen block size 64. 64 + 64 − 1 = <strong>10.0.1.127</strong> se broadcast la.</p></div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">❓ Kesyon 3: Ki sou-rezo 172.16.4.200/24 appartni? <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner"><p><strong>Repons:</strong> /24 = Network ID 172.16.4.0, Broadcast 172.16.4.255. Adrès <strong>172.16.4.200</strong> ap nan plag .1 à .254 — li nan sou-rezo <strong>172.16.4.0/24</strong>.</p></div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">❓ Kesyon 4: Ou bezwen 50 aparèy nan yon sou-rezo. Ki /CIDR pi piti ki ka sèvi? <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner"><p><strong>Repons:</strong> /26 bay 62 òs (sifi). /27 bay sèlman 30 (pa sifi). Repons: <strong>/26</strong>.</p></div></div>
+      </div>
+      <div class="accordion-item">
+        <button class="accordion-header">❓ Kesyon 5: Ki masque sou-rezo /28 ye? <span class="acc-icon">▼</span></button>
+        <div class="accordion-body"><div class="accordion-body-inner"><p><strong>Repons:</strong> /28 = 28 bit "1". Dènye okté: 11110000 = <strong>240</strong>. Donk masque: <strong>255.255.255.240</strong>. Òs itilizabl: 2⁴−2 = 14.</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Tablo Referans Rapid CIDR</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>CIDR</th><th>Masque Sou-Rezo</th><th>Sou-Rezo (/24)</th><th>Òs Itilizabl</th><th>Block Size</th></tr></thead>
+        <tbody>
+          <tr><td>/24</td><td>255.255.255.0</td><td>1</td><td>254</td><td>256</td></tr>
+          <tr><td>/25</td><td>255.255.255.128</td><td>2</td><td>126</td><td>128</td></tr>
+          <tr><td>/26</td><td>255.255.255.192</td><td>4</td><td>62</td><td>64</td></tr>
+          <tr><td>/27</td><td>255.255.255.224</td><td>8</td><td>30</td><td>32</td></tr>
+          <tr><td>/28</td><td>255.255.255.240</td><td>16</td><td>14</td><td>16</td></tr>
+          <tr><td>/29</td><td>255.255.255.248</td><td>32</td><td>6</td><td>8</td></tr>
+          <tr><td>/30</td><td>255.255.255.252</td><td>64</td><td>2</td><td>4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="info-box tip"><div class="icon">🎯</div><div class="body"><strong>Triks pou Egzamen:</strong><p>Memori block size yo: 256, 128, 64, 32, 16, 8, 4. Chak fwa ou ogmante CIDR pa 1, ou divize block size pa 2.</p></div></div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="ip-addressing.html" class="btn btn-secondary">← Adrès IP</a>
+    <a href="protocols.html" class="btn btn-primary">Pwotokòl →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

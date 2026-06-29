@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rezo Enfòmatik an Kreyòl – Akèy</title>
+  <meta name="description" content="Aprann rezo enfòmatik an Kreyòl ayisyen. IP, DNS, DHCP, VLAN, subnetting, routing, switching, sekirite ak plis."/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand">
+    <span class="brand-icon">🌐</span>
+    <span>Rezo Enfòmatik</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html">Akèy</a>
+    <a href="about.html">Sou Rezo</a>
+    <a href="topologies.html">Topoloji</a>
+    <a href="osi.html">OSI/TCP-IP</a>
+    <a href="devices.html">Aparèy</a>
+    <a href="cables.html">Kab</a>
+    <a href="ip-addressing.html">IP</a>
+    <a href="subnetting.html">Subnetting</a>
+    <a href="protocols.html">Pwotokòl</a>
+    <a href="dns-dhcp.html">DNS/DHCP</a>
+    <a href="routing-switching.html">Routing</a>
+    <a href="wireless.html">Wi-Fi</a>
+    <a href="security.html">Sekirite</a>
+    <a href="troubleshooting.html">Depannaj</a>
+    <a href="homelab.html">Home Lab</a>
+    <a href="labs.html">Labs</a>
+    <a href="quiz.html">Quiz</a>
+    <a href="glossary.html">Glosè</a>
+    <a href="resources.html">Resous</a>
+  </div>
+  <div class="nav-actions">
+    <button class="btn-theme-toggle" id="theme-toggle" title="Chanje tèm">☀️</button>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a>
+  <a href="about.html">📡 Sou Rezo</a>
+  <a href="topologies.html">🔗 Topoloji</a>
+  <a href="osi.html">📋 OSI/TCP-IP</a>
+  <a href="devices.html">🖥️ Aparèy</a>
+  <a href="cables.html">🔌 Kab</a>
+  <a href="ip-addressing.html">🔢 IP</a>
+  <a href="subnetting.html">📊 Subnetting</a>
+  <a href="protocols.html">📦 Pwotokòl</a>
+  <a href="dns-dhcp.html">🗂️ DNS/DHCP</a>
+  <a href="routing-switching.html">🔄 Routing</a>
+  <a href="wireless.html">📶 Wi-Fi</a>
+  <a href="security.html">🛡️ Sekirite</a>
+  <a href="troubleshooting.html">🔧 Depannaj</a>
+  <a href="homelab.html">🏡 Home Lab</a>
+  <a href="labs.html">🧪 Labs</a>
+  <a href="quiz.html">❓ Quiz</a>
+  <a href="glossary.html">📖 Glosè</a>
+  <a href="resources.html">📚 Resous</a>
+</div>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-grid"></div>
+  <div class="hero-content">
+    <span class="hero-badge">🎓 Kou Konplè an Kreyòl • Gratis</span>
+    <h1>Rezo Enfòmatik<br/>an Kreyòl Ayisyen</h1>
+    <p>Aprann tout bagay sou networking — depi koumansman rive nan nivo avanse — ekri antièman an Kreyòl ayisyen. Prepare pou CompTIA Network+ ak kou kolèj.</p>
+    <div class="hero-buttons">
+      <a href="about.html" class="btn btn-primary btn-lg">🚀 Kòmanse Aprann</a>
+      <a href="topologies.html" class="btn btn-outline btn-lg">🔗 Gade Topoloji yo</a>
+      <a href="labs.html" class="btn btn-secondary btn-lg">🧪 Pratike Lab</a>
+    </div>
+  </div>
+  <!-- Animated network diagram -->
+  <div style="position:relative;z-index:1;margin-top:3rem;display:flex;align-items:center;justify-content:center;gap:1rem;flex-wrap:wrap;">
+    <div class="hero-node"><div class="node-icon pulse">💻</div><span>PC</span></div>
+    <div class="hero-connector"></div>
+    <div class="hero-node"><div class="node-icon">🔌</div><span>Switch</span></div>
+    <div class="hero-connector"></div>
+    <div class="hero-node"><div class="node-icon">🌐</div><span>Router</span></div>
+    <div class="hero-connector"></div>
+    <div class="hero-node"><div class="node-icon">🔥</div><span>Firewall</span></div>
+    <div class="hero-connector"></div>
+    <div class="hero-node"><div class="node-icon">☁️</div><span>Entènèt</span></div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="sm" style="background:var(--bg-secondary);border-top:1px solid var(--border-color);border-bottom:1px solid var(--border-color);">
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num">19</div><div class="stat-label">Paj edikatif</div></div>
+      <div class="stat-card"><div class="stat-num">50+</div><div class="stat-label">Kesyon quiz</div></div>
+      <div class="stat-card"><div class="stat-num">100+</div><div class="stat-label">Tèm nan glosè</div></div>
+      <div class="stat-card"><div class="stat-num">10</div><div class="stat-label">Labs pratik</div></div>
+      <div class="stat-card"><div class="stat-num">7</div><div class="stat-label">Kouch OSI</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- MAIN TOPICS -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Sijè yo</span>
+      <h2>Sa Ou Pral Aprann</h2>
+      <p>Kouri tout sijè enpòtan sou rezo enfòmatik, depi baz yo rive nan konsèp avanse yo.</p>
+    </div>
+    <div class="grid grid-auto">
+      <a href="about.html" class="topic-card">
+        <span class="topic-icon">📡</span>
+        <h3>Sou Rezo Enfòmatik</h3>
+        <p>LAN, WAN, MAN, kliyan ak sèvè, Entènèt vs Intranet</p>
+        <span class="badge badge-blue">Debitan</span>
+      </a>
+      <a href="topologies.html" class="topic-card">
+        <span class="topic-icon">🔗</span>
+        <h3>Topoloji Rezo</h3>
+        <p>Bus, zetwal, bag, mesh, hibrid ak pwen-a-pwen</p>
+        <span class="badge badge-blue">Debitan</span>
+      </a>
+      <a href="osi.html" class="topic-card">
+        <span class="topic-icon">📋</span>
+        <h3>Modèl OSI ak TCP/IP</h3>
+        <p>7 kouch OSI, modèl TCP/IP, diferans ak pwotokòl</p>
+        <span class="badge badge-cyan">Entèmedyè</span>
+      </a>
+      <a href="devices.html" class="topic-card">
+        <span class="topic-icon">🖥️</span>
+        <h3>Aparèy Rezo</h3>
+        <p>Router, switch, hub, modem, firewall, sèvè, NIC</p>
+        <span class="badge badge-blue">Debitan</span>
+      </a>
+      <a href="cables.html" class="topic-card">
+        <span class="topic-icon">🔌</span>
+        <h3>Kab ak Medya</h3>
+        <p>Ethernet, fibè optik, koaksyal, Cat5e/6/6a, RJ45</p>
+        <span class="badge badge-blue">Debitan</span>
+      </a>
+      <a href="ip-addressing.html" class="topic-card">
+        <span class="topic-icon">🔢</span>
+        <h3>Adrès IP</h3>
+        <p>IPv4, IPv6, IP piblik vs prive, masque, CIDR, APIPA</p>
+        <span class="badge badge-cyan">Entèmedyè</span>
+      </a>
+      <a href="subnetting.html" class="topic-card">
+        <span class="topic-icon">📊</span>
+        <h3>Subnetting</h3>
+        <p>/24, /25, /26, /27 — kalkil, network ID, broadcast</p>
+        <span class="badge badge-yellow">Avanse</span>
+      </a>
+      <a href="protocols.html" class="topic-card">
+        <span class="topic-icon">📦</span>
+        <h3>Pwotokòl Rezo</h3>
+        <p>TCP, UDP, HTTP, DNS, DHCP, SSH, FTP, SMTP ak plis</p>
+        <span class="badge badge-cyan">Entèmedyè</span>
+      </a>
+      <a href="dns-dhcp.html" class="topic-card">
+        <span class="topic-icon">🗂️</span>
+        <h3>DNS ak DHCP</h3>
+        <p>Rezolisyon non, DORA process, records DNS, scope DHCP</p>
+        <span class="badge badge-cyan">Entèmedyè</span>
+      </a>
+      <a href="routing-switching.html" class="topic-card">
+        <span class="topic-icon">🔄</span>
+        <h3>Routing ak Switching</h3>
+        <p>Tablo routing, VLAN, trunk, RIP, OSPF, BGP baz</p>
+        <span class="badge badge-yellow">Avanse</span>
+      </a>
+      <a href="wireless.html" class="topic-card">
+        <span class="topic-icon">📶</span>
+        <h3>Rezo San Fil</h3>
+        <p>Wi-Fi, SSID, 2.4/5/6 GHz, WPA2/3, entèferans</p>
+        <span class="badge badge-cyan">Entèmedyè</span>
+      </a>
+      <a href="security.html" class="topic-card">
+        <span class="topic-icon">🛡️</span>
+        <h3>Sekirite Rezo</h3>
+        <p>CIA Triad, firewall, VPN, IDS/IPS, atak komen yo</p>
+        <span class="badge badge-yellow">Avanse</span>
+      </a>
+      <a href="troubleshooting.html" class="topic-card">
+        <span class="topic-icon">🔧</span>
+        <h3>Depannaj Rezo</h3>
+        <p>ping, ipconfig, tracert, nslookup, netstat, arp</p>
+        <span class="badge badge-cyan">Entèmedyè</span>
+      </a>
+      <a href="homelab.html" class="topic-card">
+        <span class="topic-icon">🏡</span>
+        <h3>Home Lab</h3>
+        <p>Konstri yon labo lakay ou — VM, pfSense, Packet Tracer</p>
+        <span class="badge badge-green">Pratik</span>
+      </a>
+      <a href="labs.html" class="topic-card">
+        <span class="topic-icon">🧪</span>
+        <h3>Labs Pratik</h3>
+        <p>10 labs pou pratike konfigirasyon ak depannaj rezo</p>
+        <span class="badge badge-green">Pratik</span>
+      </a>
+      <a href="quiz.html" class="topic-card">
+        <span class="topic-icon">❓</span>
+        <h3>Quiz</h3>
+        <p>50 kesyon chwa miltipl sou tout sijè rezo yo</p>
+        <span class="badge badge-green">Tès</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- WHY NETWORKING -->
+<section style="background:var(--bg-secondary);border-top:1px solid var(--border-color);">
+  <div class="container">
+    <div class="two-col">
+      <div>
+        <span class="section-label">Poukisa aprann networking?</span>
+        <h2 style="font-size:1.8rem;font-weight:800;margin-bottom:1rem;">Networking se<br/><span class="text-blue">Baz Teknoloji</span></h2>
+        <p style="color:var(--text-secondary);margin-bottom:1.5rem;">Tout sistèm enfòmatik modèn depann sou rezo pou fonksyone. Grandi nan networking vle di grandi nan teknoloji.</p>
+        <div class="steps">
+          <div class="step"><div class="step-num">1</div><div class="step-content"><h4>Konprann Enfrastriktè</h4><p>Aprann kijan enfrastriktè IT yo travay nan konpayi, lekòl, lopital ak gouvernman.</p></div></div>
+          <div class="step"><div class="step-num">2</div><div class="step-content"><h4>Prepare pou Sètifikasyon</h4><p>CompTIA Network+, Cisco CCNA, ak lòt sètifikasyon ki ouvri pòt travay yo.</p></div></div>
+          <div class="step"><div class="step-num">3</div><div class="step-content"><h4>Travay nan Sekirite IT</h4><p>Sekirite rezo (cybersecurity) se youn nan domèn ki peye pi bon yo nan IT.</p></div></div>
+          <div class="step"><div class="step-num">4</div><div class="step-content"><h4>Ranfòse Ayiti Dijital</h4><p>Ayiti bezwen espèsyalis rezo pou konstwi enfrastriktè dijital peyi a.</p></div></div>
+        </div>
+      </div>
+      <div>
+        <div class="callout" style="margin-bottom:1.5rem;">
+          <h3>💡 Kisa Rezo Ye?</h3>
+          <p>Yon rezo enfòmatik se yon gwoup òdinatè ak aparèy ki konekte youn ak lòt pou pataje enfòmasyon ak resous. San rezo, pa gen Entènèt, pa gen imel, pa gen platfòm sosyal.</p>
+        </div>
+        <div class="card">
+          <span class="card-icon">🏆</span>
+          <h3>Kòmanse Jodi a</h3>
+          <p>Tout materyèl yo gratis ak ekri an Kreyòl ayisyen. Ou kapab aprann nan vitès ou.</p>
+          <a href="about.html" class="btn btn-primary mt-2">Kòmanse Aprann →</a>
+        </div>
+        <div class="card mt-2">
+          <span class="card-icon">📖</span>
+          <h3>Glosè Teknik</h3>
+          <p>Jwenn definisyon plis pase 100 tèm teknik yo eksplike an Kreyòl.</p>
+          <a href="glossary.html" class="card-link">Ale nan Glosè →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- QUICK PATHS -->
+<section>
+  <div class="container">
+    <div class="section-header">
+      <span class="section-label">Wout Aprann</span>
+      <h2>Chwazi Nivo Ou</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card text-center">
+        <span class="card-icon">🌱</span>
+        <h3>Debitan Konplè</h3>
+        <p>Kòmanse depi zéro. Aprann kisa rezo ye, topoloji, aparèy, ak kab.</p>
+        <a href="about.html" class="btn btn-outline mt-2">Kòmanse →</a>
+      </div>
+      <div class="card text-center">
+        <span class="card-icon">📈</span>
+        <h3>Entèmedyè</h3>
+        <p>Ou deja konnen baz yo. Kontinye ak IP, subnetting, DNS, DHCP, routing.</p>
+        <a href="ip-addressing.html" class="btn btn-outline mt-2">Kontinye →</a>
+      </div>
+      <div class="card text-center">
+        <span class="card-icon">🔬</span>
+        <h3>Pratik ak Labs</h3>
+        <p>Mete konesans yo an pratik ak labs, quiz, ak yon home lab reyèl.</p>
+        <a href="labs.html" class="btn btn-outline mt-2">Kòmanse Labs →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div>
+      <p>Yon resous edikatif gratis pou ede étidyan ayisyen aprann rezo enfòmatik nan lang manman yo.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Sijè Prensipal</h4>
+      <ul>
+        <li><a href="about.html">Sou Rezo</a></li>
+        <li><a href="osi.html">Modèl OSI</a></li>
+        <li><a href="ip-addressing.html">Adrès IP</a></li>
+        <li><a href="subnetting.html">Subnetting</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Pwotokòl</h4>
+      <ul>
+        <li><a href="protocols.html">Pwotokòl</a></li>
+        <li><a href="dns-dhcp.html">DNS & DHCP</a></li>
+        <li><a href="routing-switching.html">Routing</a></li>
+        <li><a href="wireless.html">Wi-Fi</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Resous</h4>
+      <ul>
+        <li><a href="quiz.html">Quiz</a></li>
+        <li><a href="glossary.html">Glosè</a></li>
+        <li><a href="labs.html">Labs</a></li>
+        <li><a href="resources.html">Lyen Itil</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2024 Rezo Enfòmatik an Kreyòl. Gratis pou tout moun.</span>
+    <span>Fèt pou étidyan ayisyen 🇭🇹</span>
+  </div>
+</footer>
+
+<button id="back-to-top" title="Retounen anwo">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

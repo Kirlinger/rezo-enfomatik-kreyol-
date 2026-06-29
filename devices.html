@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aparèy Rezo – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Aparèy Rezo</div>
+    <h1>🖥️ Aparèy Rezo</h1>
+    <p>Aprann sou tout aparèy rezo enpòtan yo — Router, Switch, Hub, Modem, Firewall ak plis.</p>
+  </div>
+</div>
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="info-box note"><div class="icon">🖥️</div><div class="body"><strong>Aparèy Rezo yo</strong><p>Aparèy rezo (network devices) se <strong>materyèl fizik</strong> ki pèmèt òdinatè ak lòt aparèy konekte ak kominike. Chak aparèy gen yon wòl espesifik.</p></div></div>
+
+  <div class="content-section">
+    <h2>Router (Routeur)</h2>
+    <div class="two-col">
+      <div>
+        <div class="img-placeholder"><div class="ph-icon">🌐</div><p>Imaj yon Router</p></div>
+      </div>
+      <div>
+        <p>Yon <strong>Router</strong> se aparèy ki <strong>konekte diferan rezo</strong> ansanm epi <strong>dirije (route) pakè done</strong> bay bon destinasyon yo. Li opere nan Kouch 3 (Network) modèl OSI a.</p>
+        <h3>Wòl kle yo:</h3>
+        <ul>
+          <li>Konekte LAN ou ak Entènèt la</li>
+          <li>Distribye adrès IP via DHCP</li>
+          <li>Pwoteje rezo a kòm yon firewall debaz</li>
+          <li>Sipòte Wi-Fi (routeur san fil)</li>
+        </ul>
+        <div class="info-box tip"><div class="icon">🏠</div><div class="body"><strong>Egzanp Kay:</strong><p>Boîte Digicel/Natcom nan kay ou se yon routeur ki konekte rezo Kay ou (LAN) ak Entènèt (WAN).</p></div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Switch (Komutator)</h2>
+    <div class="two-col">
+      <div>
+        <div class="img-placeholder"><div class="ph-icon">🔌</div><p>Imaj yon Switch 24 pò</p></div>
+      </div>
+      <div>
+        <p>Yon <strong>Switch</strong> konekte plizyè aparèy nan menm rezo lokal (LAN) epi dirije done <strong>dirèkteman bay aparèy destinasyon an</strong> sèlman. Li opere nan Kouch 2 (Data Link) epi itilize <strong>adrès MAC</strong>.</p>
+        <h3>Karakteristik:</h3>
+        <ul>
+          <li>Pò 8, 16, 24, 48 oswa plis</li>
+          <li>Pi entelijan pase Hub — konekte dirèkteman</li>
+          <li>Sipòte VLAN pou segmantasyon</li>
+          <li>Managed vs Unmanaged Switch</li>
+        </ul>
+        <div class="grid grid-2 mt-2">
+          <div class="card"><h3>Unmanaged</h3><p>Plug-and-play. Pa ka konfigire. Bon pou ti rezo kay.</p></div>
+          <div class="card"><h3>Managed</h3><p>Ka konfigire ak VLAN, QoS, monitoring. Pou rezo antrepriz.</p></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Hub (Konsentrateur)</h2>
+    <p>Yon <strong>Hub</strong> se ansyen vèsyon switch la. Li voye done bay <strong>tout aparèy</strong> konekte, pa jis destinasyon an. Sa kreye kolizyon ak bann pasant gaspiye.</p>
+    <div class="info-box warning"><div class="icon">⚠️</div><div class="body"><strong>Pa Rekòmande:</strong><p>Hub yo kasi obsòlèt jodi a. Yo ranplase pa Switch ki pi entelijan ak efisyan. Si ou wè Hub nan egzamen, sonje: Kouch 1, voye bay tout moun.</p></div></div>
+    <div class="grid grid-2 mt-2">
+      <div class="card"><h3>Hub (Ansyen)</h3><p>Voye done bay TOUT aparèy. Kreye kolizyon. Kouch 1.</p><span class="badge badge-red">Obsolèt</span></div>
+      <div class="card"><h3>Switch (Modèn)</h3><p>Voye done bay aparèy ESPESIFIK sèlman. Pa gen kolizyon. Kouch 2.</p><span class="badge badge-green">Estanda</span></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Modem</h2>
+    <div class="two-col">
+      <div>
+        <div class="img-placeholder"><div class="ph-icon">📡</div><p>Imaj yon Modem</p></div>
+      </div>
+      <div>
+        <p>Yon <strong>Modem (Modulator-Demodulator)</strong> konvèti sinyòl dijital òdinatè ou an sinyòl analòg pou transmèt sou liy telefòn oswa kab, epi fè konvèsyon ankò sou lòt bout la.</p>
+        <ul>
+          <li><strong>DSL Modem</strong> – itilize liy telefòn</li>
+          <li><strong>Cable Modem</strong> – itilize kab koaksyal TV</li>
+          <li><strong>Fiber Modem (ONT)</strong> – pou fibè optik</li>
+          <li><strong>4G/5G Modem</strong> – itilize rezo selilè</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Access Point (Pwen Aksè San Fil)</h2>
+    <p>Yon <strong>Wireless Access Point (WAP)</strong> lonje rezo kab Ethernet la epi bay koneksyon Wi-Fi. Li diferan ak routeur — li pa routè, li jis bay aksè san fil.</p>
+    <div class="diagram">
+      <div class="diagram-node"><div class="d-icon">🔌</div><span>Switch</span></div>
+      <div class="diagram-line"></div>
+      <div class="diagram-node"><div class="d-icon">📡</div><span>Access Point</span></div>
+      <div class="diagram-arrow">📶</div>
+      <div class="diagram-node"><div class="d-icon">📱</div><span>Telefòn</span></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Firewall</h2>
+    <p>Yon <strong>Firewall</strong> kontwole ak filtre trafik rezo selon règ sekirite. Li ka an materyèl (hardware) oswa logisyèl (software). Li opere nan Kouch 3 ak 4.</p>
+    <div class="grid grid-3 mt-2">
+      <div class="card"><span class="card-icon">🧱</span><h3>Packet Filtering</h3><p>Inspecte chak pakè epi bloke oswa pèmèt selon IP, pò, pwotokòl.</p></div>
+      <div class="card"><span class="card-icon">🔍</span><h3>Stateful Inspection</h3><p>Suiv eta koneksyon yo. Pi entelijan pase packet filtering senp.</p></div>
+      <div class="card"><span class="card-icon">🛡️</span><h3>Next-Gen Firewall</h3><p>Inspecte kontni, IDS/IPS entegre, kontwòl aplikasyon.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Sèvè (Server)</h2>
+    <p>Yon <strong>sèvè</strong> se yon òdinatè ki bay sèvis bay kliyan nan rezo a. Gen diferan tip sèvè:</p>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Tip Sèvè</th><th>Wòl li</th><th>Egzanp Logisyèl</th></tr></thead>
+        <tbody>
+          <tr><td>Sèvè Web</td><td>Sèvi paj wèb</td><td>Apache, Nginx, IIS</td></tr>
+          <tr><td>Sèvè DNS</td><td>Rezoud non domèn</td><td>BIND, Windows DNS</td></tr>
+          <tr><td>Sèvè DHCP</td><td>Bay adrès IP otomatik</td><td>Windows DHCP, ISC-DHCP</td></tr>
+          <tr><td>Sèvè Fichye</td><td>Stoke ak pataje fichye</td><td>Samba, NFS, Windows File Server</td></tr>
+          <tr><td>Sèvè Imel</td><td>Voye ak resevwa imel</td><td>Exchange, Postfix</td></tr>
+          <tr><td>Sèvè VPN</td><td>Koneksyon prive sou Entènèt</td><td>OpenVPN, pfSense</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>NIC – Network Interface Card</h2>
+    <p>Yon <strong>NIC (Network Interface Card)</strong> oswa <strong>kat rezo</strong> se konponant ki pèmèt yon òdinatè konekte ak rezo. Li gen yon <strong>adrès MAC inik</strong> ki fabrik la asiye pou li.</p>
+    <div class="info-box note"><div class="icon">🔑</div><div class="body"><strong>Adrès MAC:</strong><p>Chak NIC gen yon adrès MAC inik nan mond antye. Format: <code>00:1A:2B:3C:4D:5E</code> — 6 okté an hexadecimal. Li stoke nan materyèl la (firmware).</p></div></div>
+  </div>
+
+  <div class="content-section">
+    <h2>Patch Panel, Rack, ak UPS</h2>
+    <div class="grid grid-3">
+      <div class="card"><span class="card-icon">🔗</span><h3>Patch Panel</h3><p>Yon panèl ki santralize tout koneksyon kab Ethernet yo nan yon sèl kote pou fasil jere. Souvan nan rack nan saldonnèt.</p></div>
+      <div class="card"><span class="card-icon">🗄️</span><h3>Rack (Bati)</h3><p>Yon kago metal ki tini tout ekipman rezo yo (switch, sèvè, patch panel, UPS) nan yon fòm òganize. Mezire an "U" (1U = 1.75 pous).</p></div>
+      <div class="card"><span class="card-icon">🔋</span><h3>UPS (Alimantatè Sekou)</h3><p>Uninterruptible Power Supply — bay kouran tanporèrman pandan yon koupe kouran. Pwoteje ekipman yo kont koup courant ak surtènsyon.</p></div>
+    </div>
+  </div>
+
+  <div class="content-section">
+    <h2>Rezime Aparèy yo ak Kouch OSI</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Aparèy</th><th>Kouch OSI</th><th>Adrese pa</th><th>Travay prensipal</th></tr></thead>
+        <tbody>
+          <tr><td>Hub</td><td>Kouch 1 – Physical</td><td>Bit</td><td>Repete siyal bay tout pò</td></tr>
+          <tr><td>Switch</td><td>Kouch 2 – Data Link</td><td>Adrès MAC</td><td>Dirije tram bay bon pò</td></tr>
+          <tr><td>Router</td><td>Kouch 3 – Network</td><td>Adrès IP</td><td>Route pakè ant rezo</td></tr>
+          <tr><td>Firewall</td><td>Kouch 3-7</td><td>IP, Pò, Kontni</td><td>Filtre trafik</td></tr>
+          <tr><td>Access Point</td><td>Kouch 2 – Data Link</td><td>Adrès MAC</td><td>Koneksyon San Fil</td></tr>
+          <tr><td>Modem</td><td>Kouch 1 – Physical</td><td>Sinyòl</td><td>Konvèti sinyòl dijital/analòg</td></tr>
+          <tr><td>NIC</td><td>Kouch 1-2</td><td>MAC + Sinyòl</td><td>Konekte aparèy ak rezo</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="osi.html" class="btn btn-secondary">← Modèl OSI</a>
+    <a href="cables.html" class="btn btn-primary">Kab ak Medya →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis pou étidyan ayisyen.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>

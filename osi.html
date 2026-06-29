@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="ht">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Modèl OSI ak TCP/IP – Rezo Enfòmatik an Kreyòl</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<nav class="navbar">
+  <a href="index.html" class="navbar-brand"><span class="brand-icon">🌐</span><span>Rezo Enfòmatik</span></a>
+  <div class="nav-links"><a href="index.html">Akèy</a><a href="about.html">Sou Rezo</a><a href="topologies.html">Topoloji</a><a href="osi.html">OSI/TCP-IP</a><a href="devices.html">Aparèy</a><a href="cables.html">Kab</a><a href="ip-addressing.html">IP</a><a href="subnetting.html">Subnetting</a><a href="protocols.html">Pwotokòl</a><a href="dns-dhcp.html">DNS/DHCP</a><a href="routing-switching.html">Routing</a><a href="wireless.html">Wi-Fi</a><a href="security.html">Sekirite</a><a href="troubleshooting.html">Depannaj</a><a href="homelab.html">Home Lab</a><a href="labs.html">Labs</a><a href="quiz.html">Quiz</a><a href="glossary.html">Glosè</a><a href="resources.html">Resous</a></div>
+  <div class="nav-actions"><button class="btn-theme-toggle" id="theme-toggle">☀️</button><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div>
+</nav>
+<div class="mobile-nav" id="mobile-nav">
+  <a href="index.html">🏠 Akèy</a><a href="about.html">📡 Sou Rezo</a><a href="topologies.html">🔗 Topoloji</a><a href="osi.html">📋 OSI/TCP-IP</a><a href="devices.html">🖥️ Aparèy</a><a href="cables.html">🔌 Kab</a><a href="ip-addressing.html">🔢 IP</a><a href="subnetting.html">📊 Subnetting</a><a href="protocols.html">📦 Pwotokòl</a><a href="dns-dhcp.html">🗂️ DNS/DHCP</a><a href="routing-switching.html">🔄 Routing</a><a href="wireless.html">📶 Wi-Fi</a><a href="security.html">🛡️ Sekirite</a><a href="troubleshooting.html">🔧 Depannaj</a><a href="homelab.html">🏡 Home Lab</a><a href="labs.html">🧪 Labs</a><a href="quiz.html">❓ Quiz</a><a href="glossary.html">📖 Glosè</a><a href="resources.html">📚 Resous</a>
+</div>
+
+<div class="page-header">
+  <div class="container">
+    <div class="breadcrumb"><a href="index.html">Akèy</a> › Modèl OSI ak TCP/IP</div>
+    <h1>📋 Modèl OSI ak TCP/IP</h1>
+    <p>Konprann kijan done vwayaje nan rezo atravè 7 kouch OSI ak 4 kouch TCP/IP la.</p>
+  </div>
+</div>
+
+<main>
+<div class="container" style="padding-top:3rem;padding-bottom:4rem;">
+
+  <div class="info-box note"><div class="icon">💡</div><div class="body"><strong>Kisa Modèl yo Ye?</strong><p>Modèl OSI ak TCP/IP se <strong>estanda referans</strong> ki montre kijan done vwayaje soti nan yon aparèy rive nan yon lòt. Yo divize pwosesis kominikasyon an kouch (layers) pou fasil konprann ak depane.</p></div></div>
+
+  <!-- OSI Model -->
+  <div class="content-section">
+    <h2>Modèl OSI – 7 Kouch yo</h2>
+    <p>Modèl <strong>OSI (Open Systems Interconnection)</strong> se yon estanda ki divize kominikasyon rezo an <strong>7 kouch</strong>. Chak kouch gen yon travay espesifik. Li kreye pa ISO an 1984.</p>
+    <p><strong>Triks pou sonje yo:</strong> <em>"All People Seem To Need Data Processing"</em> (Application → Physical) oswa soti anba: <em>"Please Do Not Throw Sausage Pizza Away"</em></p>
+
+    <div class="two-col mt-3">
+      <div>
+        <div class="osi-stack">
+          <div class="osi-layer osi-7"><div class="osi-num">7</div><div class="osi-info"><strong>Application</strong><small>HTTP, FTP, DNS, SMTP</small></div></div>
+          <div class="osi-layer osi-6"><div class="osi-num">6</div><div class="osi-info"><strong>Presentation</strong><small>SSL/TLS, JPEG, encryption</small></div></div>
+          <div class="osi-layer osi-5"><div class="osi-num">5</div><div class="osi-info"><strong>Session</strong><small>NetBIOS, RPC, SQL sessions</small></div></div>
+          <div class="osi-layer osi-4"><div class="osi-num">4</div><div class="osi-info"><strong>Transport</strong><small>TCP, UDP — pò yo</small></div></div>
+          <div class="osi-layer osi-3"><div class="osi-num">3</div><div class="osi-info"><strong>Network</strong><small>IP, ICMP, Router</small></div></div>
+          <div class="osi-layer osi-2"><div class="osi-num">2</div><div class="osi-info"><strong>Data Link</strong><small>Ethernet, MAC, Switch</small></div></div>
+          <div class="osi-layer osi-1"><div class="osi-num">1</div><div class="osi-info"><strong>Physical</strong><small>Kab, Hub, signyal elektrik</small></div></div>
+        </div>
+        <p class="text-muted mt-2" style="font-size:0.82rem;text-align:center;">← Anwo = Plis prè itilizatè | Anba = Fizik →</p>
+      </div>
+
+      <div>
+        <div class="card mb-2">
+          <h3>📦 Enkapsülasyon Done</h3>
+          <p style="color:var(--text-secondary);font-size:0.9rem;">Lè done vwayaje desann nan kouch yo, chak kouch <strong>ajoute tèt li (header)</strong> nan done a. Sa rele <strong>enkapsülasyon</strong>. Kouch fizik la voye tout bagay la kòm bit/sinyò.</p>
+        </div>
+        <div class="card">
+          <h3>📬 Non Done nan Chak Kouch</h3>
+          <div class="table-wrapper" style="margin:0;">
+            <table>
+              <thead><tr><th>Kouch</th><th>Non Done (PDU)</th></tr></thead>
+              <tbody>
+                <tr><td>7,6,5</td><td>Data (Données)</td></tr>
+                <tr><td>4 – Transport</td><td>Segman (Segments)</td></tr>
+                <tr><td>3 – Network</td><td>Pakè (Packets)</td></tr>
+                <tr><td>2 – Data Link</td><td>Tram (Frames)</td></tr>
+                <tr><td>1 – Physical</td><td>Bit (Bits)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Detailed layer explanations -->
+    <h3>Kouch 7 – Application (Aplikasyon)</h3>
+    <p>Kouch <strong>Application</strong> se kouch ki pi prè itilizatè a. Li bay entèfas pou aplikasyon yo kominike. Se la yo jwenn pwotokòl tankou <code>HTTP</code>, <code>HTTPS</code>, <code>FTP</code>, <code>DNS</code>, <code>SMTP</code>.</p>
+    <div class="info-box note"><div class="icon">🌐</div><div class="body"><strong>Analoji:</strong><p>Yon moun k ap ekri yon lèt. Li pa konnen kijan lapòs la travay — li jis ekri mesaj la ak adres la. Se aplikasyon an ki fè sa.</p></div></div>
+
+    <h3>Kouch 6 – Presentation (Prezantasyon)</h3>
+    <p>Kouch <strong>Presentation</strong> konvèti done nan fòma rezo ka konprann. Li jere <strong>chifraj (encryption)</strong>, <strong>konpresyon</strong>, ak <strong>konvèsyon fòma</strong> (JPEG, MP3, SSL/TLS).</p>
+
+    <h3>Kouch 5 – Session (Sesyon)</h3>
+    <p>Kouch <strong>Session</strong> kòmanse, jere, ak fèmen <strong>sesyon kominikasyon</strong> ant de aplikasyon. Li asire done yo vini nan lòd kòrèk. Egzanp: NetBIOS, RPC.</p>
+
+    <h3>Kouch 4 – Transport (Transpò)</h3>
+    <p>Kouch <strong>Transport</strong> jere transpò <strong>segman</strong> done ant òs yo. Li responsab pou:</p>
+    <ul>
+      <li><strong>Segmentasyon</strong> – divize gwo done an ti moso</li>
+      <li><strong>Livrezon garanti (TCP)</strong> – asire tout done rive</li>
+      <li><strong>Nimewo pò</strong> – HTTP pò 80, HTTPS pò 443</li>
+      <li><strong>Kontwòl flò</strong> – pa voye twòp done alafwa</li>
+    </ul>
+    <div class="grid grid-2 mt-2">
+      <div class="card"><h3>TCP – Reliable</h3><p>Transmission Control Protocol. Garanti livrezon, verifye erè, bay akèy (acknowledgment). Itilize pou HTTP, FTP, imel.</p><span class="badge badge-green">Serye</span></div>
+      <div class="card"><h3>UDP – Fast</h3><p>User Datagram Protocol. Pa garanti livrezon men pi rapid. Itilize pou streaming videyo, jwèt an liy, DNS.</p><span class="badge badge-yellow">Rapid</span></div>
+    </div>
+
+    <h3>Kouch 3 – Network (Rezo)</h3>
+    <p>Kouch <strong>Network</strong> responsab pou <strong>routage pakè</strong> ant diferan rezo. Li itilize <strong>adrès IP</strong> pou idantifye sous ak destinasyon. Aparèy prensipal: <strong>Router</strong>.</p>
+    <div class="info-box note"><div class="icon">🗺️</div><div class="body"><strong>Analoji:</strong><p>Kouch Network la se tankou yon GPS ki jwenn wout ki pi bon pou yon pakè vwayaje soti nan New York rive Port-au-Prince.</p></div></div>
+
+    <h3>Kouch 2 – Data Link (Lyen Données)</h3>
+    <p>Kouch <strong>Data Link</strong> jere kominikasyon ant aparèy sou <strong>menm rezo lokal</strong>. Li itilize <strong>adrès MAC</strong> pou idantifye aparèy yo. Aparèy prensipal: <strong>Switch</strong>. Li gen de sou-kouch:</p>
+    <ul>
+      <li><strong>LLC (Logical Link Control)</strong> – kontwòl flò ak erè</li>
+      <li><strong>MAC (Media Access Control)</strong> – kontwòl aksè sou medya fizik la</li>
+    </ul>
+
+    <h3>Kouch 1 – Physical (Fizik)</h3>
+    <p>Kouch <strong>Physical</strong> se ba tout rezo a. Li jere <strong>transmisyon bit</strong> sou medya fizik (kab, fibè optik, siyal san fil). Li defini vòltaj, vitès, konèktè, ak karakteristik elektrik ak optik.</p>
+    <div class="info-box tip"><div class="icon">🔌</div><div class="body"><strong>Aparèy Kouch 1:</strong><p>Hub, kab Ethernet (RJ45), fibè optik, konèktè, répéteur (repeater).</p></div></div>
+  </div>
+
+  <!-- TCP/IP Model -->
+  <div class="content-section">
+    <h2>Modèl TCP/IP – 4 Kouch yo</h2>
+    <p>Modèl <strong>TCP/IP</strong> (oswa Modèl Entènèt) se modèl praktik ki itilize reyèlman nan Entènèt. Li gen <strong>4 kouch</strong> sèlman epi li pi senp pase OSI.</p>
+
+    <div class="two-col mt-3">
+      <div>
+        <div class="osi-stack">
+          <div class="osi-layer osi-7" style="border-radius:var(--radius) var(--radius) 0 0;"><div class="osi-num">4</div><div class="osi-info"><strong>Application</strong><small>HTTP, FTP, DNS, SMTP, SSH</small></div></div>
+          <div class="osi-layer osi-4"><div class="osi-num">3</div><div class="osi-info"><strong>Transport</strong><small>TCP, UDP</small></div></div>
+          <div class="osi-layer osi-3"><div class="osi-num">2</div><div class="osi-info"><strong>Internet</strong><small>IP, ICMP, ARP</small></div></div>
+          <div class="osi-layer osi-1" style="border-radius:0 0 var(--radius) var(--radius);"><div class="osi-num">1</div><div class="osi-info"><strong>Network Access</strong><small>Ethernet, Wi-Fi, Kab, MAC</small></div></div>
+        </div>
+      </div>
+
+      <div>
+        <div class="callout">
+          <h3>🔗 Korespondan OSI → TCP/IP</h3>
+          <div class="table-wrapper" style="margin:0;">
+            <table>
+              <thead><tr><th>TCP/IP</th><th>Kouch OSI Korespondan</th></tr></thead>
+              <tbody>
+                <tr><td>Application</td><td>Kouch 5, 6, 7 (Session, Pres., App.)</td></tr>
+                <tr><td>Transport</td><td>Kouch 4 (Transport)</td></tr>
+                <tr><td>Internet</td><td>Kouch 3 (Network)</td></tr>
+                <tr><td>Network Access</td><td>Kouch 1, 2 (Physical, Data Link)</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Comparison -->
+  <div class="content-section">
+    <h2>Diferans OSI vs TCP/IP</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>Karakteristik</th><th>Modèl OSI</th><th>Modèl TCP/IP</th></tr></thead>
+        <tbody>
+          <tr><td>Kantite kouch</td><td>7</td><td>4</td></div></tr>
+          <tr><td>Kreye pa</td><td>ISO (1984)</td><td>DoD / ARPA (1970s)</td></tr>
+          <tr><td>Itilizasyon</td><td>Referans akademik</td><td>Entènèt reyèl la</td></tr>
+          <tr><td>Fleksibilite</td><td>Pi rigid</td><td>Pi pratik</td></tr>
+          <tr><td>Separe Pres. ak Ses.</td><td>Wi</td><td>Non (entegre nan App.)</td></tr>
+          <tr><td>Separe Fizik ak Data Link</td><td>Wi</td><td>Non (Network Access)</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="info-box tip"><div class="icon">📝</div><div class="body"><strong>Konsèy pou Egzamen:</strong><p>Pou CompTIA Network+, ou bezwen konnen <strong>chak kouch OSI</strong>, aparèy yo, pwotokòl yo, ak PDU yo (Data, Segment, Packet, Frame, Bit). Aprann yo pafè!</p></div></div>
+  </div>
+
+  <!-- Quick Reference -->
+  <div class="content-section">
+    <h2>Referans Rapid – Chak Kouch OSI</h2>
+    <div class="table-wrapper">
+      <table>
+        <thead><tr><th>#</th><th>Kouch</th><th>PDU</th><th>Aparèy Kle</th><th>Pwotokòl/Egzanp</th><th>Analoji</th></tr></thead>
+        <tbody>
+          <tr><td>7</td><td>Application</td><td>Data</td><td>Òdinatè (logisyèl)</td><td>HTTP, FTP, DNS, SMTP</td><td>Itilizatè k ap ekri mesaj</td></tr>
+          <tr><td>6</td><td>Presentation</td><td>Data</td><td>Òdinatè (logisyèl)</td><td>SSL/TLS, JPEG, ASCII</td><td>Tradiktè / Chifraj</td></tr>
+          <tr><td>5</td><td>Session</td><td>Data</td><td>Òdinatè (logisyèl)</td><td>NetBIOS, RPC</td><td>Jij yon konvèsasyon</td></tr>
+          <tr><td>4</td><td>Transport</td><td>Segman</td><td>Firewall</td><td>TCP, UDP</td><td>Sèvis pòs ak nimewo swivi</td></tr>
+          <tr><td>3</td><td>Network</td><td>Pakè</td><td>Router</td><td>IP, ICMP, OSPF</td><td>GPS / Pòstye</td></tr>
+          <tr><td>2</td><td>Data Link</td><td>Tram</td><td>Switch, Bridge</td><td>Ethernet, ARP, MAC</td><td>Kat idantite lokal</td></tr>
+          <tr><td>1</td><td>Physical</td><td>Bit</td><td>Hub, Kab, NIC</td><td>1000BASE-T, 802.11</td><td>Wout asfalte</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="d-flex gap-2 mt-4 flex-wrap">
+    <a href="topologies.html" class="btn btn-secondary">← Topoloji</a>
+    <a href="devices.html" class="btn btn-primary">Aparèy Rezo →</a>
+  </div>
+</div>
+</main>
+<footer><div class="footer-grid"><div class="footer-brand"><div class="brand-name">🌐 Rezo Enfòmatik an Kreyòl</div><p>Resous edikatif gratis pou étidyan ayisyen.</p></div><div class="footer-col"><h4>Sijè</h4><ul><li><a href="about.html">Sou Rezo</a></li><li><a href="osi.html">Modèl OSI</a></li><li><a href="ip-addressing.html">Adrès IP</a></li><li><a href="subnetting.html">Subnetting</a></li></ul></div><div class="footer-col"><h4>Pratik</h4><ul><li><a href="labs.html">Labs</a></li><li><a href="quiz.html">Quiz</a></li><li><a href="glossary.html">Glosè</a></li><li><a href="resources.html">Resous</a></li></ul></div><div class="footer-col"><h4>Avanse</h4><ul><li><a href="routing-switching.html">Routing</a></li><li><a href="security.html">Sekirite</a></li><li><a href="homelab.html">Home Lab</a></li><li><a href="wireless.html">Wi-Fi</a></li></ul></div></div><div class="footer-bottom"><span>© 2024 Rezo Enfòmatik an Kreyòl</span><span>🇭🇹</span></div></footer>
+<button id="back-to-top">↑</button>
+<script src="script.js"></script>
+</body>
+</html>
